@@ -10,6 +10,8 @@ class User < ApplicationRecord
             :session_token,
             presence: true
 
+  # testing github setup 
+
   attr_reader :password
 
   after_initialize :ensure_session_token
