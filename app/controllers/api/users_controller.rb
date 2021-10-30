@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
       login!(@user)
       render :show
     else
-      render json: @user.errors.full_messages, status: 401
+      render json: @user.errors.full_messages, status: 418 # this is where were getting our error
     end
   end
   
@@ -24,9 +24,9 @@ class Api::UsersController < ApplicationController
     @user = selected_user
   end
   
-  # def index
-  #   @users = User.all
-  # end
+  def index
+    @users = User.all
+  end
   
   def destroy
     @user = selected_user
@@ -45,6 +45,6 @@ class Api::UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:email, :age, :password, :pronouns)
   end
 end
