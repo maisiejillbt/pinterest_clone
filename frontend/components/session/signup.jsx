@@ -8,7 +8,7 @@ class SignUp extends React.Component {
       email: '', 
       password: '',
       age: '',
-      pronouns:'',
+      username: 'hi'
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,11 +17,16 @@ class SignUp extends React.Component {
   handleInput(type){
     return e => {
       this.setState({[type]: e.target.value})
+      this.setState({
+        username: this.state.email
+      })
     };
   }
 
   handleSubmit(e){
     e.preventDefault(); 
+    console.log(this.state.email)
+
     this.props.createNewUser(this.state)
       .then(()=>this.props.history.push('/')) /// this is where we will be sent after submit!
 
@@ -62,14 +67,14 @@ class SignUp extends React.Component {
               />
           </label>
 
-          <label>Pronouns
+          {/* <label>Pronouns
             <input 
               type="text" 
               placeholder="Pronouns"
               value={this.state.pronouns}
               onChange={this.handleInput('pronouns')}
               />
-          </label>
+          </label> */}
 
 
           {/* <div>

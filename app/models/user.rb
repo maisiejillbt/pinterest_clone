@@ -4,7 +4,6 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email,
             :age,
-            :pronouns,
             :password_digest,
             :session_token,
             presence: true
@@ -31,6 +30,7 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
+    puts self
     self.session_token = SecureRandom.base64(64)
     self.save!
     self.session_token

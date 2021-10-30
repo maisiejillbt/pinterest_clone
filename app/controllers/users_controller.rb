@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @users = User.where("username LIKE '%#{params[:query]}%'")
+    @users = User.where("email LIKE '%#{params[:query]}%'")
     render json: @users
   end
 
@@ -63,6 +63,6 @@ class UsersController < ApplicationController
   def user_params
     # params.require(:user).permit(:username, :email)
     # Add password
-    params.require(:user).permit(:email, :age, :password, :pronouns )
+    params.require(:user).permit(:email, :age, :password )
   end
 end
