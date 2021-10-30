@@ -9,10 +9,10 @@ class User < ApplicationRecord
             :password_digest,
             :session_token,
             presence: true
-
-  # testing github setup 
-
+            
   attr_reader :password
+
+  # Put associations here
 
   after_initialize :ensure_session_token
 
