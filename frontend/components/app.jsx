@@ -11,10 +11,9 @@ import { AuthRoute } from '../utils/routes_utils'
 export default () => (
   <div>
     <Route path="/" component={NavBarContainer}/> 
-    <Switch>
-      <Route path="/jackblack" component={JackBlack}/>   
-      <AuthRoute path="/signup" component={SignupContainer}/> 
-      <AuthRoute path="/login" component={LoginContainer} />
-    </Switch>
+    
+    <Route path="/jackblack" component={JackBlack}/>   
+    <AuthRoute path="/signup" component={SignupContainer}/> 
+    <AuthRoute path="/login" component={LoginContainer} />
   </div>
 );

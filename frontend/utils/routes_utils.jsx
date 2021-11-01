@@ -4,7 +4,7 @@ import { Redirect, Route, withRouter } from 'react-router-dom';
 
 
 const mstp = state => ({
-  loggedIn: Boolean(state.session.currentUser), 
+  loggedIn: Boolean(state.session.current_user), 
 }); 
 
 const Auth = ({loggedIn, path, component: Component}) => (

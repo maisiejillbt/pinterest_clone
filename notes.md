@@ -21,7 +21,8 @@
 ### TODO 
   - figure out how to trigger a re-render of the header when the current user changes ( likely change nav bar to class component)
   - ask about css and what connection package we'll be using 
-  - get finish landing page 
+  - start / finish landing page 
 
-
+- figured out render issue, I had a mispelling of current_user in my backend 
+- **a new priority is to fix all the different spellings of current_user/currentUser to be appropriate for fe/be**
 
