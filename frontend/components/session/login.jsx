@@ -7,7 +7,7 @@ class Login extends React.Component {
       email: '',
       password: '',
     };
-    this.demoSubmit = this.demoSubmit.bind(this);
+    this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -17,13 +17,14 @@ class Login extends React.Component {
     };
   }
 
-  demoSubmit(e) {
-    this.setState({
+  demoSignIn(e) {
+    const demoState = ({
       email: 'demo@demo.com',
-      password: 'password',
+      password: 'password'
     });
-
-    this.handleSubmit(e);
+    e.preventDefault();
+    this.props.login(demoState)
+      .then(() => this.props.history.push('/jackblack'));
   }
 
   handleSubmit(e) {
@@ -55,7 +56,8 @@ class Login extends React.Component {
           <button onClick={this.handleSubmit}>Log In!</button>
           </label>
         </form>
-        <button onClick={this.demoSubmit}>Demo Login</button>
+        
+        <a onClick={this.demoSignIn}>Demo Login</a>
       </div>
     );
   }
