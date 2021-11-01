@@ -26,3 +26,6 @@
 - figured out render issue, I had a mispelling of current_user in my backend 
 - **a new priority is to fix all the different spellings of current_user/currentUser to be appropriate for fe/be**
 
+### change of plans for 11/01/21 
+  - now working on pushing to heruku and setting up AWS (this could take the whole day)
+

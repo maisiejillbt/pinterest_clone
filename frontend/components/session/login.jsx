@@ -7,7 +7,7 @@ class Login extends React.Component {
       email: '',
       password: '',
     };
-
+    this.demoSubmit = this.demoSubmit.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -15,6 +15,15 @@ class Login extends React.Component {
     return (e) => {
       this.setState({ [type]: e.target.value });
     };
+  }
+
+  demoSubmit(e) {
+    this.setState({
+      email: 'demo@demo.com',
+      password: 'password',
+    });
+
+    this.handleSubmit(e);
   }
 
   handleSubmit(e) {
@@ -46,6 +55,7 @@ class Login extends React.Component {
           <button onClick={this.handleSubmit}>Log In!</button>
           </label>
         </form>
+        <button onClick={this.demoSubmit}>Demo Login</button>
       </div>
     );
   }

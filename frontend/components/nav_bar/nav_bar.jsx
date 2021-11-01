@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../../../app/assets/images/logos/intrestLogo.png"
+
 
 const NavBar = ({ current_user, logoutUser }) => {
   const display = current_user ? (
@@ -21,7 +21,7 @@ const NavBar = ({ current_user, logoutUser }) => {
   return (
     <header>
       <div className="LeftHeader">
-        <img src={logo}/> 
+      <Link to="/"><img className="MainLogo" src={window.main_logo} alt="main-logo"/></Link>
       </div>
       {display}
     </header>

@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/maisiejillbt/pintrest_clone/issues"
   },
-  "homepage": "https://github.com/maisiejillbt/pintrest_clone#readme"
+  "homepage": "https://github.com/maisiejillbt/pintrest_clone#readme",
+  "devDependencies": {
+    "img-loader": "^4.0.0"
+  }
 }

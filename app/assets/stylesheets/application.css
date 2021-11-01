@@ -30,12 +30,4 @@
      padding:5%;
    }
 
-   .LeftHeader {
-     display: flex; 
-     justify-content: start;
-   }
 
-   .RightHeader {
-     display: flex; 
-     justify-content: end;
-   }
