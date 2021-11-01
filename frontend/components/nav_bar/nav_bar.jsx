@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = ({ current_user, logoutUser }) => {
+  console.log(current_user)
   const display = current_user ? (
-    <div>
+    <div className="RightHeader">
       <h1>BELL</h1>
       <h1>DMS</h1>
       <h1>DD</h1>
@@ -12,7 +13,7 @@ const NavBar = ({ current_user, logoutUser }) => {
     </div>
 
   ) : (
-    <div>
+    <div className="RightHeader">
       <Link to="/signup">Sign Up</Link>
       <Link to="/login">Log In</Link>
     </div>

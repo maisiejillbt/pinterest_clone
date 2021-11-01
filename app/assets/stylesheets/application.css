@@ -20,3 +20,22 @@
      box-shadow: 3px 3px 3px darkblue;
      text-decoration: none;
    }
+
+   header {
+     display: flex; 
+     justify-content: space-between;
+   }
+
+   h1{
+     padding:5%;
+   }
+
+   .LeftHeader {
+     display: flex; 
+     justify-content: start;
+   }
+
+   .RightHeader {
+     display: flex; 
+     justify-content: end;
+   }
