@@ -7,15 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
 
-  if (window.currentUser) {
+  if (window.current_user) { /// need to adjusr current_user to the right naming conventions in frontend
         const preloadedState = {
-            entities: {
-                users: { [window.currentUser.id]: window.currentUser }
-            },
-            session: { id: window.currentUser.id }
+          session: { 
+            current_user: window.current_user 
+          }
         };
         store = configureStore(preloadedState);
-        delete window.currentUser;
+        delete window.current_user;
   } else {
       store = configureStore();
   }

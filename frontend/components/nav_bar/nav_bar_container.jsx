@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavBar from './navBar';
+import NavBar from './nav_bar';
 
 import { logoutUser } from '../../actions/session';
 
 const mstp = state => ({
-  currentUser: state.session.currentUser,
+  current_user: state.session.current_user,
 });
 
 const mdtp = dispatch => ({
