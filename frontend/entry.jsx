@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
 
-  if (window.current_user) { /// need to adjusr current_user to the right naming conventions in frontend
+  if (window.current_user) { /// need to adjust current_user to the right naming conventions in frontend
         const preloadedState = {
           session: { 
             current_user: window.current_user 

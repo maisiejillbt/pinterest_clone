@@ -4,7 +4,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: '',
     };
 
@@ -20,7 +20,7 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state)
-      .then(() => this.props.history.push('/chirps'));
+      .then(() => this.props.history.push('/jackblack'));
   }
 
   render() {
@@ -29,11 +29,11 @@ class Login extends React.Component {
       <div className="session-form">
         <h2>Log In!</h2>
         <form>
-          <label>Username:
+          <label>Email:
           <input
             type="text"
-            value={this.state.username}
-            onChange={this.handleInput('username')}
+            value={this.state.email}
+            onChange={this.handleInput('email')}
           />
           </label>
 

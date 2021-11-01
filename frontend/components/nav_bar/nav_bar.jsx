@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const NavBar = ({ current_user, logoutUser }) => {
-  console.log(current_user)
   const display = current_user ? (
     <div>
       <h1>BELL</h1>
