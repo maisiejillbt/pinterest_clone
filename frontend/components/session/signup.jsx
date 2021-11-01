@@ -8,7 +8,7 @@ class SignUp extends React.Component {
       email: '', 
       password: '',
       age: '',
-      username: 'hi'
+      username: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +27,6 @@ class SignUp extends React.Component {
     e.preventDefault(); 
     this.props.createNewUser(this.state)
       .then(()=>this.props.history.push('/')) /// this is where we will be sent after submit!
-
   }
 
 
@@ -65,16 +64,7 @@ class SignUp extends React.Component {
               />
           </label>
 
-          {/* <label>Pronouns
-            <input 
-              type="text" 
-              placeholder="Pronouns"
-              value={this.state.pronouns}
-              onChange={this.handleInput('pronouns')}
-              />
-          </label> */}
-
-
+          {/* {Would love to come back to this and add in the entire set of questions asked during create user} */}
           {/* <div>
             <input type="radio" id="he/him/his" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}
                   defaultChecked/>
