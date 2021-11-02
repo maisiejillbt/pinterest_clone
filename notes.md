@@ -26,6 +26,17 @@
 - figured out render issue, I had a mispelling of current_user in my backend 
 - **a new priority is to fix all the different spellings of current_user/currentUser to be appropriate for fe/be**
 
-### change of plans for 11/01/21 
-  - now working on pushing to heruku and setting up AWS (this could take the whole day)
+      ### change of plans for 11/01/21 
+        - now working on pushing to heruku and setting up AWS (this could take the whole day)
+- ended up only working on heroku deploy and aws, aws is still not set up (very complicated)
+- Im glad I at least got my bugs fixed, my demo user built out and heroku deployed. 
+
+
+# 11/01/21
+### TODO 
+  - finish aws setup 
+  - build out logged out landing page 
+  - if time start on boards and pins (unlikely)
+
+
 
