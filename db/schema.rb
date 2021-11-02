@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_212543) do
+ActiveRecord::Schema.define(version: 2021_11_02_212302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,31 @@ ActiveRecord::Schema.define(version: 2021_11_01_212543) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description"
+    t.boolean "public", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
+  end
+
+  create_table "pins", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["user_id"], name: "index_pins_on_user_id"
+  end
+
+  create_table "saves", force: :cascade do |t|
+    t.integer "pin_id", null: false
+    t.integer "board_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["pin_id", "board_id"], name: "index_saves_on_pin_id_and_board_id", unique: true
+    t.index ["pin_id"], name: "index_saves_on_pin_id"
   end
 
   create_table "users", force: :cascade do |t|

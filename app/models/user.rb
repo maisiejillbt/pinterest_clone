@@ -10,7 +10,13 @@ class User < ApplicationRecord
             
   attr_reader :password
 
-  # Put associations here
+  has_many :pins, 
+    class_name: :Pin, 
+    foreign_key: :user_id
+
+  has_many :boards, 
+    class_name: :Board, 
+    foreign_key: :user_id
 
   has_one_attached :photo
 
