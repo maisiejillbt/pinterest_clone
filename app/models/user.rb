@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   # Put associations here
 
+  has_one_attached :photo
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(email, password)
