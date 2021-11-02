@@ -8,11 +8,14 @@ class SignUp extends React.Component {
       email: '', 
       password: '',
       age: '',
-      username: ''
+      username: '', 
+      avatar: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+
 
   handleInput(type){
     return e => {
@@ -28,7 +31,6 @@ class SignUp extends React.Component {
     this.props.createNewUser(this.state)
       .then(()=>this.props.history.push('/jackblack')) /// this is where we will be sent after submit!
   }
-
 
   render() {
     return(
