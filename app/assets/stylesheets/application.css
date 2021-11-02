@@ -14,25 +14,11 @@
  *= require_self
  */
 
-    .btn {
-     background-color: white;
-     padding: 10px;
-     box-shadow: 3px 3px 3px darkblue;
-     text-decoration: none;
-   }
+@import 'reset.scss';
+@import 'tests.scss';
+@import 'logged-out.scss';
+@import 'main.scss';
+@import 'nav-bar.scss';
 
-   header {
-     display: flex; 
-     justify-content: space-between;
-   }
-
-   h1{
-     padding:5%;
-   }
-
-   #avatar {
-     height:20px;
-     width: 20px;
-   }
 
 
