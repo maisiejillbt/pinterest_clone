@@ -18,6 +18,7 @@ const NavBar = ({ current_user, logoutUser }) => {
     </div>
   );
 
+
   return (
     <header>
       <div className="LeftHeader">
