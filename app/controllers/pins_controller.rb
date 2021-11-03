@@ -26,12 +26,8 @@ class PinsController < ApplicationController
     end
   end
 
-  def index # going to have to come back to this! 
-    @pins = if params[:user_id]
-                Pin.where(user_id: params[:user_id])
-              else
-                Pin.all
-              end
+  def index 
+    @pins = Pin.all
     render :index
   end
 

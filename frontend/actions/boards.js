@@ -2,7 +2,7 @@ export const RECEIVE_BOARDS = 'RECEIVE_BOARDS';
 export const RECEIVE_BOARD = 'RECEIVE_BOARD';
 export const REMOVE_BOARD = 'REMOVE_BOARD';
 
-import { fetchBoards, fetchBoard, createBoard, updateBoard, deleteBoard } from '../utils/board_api_util';
+import * as BoardApiUtil from '../utils/board_api_util';
 
 
 const receiveBoards = boards => ({
@@ -21,26 +21,26 @@ const removeBoard = boardId => ({
 })
 
 export const fetchBoards = () => dispatch => {
-  return fetchBoards()
+  return BoardApiUtil.fetchBoards()
     .then(boards => dispatch(receiveBoards(boards)));
 }
 
 export const fetchBoard = boardId => dispatch => {
-  return fetchBoard()
+  return BoardApiUtil.fetchBoard()
     .then(board => dispatch(receiveBoard(board)));
 }
 
 export const createBoard = board => dispatch => {
-  return creeateBoard(board)
+  return BoardApiUtil.createBoard(board)
     .then(board => dispatch(receiveBoards(board)));
 }
 
 export const updateBoard = board => dispatch => {
-  return updtateBoard(board)
+  return BoardApiUtil.updateBoard(board)
     .then(board => dispatch(receiveBoard(board)));
 }
 
 export const deleteBoard = boardId => dispatch => {
-  return deleteBoard(boardId)
+  return BoardApiUtil.deleteBoard(boardId)
     .then(() => dispatch(removeBoard(boardId)));
 }

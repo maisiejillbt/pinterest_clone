@@ -1,4 +1,6 @@
 class Api::BoardsController < ApplicationController
+   
+  
   def create
     @board = Board.new(board_params)
     if @board.save
@@ -40,7 +42,7 @@ class Api::BoardsController < ApplicationController
   private
   
   def selected_board
-    Board.find_by(params[:id])
+    Board.find(params[:id])
   end
   
   def board_params

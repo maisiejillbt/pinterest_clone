@@ -1,20 +1,20 @@
 import {
-  RECEIVE_ALL_PINS,
+  RECEIVE_PINS,
   RECEIVE_PIN,
   REMOVE_PIN,
-} from '../actions/pin_actions';
-import merge from 'lodash/merge';
+} from '../actions/pins';
 
 
-const pinsReducer = (oldState = {}, action) => {
+
+const PinsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   const nextState = Object.assign({}, oldState)
 
   switch (action.type) {
-    case RECEIVE_ALL_PINS:
+    case RECEIVE_PINS:
       return action.pins
     case RECEIVE_PIN:
-       nextState[action.pin.id]: action.pin 
+      nextState[action.pin.id] = action.pin 
       return nextState;
     case REMOVE_PIN:
       delete nextState[action.pinId]

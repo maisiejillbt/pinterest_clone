@@ -40,7 +40,7 @@ class Api::PinsController < ApplicationController
   private
   
   def selected_pin
-    Pin.find_by(params[:id])
+    Pin.find(params[:id])
   end
   
   def pin_params

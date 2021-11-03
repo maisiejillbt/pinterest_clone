@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
   def new
     @board = Board.new
     render :new
@@ -26,12 +27,13 @@ class BoardsController < ApplicationController
   end
 
   def index # going to have to come back to this! 
-    @boards = if params[:user_id]
-                Board.where(user_id: params[:user_id])
-              else
-                Board.all
-              end
-    render :index
+    # @boards = if params[:user_id]
+    #             Board.where(user_id: params[:user_id])
+    #           else
+    #             Board.all
+    #           end
+    @boards = Board.all
+    render :show
   end
 
   def edit
@@ -49,7 +51,7 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    @board = Pin.find(params[:id])
+    @board = Board.find(params[:id])
     if @board.destroy
       redirect_to board_url
     else

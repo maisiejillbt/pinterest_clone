@@ -1,13 +1,15 @@
 
 export const fetchPins = () => (
   $.ajax({
-    url: `api/pins/`
+    url: `api/pins/`,
+    method: 'GET'
   })
 );
 
 export const fetchPin = pinId => (
   $.ajax({
-    url: `/api/pins/${pinId}/`
+    url: `/api/pins/${pinId}/`,
+    method:'GET'
   })
 );
 
