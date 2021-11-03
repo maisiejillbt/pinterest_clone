@@ -13,5 +13,4 @@ class Board < ApplicationRecord
     has_many :pins,
       through: :saves,
       source: :pin
-
 end
