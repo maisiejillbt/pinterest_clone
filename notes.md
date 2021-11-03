@@ -32,11 +32,20 @@
 - Im glad I at least got my bugs fixed, my demo user built out and heroku deployed. 
 
 
-# 11/01/21
+# 11/02/21
 ### TODO 
-  - finish aws setup 
+  - finish aws setup ✅
   - build out logged out landing page 
-  - if time start on boards and pins (unlikely)
+  - if time start on boards and pins ✅
+
+- well I got literally none of that done today.. What I did get done was I added the user avatar(changes when not provided a default), made a massive seeds file, started on boards and pins and mostly figured out aws. Realizing that wanting to start on front end stuff now, without my backend functionality is pretty pointless. 
+
+# 11/03/21
+
+### TODO
+  - set up front end routes for boards and pins 
+  - set up create pin and create board forms 
+  - get photos to render on page from aws (do this after forms)
 
 
 
