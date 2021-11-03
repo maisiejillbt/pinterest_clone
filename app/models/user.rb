@@ -11,10 +11,12 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :pins, 
+    dependent: :destroy,
     class_name: :Pin, 
-    foreign_key: :user_id
+    foreign_key: :user_id 
 
   has_many :boards, 
+    dependent: :destroy,
     class_name: :Board, 
     foreign_key: :user_id
 

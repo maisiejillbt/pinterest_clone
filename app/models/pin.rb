@@ -6,6 +6,7 @@ class Pin < ApplicationRecord
     foreign_key: :user_id
 
   has_many :saves,
+    dependent: :destroy,
     class_name: :Save,
     foreign_key: :pin_id
   

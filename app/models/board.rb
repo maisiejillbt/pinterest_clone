@@ -7,10 +7,12 @@ class Board < ApplicationRecord
       foreign_key: :user_id
     
     has_many :saves,
+      dependent: :destroy,
       class_name: :Save,
       foreign_key: :board_id
 
     has_many :pins,
+      dependent: :destroy,
       through: :saves,
       source: :pin
 end

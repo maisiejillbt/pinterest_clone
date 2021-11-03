@@ -5,7 +5,7 @@ class Save < ApplicationRecord
       class_name: :Pin,
       foreign_key: :pin_id
 
-    belongs_to :board, optional: true,
+    belongs_to :board, 
       class_name: :Board,
       foreign_key: :board_id
 end 
