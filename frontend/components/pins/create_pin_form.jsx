@@ -24,7 +24,7 @@ class CreatePinForm extends React.Component {
     formData.append('pin[created_at]', new Date());
     formData.append('pin[photo]', this.state.photoFile);
     this.props.createPin(formData);
-  }
+  } 
 
   update(fld) {
     return e => this.setState({ [fld]: e.currentTarget.value });

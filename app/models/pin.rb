@@ -14,5 +14,5 @@ class Pin < ApplicationRecord
     through: :saves,
     source: :board
 
-  has_many_attached :photo 
+  has_one_attached :photo 
 end 
