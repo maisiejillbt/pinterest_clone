@@ -43,9 +43,18 @@
 # 11/03/21
 
 ### TODO
-  - set up front end routes for boards and pins 
-  - set up create pin and create board forms 
-  - get photos to render on page from aws (do this after forms)
+  - set up front end routes for boards and pins ✅
+  - set up create pin and create board forms 1/2✅
+  - get photos to render on page from aws (do this after forms)✅
+
+- got everything on my list done today, but still workign on getting my edit post form working properly, hading difficulty getting the post to return to the state with fetch post. 
+
+# 11/04/21
+  ### TODO 
+    - finish update post form 
+    - add photos to 20 pins 
+    - make create board and edit board forms 
+    - start mapping out styling and finish styling PIN
 
 
 
