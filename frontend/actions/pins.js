@@ -16,7 +16,7 @@ const receivePin = pin => ({
 });
 
 const removePin = pinId => ({
-  type:REMOVE_PIN, 
+  type: REMOVE_PIN, 
   pinId
 })
 

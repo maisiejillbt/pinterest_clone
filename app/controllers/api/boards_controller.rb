@@ -1,6 +1,6 @@
 class Api::BoardsController < ApplicationController
+  skip_before_action :verify_authenticity_token
    
-  
   def create
     @board = Board.new(board_params)
     if @board.save
@@ -40,7 +40,7 @@ class Api::BoardsController < ApplicationController
   end
   
   private
-  
+
   def selected_board
     Board.find(params[:id])
   end

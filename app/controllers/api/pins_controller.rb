@@ -1,4 +1,6 @@
 class Api::PinsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  
   def create
     @pin = Pin.new(pin_params)
     if @pin.save
@@ -44,6 +46,6 @@ class Api::PinsController < ApplicationController
   end
   
   def pin_params
-    params.require(:pin).permit(:title, :user_id, :description, :created_at)
+    params.require(:pin).permit(:title, :user_id, :description, :created_at, :photo)
   end
 end
