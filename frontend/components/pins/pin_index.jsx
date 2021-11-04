@@ -12,10 +12,6 @@ class PinIndex extends React.Component {
 
   render() {
     const pins = this.props.pins
-    // console.log(typeof(pins))
-    console.log(pins[166])
-    console.log(pins[16])
-
     return(
       <div> 
         {

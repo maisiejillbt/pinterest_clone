@@ -1,16 +1,14 @@
 import React from 'react';
 
-class CreatePinForm extends React.Component {
+class UpdatePinForm extends React.Component {
   constructor(props) {
     super(props);
-    
-    this.state = {
-      title: '',
-      description: '',
-      photoFile: null
-    }
+    this.state = this.props.pin; 
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log(this.props)
+  }
+
+  componentDidMount(){
+    this.props.fetchPin(this.props.match.params.pinId)
   }
 
   handleSubmit(e) {
@@ -21,7 +19,7 @@ class CreatePinForm extends React.Component {
     formData.append('pin[user_id]', this.props.current_user);
     formData.append('pin[created_at]', new Date());
     formData.append('pin[photo]', this.state.photoFile);
-    this.props.createPin(formData);
+    this.props.updatePin(formData);
   } 
 
   update(fld) {
@@ -33,12 +31,14 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
+    const pin = this.props
+    console.log(pin)
 
     return (
       <div>
-        <h3>Create A Pin!</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Title
+        <h3>Update your Pin!</h3>
+        {/* <form onSubmit={this.handleSubmit}> */}
+          {/* <label>Title
             <input
               type='text'
               placeholder="Add Your Title"
@@ -55,10 +55,10 @@ class CreatePinForm extends React.Component {
           </label>
           <input type="file" onChange={this.handleFile.bind(this)}/>
           <button type='submit'>Create Pin!</button>
-        </form>
+        </form> */}
       </div>
     );
   }
 }
 
-export default CreatePinForm;
+export default UpdatePinForm;

@@ -26,7 +26,7 @@ export const fetchPins = () => dispatch => {
 }
 
 export const fetchPin = pinId => dispatch => {
-  return PinUtils.fetchPin()
+  return PinUtils.fetchPin(pinId)
     .then(pin => dispatch(receivePin(pin)));
 }
 
