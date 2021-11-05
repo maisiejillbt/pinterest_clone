@@ -1,9 +1,14 @@
+header{
+  position: fixed;
+}
 .nav-bar{
   // padding-top: 30px;
   height: 80px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 
 .dropdown{
