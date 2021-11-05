@@ -26,14 +26,8 @@ class BoardsController < ApplicationController
     end
   end
 
-  def index # going to have to come back to this! 
-    # @boards = if params[:user_id]
-    #             Board.where(user_id: params[:user_id])
-    #           else
-    #             Board.all
-    #           end
+  def index 
     @boards = Board.all
-    render :show
   end
 
   def edit

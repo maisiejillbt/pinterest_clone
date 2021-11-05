@@ -63,6 +63,7 @@
   ### TODO 
     - make update board form ✅
     - start adding photos into seeds file ✅
+    - style login modals (login, signup, edits)
     - make users/userid page (profile)
-    - connect all already connected buttons 
+    - connect all already made buttons 
     - start logged-out landing page 

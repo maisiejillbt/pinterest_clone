@@ -5,6 +5,7 @@ class Pin extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const pin = this.props.pin
     return(
       <div className="pin-container">
