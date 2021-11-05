@@ -51,13 +51,18 @@
 
 # 11/04/21
   ### TODO 
-    - finish update post form 
-    - add photos to 20 pins 
-    - make create board and edit board forms 
-    - start mapping out styling and finish styling PIN
+    - finish update pin form ✅
+    - add photos to 20 pins 1/2 done (I want to add the photos to the seeds file)
+    - make create board and edit board forms (I only made create lol)✅
+    - start mapping out styling and finish styling PIN ✅
 
+- I feel pretty good about progress today, I learned a lot about jbuilder and how it functions. 
+- spent the most time today figuring out what the best way to send the posts up with the boards is 
 
-
-
-# Things 
-
+# 11/05/21 
+  ### TODO 
+    - make update board form 
+    - start adding photos into seeds file 
+    - make users/userid page (profile)
+    - connect all already connected buttons 
+    - start logged-out landing page 

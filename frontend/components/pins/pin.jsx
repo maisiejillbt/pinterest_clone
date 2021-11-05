@@ -9,7 +9,9 @@ class Pin extends React.Component {
     return(
       <div className="pin-container">
         {pin.photoUrl ? 
+        <div>
         <img className="pin-image" src={pin.photoUrl}/> 
+        </div>
         : 
         <div className="image-placeholder">
           <h1>Image goes here</h1>
