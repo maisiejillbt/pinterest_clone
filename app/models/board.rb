@@ -1,5 +1,5 @@
 class Board < ApplicationRecord
-  validates :name, :user_id, :created_at, :public, presence: true
+  validates :name, :user_id, :created_at, presence: true
   validates :public, inclusion: { in: [true, false] }
 
     belongs_to :user,

@@ -16,9 +16,13 @@
 
 @import 'reset.scss';
 @import 'tests.scss';
-@import 'logged-out.scss';
 @import 'main.scss';
+@import 'logged-out.scss';
 @import 'nav-bar.scss';
+@import 'pin.scss';
+@import 'board.scss';
+
+
 
 
 

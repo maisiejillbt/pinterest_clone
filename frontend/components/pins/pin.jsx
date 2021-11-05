@@ -1,5 +1,4 @@
 import React from 'react';
-
 class Pin extends React.Component {
   constructor(props){
     super(props)
@@ -8,9 +7,16 @@ class Pin extends React.Component {
   render() {
     const pin = this.props.pin
     return(
-      <div>
-        {pin.photoUrl ? <img src={pin.photoUrl}/> : <h1>Image goes here</h1>}
-        <h1>{pin.title}</h1>
+      <div className="pin-container">
+        {pin.photoUrl ? 
+        <img className="pin-image" src={pin.photoUrl}/> 
+        : 
+        <div className="image-placeholder">
+          <h1>Image goes here</h1>
+        </div>}
+        <div className="pin-title">
+          <a>{pin.title}</a>
+        </div>
       </div>
     )
   }

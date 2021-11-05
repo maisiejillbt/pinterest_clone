@@ -10,7 +10,6 @@ class CreatePinForm extends React.Component {
       photoFile: null
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log(this.props)
   }
 
   handleSubmit(e) {

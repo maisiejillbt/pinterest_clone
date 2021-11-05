@@ -12,7 +12,8 @@ class Api::PinsController < ApplicationController
   
   def update
     @pin = selected_pin
-    if @pin && @pin.update_attributes(pin_params)
+
+    if @pin && @pin.update_attributes!(pin_params)
       render :show
     elsif !@pin
       render json: ['Could not locate pin'], status: 400

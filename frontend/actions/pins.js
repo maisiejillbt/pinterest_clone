@@ -35,7 +35,7 @@ export const createPin = pin => dispatch => {
     .then(pin => dispatch(receivePin(pin)));
 }
 
-export const updatePin = pin => dispatch => {
+export const updatePin = (pin) => dispatch => {
   return PinUtils.updatePin(pin)
     .then(pin => dispatch(receivePin(pin)));
 }

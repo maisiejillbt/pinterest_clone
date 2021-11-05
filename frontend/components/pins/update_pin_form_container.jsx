@@ -6,6 +6,7 @@ import { updatePin, fetchPin } from '../../actions/pins';
 
 const mapStateToProps = (state, ownProps) => ({ 
   current_user: state.session.current_user,
+  pins: Object.values(state.entities.pins)
 });
 
 const mapDispatchToProps = dispatch => ({
