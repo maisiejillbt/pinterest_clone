@@ -6,13 +6,12 @@ class Board extends React.Component {
     super(props)
   }
 
-
   render() {
     const board = this.props.board
     console.log(board)
     const pins = board.pins.length > 0 ? board.pins.slice(0,3) : null
     return(
-      <div key={board.id} className="board-preview">
+      <div key={board.id} className="board-container">
         <BoardImagePreview pins={pins}/>
         <h1 className="board-name">{board.name}</h1>
         <h1 className="board-pin-count">{board.pins.length} Pins</h1>

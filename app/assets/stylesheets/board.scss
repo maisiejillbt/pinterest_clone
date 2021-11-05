@@ -1,3 +1,29 @@
+
+.board-preview-container {
+  display:flex;
+  justify-content:center; 
+  align-items: center;
+  
+}
+
+.board-grid{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90vw;
+}
+
+
+.board-container{
+  display:flex;
+  justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  margin:0;
+  padding-left: 15px;
+  width: 245px;
+}
+
 .board-image-container{
   display:flex;
   margin-bottom: 10px;

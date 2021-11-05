@@ -12,13 +12,16 @@ class BoardIndex extends React.Component {
 
   render() {
     const boards = this.props.boards 
+    console.log(boards)
     return(
-      <div> 
+      <div className="board-preview-container">
+      <div className="board-grid"> 
         {
           boards.map((board) => (
             <Board board={board.board} key={board.board.id}/>
           ))
         }
+      </div>
       </div>
     )
   }
