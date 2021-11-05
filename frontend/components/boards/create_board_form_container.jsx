@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import CreateBoardForm from './create_board_form';
-import { createBoard } from '../../actions/boards';
+import { createBoard } from '../../actions/boards'; 
 
 
 const mapStateToProps = state => ({ 

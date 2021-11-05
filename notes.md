@@ -61,8 +61,8 @@
 
 # 11/05/21 
   ### TODO 
-    - make update board form 
-    - start adding photos into seeds file 
+    - make update board form ✅
+    - start adding photos into seeds file ✅
     - make users/userid page (profile)
     - connect all already connected buttons 
     - start logged-out landing page 

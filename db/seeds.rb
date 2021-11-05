@@ -20,52 +20,77 @@ for i in 0..25
   User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::TvShows::RuPaul.unique.queen, password: 'password', email: Faker::Internet.unique.email, age: 25 )
 end
 
-Board.create!(created_at: DateTime.now, name:"Home decor Inspo", user_id:1, public:true) 
+Board.create!(created_at: DateTime.now, name:"Home decor Inspo", description:"",user_id:1, public:true) 
 
 pin1 = Pin.create!(created_at: DateTime.now, title:"Plant shelf idea", user_id:20)
-pin1.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg"), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
+pin1.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg"), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
 pin2 = Pin.create!(created_at: DateTime.now, title:"20 Borderline Genius Ways To Spruce Up Your Bedroom", user_id:10)
-pin2.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png"), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
+pin2.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png"), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
 pin3 = Pin.create!(created_at: DateTime.now, title:"Boho Bedroom Decor Ideas", user_id:12)
-pin3.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg"), filename: "22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg")
+pin3.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg"), filename: "22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg")
 pin4 = Pin.create!(created_at: DateTime.now, title:"How To Design A Sustainable & Minimalist Holiday Home", user_id:5)
-pin4.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/How To Design A Sustainable & Minimalist Holiday Home.jpeg"), filename: "How To Design A Sustainable & Minimalist Holiday Home.jpeg")
+pin4.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/How To Design A Sustainable & Minimalist Holiday Home.jpeg"), filename: "How To Design A Sustainable & Minimalist Holiday Home.jpeg")
 pin5 = Pin.create!(created_at: DateTime.now, title:"10 Beautiful Screened in Porch Ideas", user_id:6)
-pin5.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/10 Beautiful Screened in Porch Ideas.png"), filename: "10 Beautiful Screened in Porch Ideas.png")
+pin5.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/10 Beautiful Screened in Porch Ideas.png"), filename: "10 Beautiful Screened in Porch Ideas.png")
 pin6 = Pin.create!(created_at: DateTime.now, title:"The New Neutrals", user_id:8)
-pin6.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg"), filename: "Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg")
+pin6.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg"), filename: "Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg")
 pin7 = Pin.create!(created_at: DateTime.now, title:"How to style bookshelves", user_id:7)
-pin7.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/Built-in Bookshelf Styling.jpeg"), filename: "Built-in Bookshelf Styling.jpeg")
+pin7.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Built-in Bookshelf Styling.jpeg"), filename: "Built-in Bookshelf Styling.jpeg")
 pin8 = Pin.create!(created_at: DateTime.now, title:"How I Decorated My Entryway on a Budget", user_id:1)
-pin8.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/How I Decorated My Entryway on a Budget.jpeg"), filename: "How I Decorated My Entryway on a Budget.jpeg")
+pin8.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/How I Decorated My Entryway on a Budget.jpeg"), filename: "How I Decorated My Entryway on a Budget.jpeg")
 pin9 = Pin.create!(created_at: DateTime.now, title:"Modern Cottage Style Bedroom", user_id:1)
-pin9.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png"), filename: "Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png")
+pin9.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png"), filename: "Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png")
 pin10 = Pin.create!(created_at: DateTime.now, title:"Pantry Organization", user_id:1)
-pin10.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/Pantry cupboard inspiration!.jpeg"), filename: "Pantry cupboard inspiration!.jpeg")
+pin10.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Pantry cupboard inspiration!.jpeg"), filename: "Pantry cupboard inspiration!.jpeg")
 pin11 = Pin.create!(created_at: DateTime.now, title:"Lookbook | Backsplash", user_id:1)
-pin11.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/Lookbook _ Backsplash.png"), filename: "Lookbook _ Backsplash.png")
+pin11.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Lookbook _ Backsplash.png"), filename: "Lookbook _ Backsplash.png")
 pin12 = Pin.create!(created_at: DateTime.now, title:"Room Ideas", user_id:1)
-pin12.image.attach(io: File.open("Users/maisiebruno-tyne/Downloads/60+ Aesthetic Dorm Room Ideas On A Budget.jpeg"), filename: "60+ Aesthetic Dorm Room Ideas On A Budget.jpeg")
+pin12.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/60+ Aesthetic Dorm Room Ideas On A Budget.jpeg"), filename: "60+ Aesthetic Dorm Room Ideas On A Budget.jpeg")
 
 
-Board.create!(created_at: DateTime.now, name:"Dinner Ideas", user_id:3, public:true) # 1,3
-
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Honey Balsamic Glazed Chicken", user_id:9)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Slow Cooker Pot Roast", user_id:10)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"CROCK POT CUBED STEAK & GRAVY", user_id:12)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Stromboli", user_id:13)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Healthy Baked Zucchini Fries with Parmesan Cheese", user_id:1)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Quick Spinach Pasta", user_id:4)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Spanish Rice", user_id:13)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"OVEN BAKED CHICKEN PARMESAN", user_id:3)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Asian Steak Bites and Potatoes", user_id:3)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"BBQ CHICKEN SLIDERS", user_id:3)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"SLOW COOKER HONEY GARLIC CHICKEN AND VEGGIES", user_id:3)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Bang Bang Shrimp Pasta Recipe", user_id:3)
-Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Baked Honey Garlic Chicken Tenders", user_id:3)
+Board.create!(created_at: DateTime.now, name:"Dinner Ideas", description:"", user_id:3, public:true) # 1,3
 
 
-Board.create!(created_at: DateTime.now, name:"Floral Arrangements", user_id:1, public:true) # 1,3,1
+pin13 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Honey Balsamic Glazed Chicken", user_id:9)
+pin13.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Honey Balsamic Chicken _ Evolving Table Recipe.jpeg"), filename: "Honey Balsamic Chicken _ Evolving Table Recipe.jpeg")
+
+pin14 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Slow Cooker Pot Roast", user_id:10)
+pin14.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg"), filename: "Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg")
+
+pin15 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"CROCK POT CUBED STEAK & GRAVY", user_id:12)
+pin15.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Crock Pot Cubed Steak with Gravy.jpeg"), filename: "Crock Pot Cubed Steak with Gravy.jpeg")
+
+pin16 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Stromboli", user_id:13)
+pin16.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/How to Make Homemade Stromboli - Sally's Baking Addiction.png"), filename: "How to Make Homemade Stromboli - Sally's Baking Addiction.png")
+
+pin17 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Healthy Baked Zucchini Fries with Parmesan Cheese", user_id:1)
+pin17.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg"), filename: "Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg")
+
+pin18 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Quick Spinach Pasta", user_id:4)
+pin18.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg"), filename: "Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg")
+
+pin19 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Spanish Rice", user_id:13)
+pin19.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/One Pot Spanish Chicken and Rice.jpeg"), filename: "One Pot Spanish Chicken and Rice.jpeg")
+
+pin20 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"OVEN BAKED CHICKEN PARMESAN", user_id:3)
+pin20.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Baked Parmesan Chicken.jpeg"), filename: "Baked Parmesan Chicken.jpeg")
+
+pin21 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Asian Steak Bites and Potatoes", user_id:3)
+pin21.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg"), filename: "Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg")
+
+pin22 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"BBQ CHICKEN SLIDERS", user_id:3)
+pin22.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg"), filename: "Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg")
+
+pin23 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"SLOW COOKER HONEY GARLIC CHICKEN AND VEGGIES", user_id:3)
+pin23.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png"), filename: "Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png")
+
+pin24 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Bang Bang Shrimp Pasta Recipe", user_id:3)
+pin24.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Bang Bang Shrimp and Pasta.png"), filename: "Bang Bang Shrimp and Pasta.png")
+
+pin25 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Baked Honey Garlic Chicken Tenders", user_id:3)
+pin25.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/Honey Garlic Chicken Tenders {Paleo}.jpeg"), filename: "Honey Garlic Chicken Tenders {Paleo}.jpeg")
+
+Board.create!(description:"", created_at: DateTime.now, name:"Floral Arrangements", user_id:1, public:true) # 1,3,1
 
 Pin.create!(created_at: DateTime.now, title:"San Diego Elopement", user_id:6)
 Pin.create!(created_at: DateTime.now, title:"I LOVE YOU A LATTE", user_id:6)
@@ -83,7 +108,7 @@ Pin.create!(created_at: DateTime.now, title:"Blooming Apricot & Blush Magnolia B
 Pin.create!(created_at: DateTime.now, title:"Private Floral Arranging Class", user_id:1)
 
 
-Board.create!(created_at: DateTime.now, name:"DIY Home Decor", user_id:3, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"DIY Home Decor", user_id:3, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"DIY Sofa Table Build", user_id:12)
 Pin.create!(created_at: DateTime.now, title:"How to make a giant standing mirror for $100", user_id:21)
@@ -99,7 +124,7 @@ Pin.create!(created_at: DateTime.now, title:"DIY Closet Makeover", user_id:3)
 Pin.create!(created_at: DateTime.now, title:"DIY footed bowl", user_id:3)
 
 
-Board.create!(created_at: DateTime.now, name:"Autum Outfits", user_id:3, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Autum Outfits", user_id:3, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"Parisian Chic", user_id:3)
 Pin.create!(created_at: DateTime.now, title:"comfortable fall style", user_id:3)
@@ -114,7 +139,7 @@ Pin.create!(created_at: DateTime.now, title:"The Fall Trends You’re Probably M
 Pin.create!(created_at: DateTime.now, title:"whatemwore on LTK", user_id:9)
 
 
-Board.create!(created_at: DateTime.now, name:"Christmas Decor Ideas", user_id:3, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Christmas Decor Ideas", user_id:3, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"Christmas Tour - Home Bunch", user_id:3)
 Pin.create!(created_at: DateTime.now, title:"Style Scouting: Vol. 24", user_id:3)
@@ -130,7 +155,7 @@ Pin.create!(created_at: DateTime.now, title:"Christmas Decor We Are Drooling Ove
 Pin.create!(created_at: DateTime.now, title:"Christmas Home Tour 2020", user_id:19)
 
 
-Board.create!(created_at: DateTime.now, name:"Engagement Rings", user_id:1, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Engagement Rings", user_id:1, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"Marquise Cut Moissanite", user_id:19)
 Pin.create!(created_at: DateTime.now, title:"Round Pave Engagement Ring", user_id:19)
@@ -148,7 +173,7 @@ Pin.create!(created_at: DateTime.now, title:"Vintage Scroll Pattern Engraved Dia
 Pin.create!(created_at: DateTime.now, title:"Radiant cut engagement ring", user_id:14)
 
 
-Board.create!(created_at: DateTime.now, name:"Green Aesthetic", user_id:7, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Green Aesthetic", user_id:7, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"sage green collage kit", user_id:7)
 Pin.create!(created_at: DateTime.now, title:"Matisse Print Green Leaf", user_id:7)
@@ -166,7 +191,7 @@ Pin.create!(created_at: DateTime.now, title:"green heart wallpaper", user_id:10)
 Pin.create!(created_at: DateTime.now, title:"Flowering Meadow, Dandelion", user_id:9)
 
 
-Board.create!(created_at: DateTime.now, name:"Hairstyles", user_id:1, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Hairstyles", user_id:1, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"Long Butterfly Locs", user_id:9)
 Pin.create!(created_at: DateTime.now, title:"Easy rubber band hairstyle", user_id:9)
@@ -181,7 +206,7 @@ Pin.create!(created_at: DateTime.now, title:"30 Trendy Hairstyles With Bangs You
 Pin.create!(created_at: DateTime.now, title:"EASY BRAIDED PONYTAIL HAIRSTYLE SPRING 2021 🌷", user_id:11)
 
 
-Board.create!(created_at: DateTime.now, name:"Instagram Captions", user_id:7, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Instagram Captions", user_id:7, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"100 Insta Captions For Girls", user_id:7)
 Pin.create!(created_at: DateTime.now, title:"Cool Snapchat Quotes & Captions", user_id:7)
@@ -200,7 +225,7 @@ Pin.create!(created_at: DateTime.now, title:"Instagram Captions", user_id:3)
 
 
 
-Board.create!(created_at: DateTime.now, name:"Kawaii Wallpapers", user_id:7, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Kawaii Wallpapers", user_id:7, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"CUTE", user_id:7)
 Pin.create!(created_at: DateTime.now, title:"| 𝘩 𝘰 𝘮 𝘦 - template!", user_id:7)
@@ -216,7 +241,7 @@ Pin.create!(created_at: DateTime.now, title:"Free Lock Screen Wallpaper by Bymun
 Pin.create!(created_at: DateTime.now, title:"💖✨", user_id:20)
 
 
-Board.create!(created_at: DateTime.now, name:"mEmeS", user_id:7, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"mEmeS", user_id:7, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"Funny relatable!", user_id:2)
 Pin.create!(created_at: DateTime.now, title:"yes <3", user_id:2)
@@ -232,7 +257,7 @@ Pin.create!(created_at: DateTime.now, title:"I can’t this is too funny 😂", 
 Pin.create!(created_at: DateTime.now, title:"I Mean... You Tried..?", user_id:20)
 
 
-Board.create!(created_at: DateTime.now, name:"Nail design inspo", user_id:1, public:true) 
+Board.create!(description:"", created_at: DateTime.now, name:"Nail design inspo", user_id:1, public:true) 
 
 Pin.create!(created_at: DateTime.now, title:"PRETTY & CHIC NAIL TRENDS AND DESIGNS FOR FALL 2021", user_id:8)
 Pin.create!(created_at: DateTime.now, title:"Swirls", user_id:8)

@@ -11,6 +11,7 @@ class Login extends React.Component {
     };
     this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    console.log('login container')
   }
 
   handleInput(type) {
@@ -38,7 +39,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="session-form">
+      <div className="session-form login">
         <h2>Log In!</h2>
         <form>
           <label>Email:

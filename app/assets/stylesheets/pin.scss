@@ -7,10 +7,11 @@
 }
 
 .pin-grid{
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 90vw;
+  align-items:initial;
+  width: 90vw;
   padding-top: 80px;
 
 }
