@@ -7,7 +7,7 @@ class BoardIndex extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchBoards();
+    this.props.fetchUserBoards();
   }
 
   render() {

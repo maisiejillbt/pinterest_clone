@@ -28,8 +28,7 @@ class SignUp extends React.Component {
 
   handleSubmit(e){
     e.preventDefault(); 
-    this.props.createNewUser(this.state)
-      .then(()=>this.props.history.push('/jackblack')) /// this is where we will be sent after submit!
+     /// this is where we will be sent after submit!
   }
 
   render() {

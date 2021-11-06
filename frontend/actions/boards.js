@@ -20,8 +20,8 @@ const removeBoard = boardId => ({
   boardId
 })
 
-export const fetchBoards = () => dispatch => {
-  return BoardApiUtil.fetchBoards()
+export const fetchUserBoards = () => dispatch => {
+  return BoardApiUtil.fetchUserBoards()
     .then(boards => dispatch(receiveBoards(boards)));
 }
 

@@ -59,10 +59,19 @@
 - I feel pretty good about progress today, I learned a lot about jbuilder and how it functions. 
 - spent the most time today figuring out what the best way to send the posts up with the boards is 
 
-# 11/05/21 
+# 11/05/21 / 11/06/21
   ### TODO 
     - make update board form ✅
     - start adding photos into seeds file ✅
+    - finish styling pin ✅
+    - make pin details modal
+    - make board show page 
+
+
+
+
+
+
     - style login modals (login, signup, edits)
     - make users/userid page (profile)
     - connect all already made buttons 

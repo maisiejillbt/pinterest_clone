@@ -8,16 +8,18 @@ class PinIndex extends React.Component {
 
   componentDidMount(){
     this.props.fetchPins();
+    this.props.fetchUserBoards();
   }
 
   render() {
-    const pins = this.props.pins
+    const pins = this.props.pins 
+    const boards = this.props.boards
     return(
-      <div className="board-preview-container"> 
+      <div className="pin-preview-container"> 
         <div className="pin-grid">
         {
           pins.map((pin) => (
-            <Pin pin={pin} key={pin.id}/>
+            <Pin pin={pin} key={pin.id} boards={boards}/>
           ))
         }
         </div>

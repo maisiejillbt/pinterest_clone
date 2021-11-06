@@ -8,7 +8,6 @@ class Board extends React.Component {
 
   render() {
     const board = this.props.board
-    console.log(board)
     const pins = board.pins.length > 0 ? board.pins.slice(0,3) : null
     return(
       <div key={board.id} className="board-container">

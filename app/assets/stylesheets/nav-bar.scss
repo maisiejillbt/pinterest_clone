@@ -2,7 +2,7 @@ header{
   position: fixed;
 }
 .nav-bar{
-  // padding-top: 30px;
+  z-index: 50;
   height: 80px;
   width: 100vw;
   display: flex;

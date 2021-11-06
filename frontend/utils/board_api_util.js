@@ -1,5 +1,5 @@
 
-export const fetchBoards = () => (
+export const fetchUserBoards = () => (
   $.ajax({
     url: `api/boards/`
   })

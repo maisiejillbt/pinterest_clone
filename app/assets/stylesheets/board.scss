@@ -3,7 +3,7 @@
   display:flex;
   justify-content:center; 
   align-items: center;
-  
+  padding-top:80px;
 }
 
 .board-grid{
@@ -47,6 +47,7 @@
 .right-images{
   display:flex; 
   flex-direction: column;
+  
 }
 
 
@@ -62,6 +63,7 @@
   border-top-left-radius: 18px;
   object-fit: cover;
   background-color: lavender;
+  border-right: 1px solid white;
 }
 
 .right-top-board-display-image, .right-bottom-board-display-image{
@@ -85,6 +87,7 @@
 .right-top-board-display-image {
   border-top-right-radius: 18px;
   background-color: lightblue;
+  border-bottom: 1px solid white;
 }
 
 .board-form{
