@@ -1,6 +1,7 @@
 import React from 'react';
 import Pin from './pin'
 
+
 class PinIndex extends React.Component {
   constructor(props){
     super(props)
@@ -13,8 +14,10 @@ class PinIndex extends React.Component {
 
   render() {
     const pins = this.props.pins 
+    console.log(this.props.pins)
     const boards = this.props.boards
-    return(
+    if (pins.length > 1) {
+      return(
       <div className="pin-preview-container"> 
         <div className="pin-grid">
         {
@@ -24,7 +27,10 @@ class PinIndex extends React.Component {
         }
         </div>
       </div>
-    )
+    )}else{ 
+      return null 
+    }
+
 
   }
 }

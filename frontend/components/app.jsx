@@ -8,6 +8,9 @@ import CreateBoardForm from './boards/create_board_form_container.jsx'
 import UpdateBoardForm from './boards/update_board_form_container.jsx'
 import UpdatePinForm from './pins/update_pin_form_container.jsx'
 import PinContainer from './pins/pins_container.jsx'
+
+import PinShowContainer from './pins/pin_show_container.jsx'
+
 import BoardContainer from './boards/board_index_container.jsx'
 
 import NavBarContainer from './nav_bar/nav_bar_container.jsx'
@@ -23,6 +26,7 @@ export default () => (
     <Route path='/boards/:boardId/edit' component={UpdateBoardForm}/>
     <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
     <Route exact path='/pins' component={PinContainer}/>
+    <Route exact path='/pins/:pinId' component={PinShowContainer}/>
     <Route exact path='/boards' component={BoardContainer}/>
     <Route path="/jackblack" component={JackBlack}/>   
     <AuthRoute path="/signup" component={SignupContainer}/> 

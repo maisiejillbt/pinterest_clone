@@ -28,6 +28,7 @@ class Api::BoardsController < ApplicationController
   def index
     @boards = Board.all.select{|board| board.user_id == current_user.id}
   end
+
   
   def destroy
     @board = selected_board
