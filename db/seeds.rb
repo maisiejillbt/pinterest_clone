@@ -312,7 +312,7 @@ saves = [[152, 165, 13],[140, 151, 12],[128, 139, 11],[114, 127,10],[103, 113,9]
 
 saves.each do |board|
   (board[0]...board[1]).each do |pin_id|
-    Save.create!(created_at: DateTime.now, board_id: eval("board#{board[2]}"), pin_id: eval("pin#{pin_id}"))
+    Save.create!(created_at: DateTime.now, board_id: eval("board#{board[2]}").id, pin_id: eval("pin#{pin_id}").id)
   end
 end
 
