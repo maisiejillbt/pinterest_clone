@@ -59,20 +59,26 @@
 - I feel pretty good about progress today, I learned a lot about jbuilder and how it functions. 
 - spent the most time today figuring out what the best way to send the posts up with the boards is 
 
-# 11/05/21 / 11/06/21
+# 11/05/21 / 11/06/21 / 11/07/21
+  
   ### TODO 
     - make update board form ✅
     - start adding photos into seeds file ✅
     - finish styling pin ✅
-    - make pin show page
-    - make board show page 
+    - make pin show page ✅
+    - make board show page ✅
+    - make dropdown menus for board selection ✅
+    - completely reshape your state shape 😅🤪 ✅
 
 
 
 
 
-
-    - style login modals (login, signup, edits)
-    - make users/userid page (profile)
-    - connect all already made buttons 
+# 11/08/21
+  ### TODO
+    - push to heroku 
+    - style login modals (login, signup)
+    - make users/userid page (profile) (mostly complete)
+    - implement save to baord logic
+    - connect all already made buttons/elements
     - start logged-out landing page 

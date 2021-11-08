@@ -31,7 +31,7 @@ const NavBar = ({ current_user, logoutUser }) => {
       <div className="RightHeader">
         <img className="icon" src={window.bell}/>
         <img className="icon" src={window.message_bubble}/>
-        <img id="avatar" className="icon" src={current_user.avatar}/>
+        <Link to="/boards"><img id="avatar" className="icon" src={current_user.avatar}/></Link>
         <img className="chevron" src={window.chevron} onClick={() => hide()}/>
         <div id="dropdown" className="dropdown hide">
           <h1>Settings</h1>
@@ -51,7 +51,7 @@ const NavBar = ({ current_user, logoutUser }) => {
   return (
     <header className="nav-bar">
       <div className="LeftHeader">
-      <Link to="/"><img className="MainLogo" src={window.main_logo} alt="main-logo"/></Link>
+      <Link to="/pins"><img className="MainLogo" src={window.main_logo} alt="main-logo"/></Link>
       </div>
       {display()}
     </header>

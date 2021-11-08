@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BoardDropdownHeader from '../elements/board_dropdown_header'
 
 class Pin extends React.Component {
@@ -18,10 +19,12 @@ class Pin extends React.Component {
     const firstBoardName = boards[0].name
     const dropdownText = (firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
     return(
+
       <div className="pin-container">
         {pin.photoUrl ? 
         <div className="pin-image-container">
-          <img className="pin-image" src={pin.photoUrl}/>
+          <Link to={`/pins/${pin.id}`}><img className="pin-image" src={pin.photoUrl}/></Link>
+          
           <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} />
           <button className="save-button">Save</button>
 
