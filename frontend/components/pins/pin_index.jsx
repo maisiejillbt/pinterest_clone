@@ -15,7 +15,7 @@ class PinIndex extends React.Component {
   render() {
     const pins = this.props.pins 
     const boards = this.props.boards
-    if (pins.length > 1) {
+    if (pins.length > 1 && boards.length > 0) {
       return(
       <div className="pin-index">
         <div className="pin-preview-container"> 
