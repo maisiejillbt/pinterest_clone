@@ -34,7 +34,7 @@ class CreatePinForm extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="create-pin">
         <h3>Create A Pin!</h3>
         <form onSubmit={this.handleSubmit}>
           <label>Title
