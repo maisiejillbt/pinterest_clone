@@ -16,6 +16,7 @@ class PinShow extends React.Component{
     const pin = this.props.pins[this.pinId]
     if (this.props.boards[0]){
       const pinOwner = pin.user
+      console.log(pinOwner)
       return (
         <div className="pin-show">
           <div className="pin-modal">
@@ -38,7 +39,9 @@ class PinShow extends React.Component{
               <div className="pin-owner">
                 <div className="left">
                   <img src={window.avatar_blue}/>
-                  <h1 className="name">{pinOwner.username}</h1>
+                  {
+                    pinOwner ? <h1 className="name">{pinOwner.username}</h1> : null
+                  }
                 </div>
                 <button className="follow-button">Follow</button>
               </div>
