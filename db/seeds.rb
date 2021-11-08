@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Pin.destroy_all
+Board.destroy_all
+Save.destroy_all
+
 
 require 'faker' 
 require 'date'
