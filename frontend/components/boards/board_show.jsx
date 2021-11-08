@@ -25,7 +25,7 @@ class BoardShow extends React.Component {
               <div className="overlay">
                 <img className="more-info" src={window.more_info}/>
                 <div className="board-show-dropdown">
-
+                
                 </div>
               </div>
               
