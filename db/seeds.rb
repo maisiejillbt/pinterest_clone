@@ -56,7 +56,7 @@ user26 = User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::
 Board.create!(created_at: DateTime.now, name:"Home decor Inspo", description:"",user_id:user1.id, public:true) 
 
 pin1 = Pin.create!(created_at: DateTime.now, title:"Plant shelf idea", user_id:user20.id)
-pin1.photo.attach(io: File.open("../../public/images/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg"), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
+pin1.photo.attach(io: File.open(File.expand_path("../../public/images/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg", __FILE__)), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
 pin2 = Pin.create!(created_at: DateTime.now, title:"20 Borderline Genius Ways To Spruce Up Your Bedroom", user_id:user10.id)
 pin2.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png"), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
 pin3 = Pin.create!(created_at: DateTime.now, title:"Boho Bedroom Decor Ideas", user_id:user12.id)
@@ -193,17 +193,17 @@ Board.create!(description:"", created_at: DateTime.now, name:"Engagement Rings",
 Pin.create!(created_at: DateTime.now, title:"Marquise Cut Moissanite", user_id:user19.id)
 Pin.create!(created_at: DateTime.now, title:"Round Pave Engagement Ring", user_id:user19.id)
 Pin.create!(created_at: DateTime.now, title:"Luxe Elodie Diamond", user_id:user19.id)
-Pin.create!(created_at: DateTime.now, title:"1 Carat Oval Hidden Halo Style", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"Anne Engagement Ring", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"Twisted Band 0.8 carat Lab Diamond ", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"Oval Green Blue Sapphire", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"WHITE RADIANT HALO PAVE DIAMOND RING", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"Brilliant Earth Viviana Oval Diamond Engagement Ring", user_id:14)
-Pin.create!(created_at: DateTime.now, title:"Juno Ring with White", user_id:14)
-Pin.create!(created_at: DateTime.now, title:"Vintage Round Engagement Ring Twisted Band", user_id:14)
-Pin.create!(created_at: DateTime.now, title:"2.20 ct Round Brilliant Cut", user_id:14)
-Pin.create!(created_at: DateTime.now, title:"Vintage Scroll Pattern Engraved Diamond Engagement Ring", user_id:22)
-Pin.create!(created_at: DateTime.now, title:"Radiant cut engagement ring", user_id:14)
+Pin.create!(created_at: DateTime.now, title:"1 Carat Oval Hidden Halo Style", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"Anne Engagement Ring", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"Twisted Band 0.8 carat Lab Diamond ", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"Oval Green Blue Sapphire", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"WHITE RADIANT HALO PAVE DIAMOND RING", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"Brilliant Earth Viviana Oval Diamond Engagement Ring", user_id:user14.id)
+Pin.create!(created_at: DateTime.now, title:"Juno Ring with White", user_id:user14.id)
+Pin.create!(created_at: DateTime.now, title:"Vintage Round Engagement Ring Twisted Band", user_id:user14.id)
+Pin.create!(created_at: DateTime.now, title:"2.20 ct Round Brilliant Cut", user_id:user14.id)
+Pin.create!(created_at: DateTime.now, title:"Vintage Scroll Pattern Engraved Diamond Engagement Ring", user_id:user22.id)
+Pin.create!(created_at: DateTime.now, title:"Radiant cut engagement ring", user_id:user14.id)
 
 
 Board.create!(description:"", created_at: DateTime.now, name:"Green Aesthetic", user_id:user7.id, public:true) 
@@ -236,7 +236,7 @@ Pin.create!(created_at: DateTime.now, title:"Back To School Hairstyles For Teens
 Pin.create!(created_at: DateTime.now, title:"Short Curly Hairstyles: Loose Double Buns", user_id:user1.id)
 Pin.create!(created_at: DateTime.now, title:"Easy Bubble Braid Hairstyle", user_id:user12.id)
 Pin.create!(created_at: DateTime.now, title:"30 Trendy Hairstyles With Bangs You Will Want To Try", user_id:user12.id)
-Pin.create!(created_at: DateTime.now, title:"EASY BRAIDED PONYTAIL HAIRSTYLE SPRING 2021 🌷", user_id:11)
+Pin.create!(created_at: DateTime.now, title:"EASY BRAIDED PONYTAIL HAIRSTYLE SPRING 2021 🌷", user_id:user11.id)
 
 
 Board.create!(description:"", created_at: DateTime.now, name:"Instagram Captions", user_id:user7.id, public:true) 
@@ -308,13 +308,13 @@ Pin.create!(created_at: DateTime.now, title:"30+ Summer Floral Nail Designs", us
 Pin.create!(created_at: DateTime.now, title:"Black Nail Designs: Matte + Marbled", user_id:user1.id)
 
 
-saves = [[151, 165,13],[140, 151,12],[128, 139,11],[114, 127,10],[103, 113,9],[89, 102,8],[75, 88,7], [63, 74,6],[52, 62,5 ],[40, 51, 4],[26, 39, 3],[12, 25, 2],[1,12,1]]
+# saves = [[151, 165,13],[140, 151,12],[128, 139,11],[114, 127,10],[103, 113,9],[89, 102,8],[75, 88,7], [63, 74,6],[52, 62,5 ],[40, 51, 4],[26, 39, 3],[12, 25, 2],[1,12,1]]
 
 
-saves.each do |board|
-  (board[0]...board[1]).each do |pin_id|
-    Save.create!(created_at: DateTime.now, board_id:board[2], pin_id: pin_id)
-  end
-end
+# saves.each do |board|
+#   (board[0]...board[1]).each do |pin_id|
+#     Save.create!(created_at: DateTime.now, board_id:board[2], pin_id: pin_id)
+#   end
+# end
 
  
