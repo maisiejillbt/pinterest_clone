@@ -14,11 +14,11 @@ class Pin extends React.Component {
 // }
 
   render() {
-    debugger
     const pin = this.props.pin
     const boards = this.props.boards
     const firstBoardName = boards[0].name
     const dropdownText = (firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
+    
     return(
 
       <div className="pin-container">

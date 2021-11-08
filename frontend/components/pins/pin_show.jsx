@@ -14,7 +14,7 @@ class PinShow extends React.Component{
 
   render(){
     const pin = this.props.pins[this.pinId]
-    if (this.props.boards[0]){
+    if (this.props.boards[0] && pin ){
       const pinOwner = pin.user
       console.log(pinOwner)
       return (
