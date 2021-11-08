@@ -14,6 +14,7 @@ class Pin extends React.Component {
 // }
 
   render() {
+    debugger
     const pin = this.props.pin
     const boards = this.props.boards
     const firstBoardName = boards[0].name
