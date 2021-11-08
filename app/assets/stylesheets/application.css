@@ -14,17 +14,6 @@
  *= require_self
  */
 
-@import 'base/reset.scss';
-@import 'base/main.scss';
-@import 'base/tests.scss';
-@import 'base/board-dropdown.scss';
-@import 'landing/logged-out.scss';
-@import 'nav-bar/nav-bar.scss';
-@import 'pins/pin-show.scss';
-@import 'pins/pin.scss';
-@import 'boards/board-show.scss';
-@import 'boards/board-index.scss';
-@import 'session/login.scss';
 
 
 
