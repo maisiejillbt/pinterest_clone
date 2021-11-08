@@ -14,7 +14,7 @@
  *= require_self
  */
 
-/* @import 'base/reset.scss'; */
+@import 'base/reset.scss';
 @import 'base/main.scss';
 @import 'base/tests.scss';
 @import 'base/board-dropdown.scss';
