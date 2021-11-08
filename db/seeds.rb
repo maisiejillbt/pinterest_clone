@@ -100,28 +100,28 @@ pin17 = Pin.create!(created_at: DateTime.now, description: Faker::Food.descripti
 pin17.photo.attach(io: File.open(File.expand_path("../../public/images/Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg", __FILE__)), filename: "Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg")
 
 pin18 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Quick Spinach Pasta", user_id:user4.id)
-pin18.photo.attach(io: File.open(File.expand_path("../../public/images/Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg", __FILE__), filename: "Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg")
+pin18.photo.attach(io: File.open(File.expand_path("../../public/images/Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg", __FILE__)), filename: "Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg")
 
 pin19 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Spanish Rice", user_id:user13.id)
-pin19.photo.attach(io: File.open(File.expand_path("../../public/images/One Pot Spanish Chicken and Rice.jpeg", __FILE__), filename: "One Pot Spanish Chicken and Rice.jpeg")
+pin19.photo.attach(io: File.open(File.expand_path("../../public/images/One Pot Spanish Chicken and Rice.jpeg", __FILE__)), filename: "One Pot Spanish Chicken and Rice.jpeg")
 
 pin20 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"OVEN BAKED CHICKEN PARMESAN", user_id:user3.id)
-pin20.photo.attach(io: File.open(File.expand_path("../../public/images/Baked Parmesan Chicken.jpeg", __FILE__), filename: "Baked Parmesan Chicken.jpeg")
+pin20.photo.attach(io: File.open(File.expand_path("../../public/images/Baked Parmesan Chicken.jpeg", __FILE__)), filename: "Baked Parmesan Chicken.jpeg")
 
 pin21 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Asian Steak Bites and Potatoes", user_id:user3.id)
-pin21.photo.attach(io: File.open(File.expand_path("../../public/images/Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg", __FILE__), filename: "Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg")
+pin21.photo.attach(io: File.open(File.expand_path("../../public/images/Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg", __FILE__)), filename: "Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg")
 
 pin22 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"BBQ CHICKEN SLIDERS", user_id:user3.id)
-pin22.photo.attach(io: File.open(File.expand_path("../../public/images/Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg", __FILE__), filename: "Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg")
+pin22.photo.attach(io: File.open(File.expand_path("../../public/images/Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg", __FILE__)), filename: "Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg")
 
 pin23 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"SLOW COOKER HONEY GARLIC CHICKEN AND VEGGIES", user_id:user3.id)
-pin23.photo.attach(io: File.open(File.expand_path("../../public/images/Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png", __FILE__), filename: "Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png")
+pin23.photo.attach(io: File.open(File.expand_path("../../public/images/Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png", __FILE__)), filename: "Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png")
 
 pin24 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Bang Bang Shrimp Pasta Recipe", user_id:user3.id)
-pin24.photo.attach(io: File.open(File.expand_path("../../public/images/Bang Bang Shrimp and Pasta.png", __FILE__), filename: "Bang Bang Shrimp and Pasta.png")
+pin24.photo.attach(io: File.open(File.expand_path("../../public/images/Bang Bang Shrimp and Pasta.png", __FILE__)), filename: "Bang Bang Shrimp and Pasta.png")
 
 pin25 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Baked Honey Garlic Chicken Tenders", user_id:user3.id)
-pin25.photo.attach(io: File.open(File.expand_path("../../public/images/Honey Garlic Chicken Tenders {Paleo}.jpeg", __FILE__), filename: "Honey Garlic Chicken Tenders {Paleo}.jpeg")
+pin25.photo.attach(io: File.open(File.expand_path("../../public/images/Honey Garlic Chicken Tenders {Paleo}.jpeg", __FILE__)), filename: "Honey Garlic Chicken Tenders {Paleo}.jpeg")
 
 Board.create!(description:"", created_at: DateTime.now, name:"Floral Arrangements", user_id:user1.id, public:true) # 1,3,1
 
