@@ -25,7 +25,7 @@ class PinShow extends React.Component{
             <div className="pin-detail">
               <div>
                 <div className="top">
-                  < BoardDropdownHeader userBoards={this.props.boards} color={"black"} />
+                  < BoardDropdownHeader userBoards={this.props.boards} pin={pin} color={"black"} />
                   <button className="save-button">Save</button>
                 </div>
 

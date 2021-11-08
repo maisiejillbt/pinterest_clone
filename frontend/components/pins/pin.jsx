@@ -22,7 +22,7 @@ class Pin extends React.Component {
         {pin.photoUrl ? 
         <div className="pin-image-container">
           <img className="pin-image" src={pin.photoUrl}/>
-          <BoardDropdownHeader userBoards={boards} color={"white"} />
+          <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} />
           <button className="save-button">Save</button>
 
         </div>
