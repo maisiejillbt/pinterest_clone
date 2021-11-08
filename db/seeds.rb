@@ -28,7 +28,7 @@ end
 Board.create!(created_at: DateTime.now, name:"Home decor Inspo", description:"",user_id:1, public:true) 
 
 pin1 = Pin.create!(created_at: DateTime.now, title:"Plant shelf idea", user_id:20)
-pin1.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg"), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
+pin1.photo.attach(io: File.open("../../public/images/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg"), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
 pin2 = Pin.create!(created_at: DateTime.now, title:"20 Borderline Genius Ways To Spruce Up Your Bedroom", user_id:10)
 pin2.photo.attach(io: File.open("/Users/maisiebruno-tyne/Downloads/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png"), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
 pin3 = Pin.create!(created_at: DateTime.now, title:"Boho Bedroom Decor Ideas", user_id:12)
