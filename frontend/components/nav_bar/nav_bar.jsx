@@ -24,13 +24,14 @@ const NavBar = ({ current_user, logoutUser }) => {
   }
 
   const display = () => {
-    if (current_user) { 
+    if (current_user) {
       assignAvatar();
+
       return (
       <div className="RightHeader">
         <img className="icon" src={window.bell}/>
         <img className="icon" src={window.message_bubble}/>
-        <img id="avatar" src={current_user.avatar}/>
+        <img id="avatar" className="icon" src={current_user.avatar}/>
         <img className="chevron" src={window.chevron} onClick={() => hide()}/>
         <div id="dropdown" className="dropdown hide">
           <h1>Settings</h1>

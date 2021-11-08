@@ -1,5 +1,5 @@
 import React from 'react';
-import Board from './board'
+import BoardPreview from './board_preview'
 
 class BoardIndex extends React.Component {
   constructor(props){
@@ -12,17 +12,17 @@ class BoardIndex extends React.Component {
 
   render() {
     const boards = this.props.boards 
-    return(
-      <div className="board-preview-container">
-      <div className="board-grid"> 
-        {
-          boards.map((board) => (
-            <Board board={board.board} key={board.board.id}/>
-          ))
-        }
-      </div>
-      </div>
-    )
+      return(
+          <div className="board-preview-container">
+            <div className="board-grid">
+              {
+                boards.map((board) => (
+                  <BoardPreview board={board} key={board.id}/>
+                ))
+              }
+            </div>
+          </div>
+        )
   }
 }
 

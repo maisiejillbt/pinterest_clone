@@ -10,10 +10,10 @@ const BoardsReducer = (oldState = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_BOARDS:
-      return action.boards
+      const newState = {...nextState, ...action.boards}
+      return newState
     case RECEIVE_BOARD:
-       nextState[action.board.id] = action.board 
-      return nextState;
+      return {...action.board, ...nextState};
     case REMOVE_BOARD:
       delete nextState[action.boardId]
       return nextState;

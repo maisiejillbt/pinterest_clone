@@ -1,4 +1,5 @@
 import React from 'react';
+import BoardDropdownHeader from '../elements/board_dropdown_header';
 
 class PinShow extends React.Component{
   constructor(props){
@@ -12,22 +13,36 @@ class PinShow extends React.Component{
   }
 
   render(){
-    console.log(this.props)
-
     const pin = this.props.pins[this.pinId]
-    if (this.props.pins[this.pinId]){
+    if (this.props.boards[0]){
       const pinOwner = pin.user
       return (
-        <div className="pin-modal-conatiner">
+        <div className="pin-show">
           <div className="pin-modal">
-            <img className="pin-detail-photo" src={pin.photoUrl}/>
-            <div>
-              <h1>{pin.title}</h1>
-              {
-                pin.details ? <h1>{pin.details}</h1> : null
-              }
-               <h1>{pinOwner.username}</h1>
-               <button>Follow</button>
+            <div className="pin-photo-container">
+              <img className="photo" src={pin.photoUrl}/>
+            </div>
+            <div className="pin-detail">
+              <div>
+                <div className="top">
+                  < BoardDropdownHeader userBoards={this.props.boards} color={"black"} />
+                  <button className="save-button">Save</button>
+                </div>
+
+                <h1 className="title">{pin.title}</h1>
+                {
+                  pin.details ? <h1>{pin.details}</h1> : null
+                }
+              </div>
+
+              <div className="pin-owner">
+                <div className="left">
+                  <img src={window.avatar_blue}/>
+                  <h1 className="name">{pinOwner.username}</h1>
+                </div>
+                <button className="follow-button">Follow</button>
+              </div>
+
             </div>
           </div>
         </div>

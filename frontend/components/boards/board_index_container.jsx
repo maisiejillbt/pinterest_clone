@@ -7,7 +7,6 @@ import BoardIndex from './board_index';
 
 const mapStateToProps = (state, ownProps) => ({
   boards: Object.values(state.entities.boards),
-  photos: state.entities.boards.photos,
   ownProps: ownProps
 });
 

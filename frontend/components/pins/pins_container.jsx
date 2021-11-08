@@ -7,8 +7,8 @@ import { fetchUser } from '../../actions/users';
 import PinIndex from './pin_index';
 
 const mapStateToProps = state => ({
-  pins: state.entities.pins,
-  boards: state.entities.boards,
+  pins: Object.values(state.entities.pins),
+  boards: Object.values(state.entities.boards),
   users: state.entities.users
 });
 

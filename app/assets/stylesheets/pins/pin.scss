@@ -1,5 +1,9 @@
 $pintrest-red: #E40B2C;
 
+.pin-index{
+  padding-top: 80px;
+}
+
 .pin-preview-container {
   display:flex;
   justify-content:center; 
@@ -12,8 +16,6 @@ $pintrest-red: #E40B2C;
   flex-wrap: wrap;
   justify-content: center;
   align-items:initial;
-  width: 90vw;
-  padding-top: 80px;
 }
 
 .pin-container{
@@ -26,17 +28,12 @@ $pintrest-red: #E40B2C;
   padding-bottom: 8px;
 }
 
-// .pin-image-container{
-//   display:none;
-// }
-
 .pin-image-container:hover{
   position: relative;
   display:flex;
   flex-direction: column;
   background-color: rgba(0,0,0,0.3);
   border-radius: 18px;
-  // margin-bottom:3px;
 }
 
 
@@ -47,12 +44,7 @@ $pintrest-red: #E40B2C;
   z-index:-1;
 }
 
-.pin-dropdown{
-  display:none;
-}
-
-
-.pin-image-container:hover .pin-dropdown{
+.pin-image-container:hover .board-dropdown-header{
   display:flex;
   justify-content: flex-start;
   position: absolute;
@@ -60,11 +52,11 @@ $pintrest-red: #E40B2C;
   margin-left: 15px;
 }
 
-.pin-dropdown-text{
+.pin-image-container .board-dropdown-header-text{
   display:none;
 }
 
-.pin-image-container:hover .pin-dropdown-text{
+.pin-image-container:hover .board-dropdown-header-text{
   display: block;
   margin: 0; 
   padding:0;
@@ -73,10 +65,10 @@ $pintrest-red: #E40B2C;
   font-size: 16px;
 }
 
-.pin-chevron{
+.pin-image-container .board-chevron{
   display:none;
 }
-.pin-image-container:hover .pin-chevron{
+.pin-image-container:hover .board-chevron{
   display: block; 
   height:15px;
   width:15px;
@@ -106,9 +98,15 @@ $pintrest-red: #E40B2C;
   display:flex;
 }
 
-.save-button{
+.pin-image-container > .save-button{
   display:none;
+  z-index:20;
 }
+
+.pin-image-container:hover > .save-button:hover{
+  background-color: #AB0D21;
+}
+
 .pin-image-container:hover > .save-button{
   display:block;
   position: absolute;

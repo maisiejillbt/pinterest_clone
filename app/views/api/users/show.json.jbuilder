@@ -1,2 +1,4 @@
-json.extract! @user, :username, :id, :email, :name, :bio, :pronouns
-# json.photoUrls @user.photos.map { |file| url_for(file) }
+json.extract! @user, :username, :id, :name, :email, :bio, :pronouns
+if @user.photo.attached?
+  json.photoUrl url_for(@user.photo)
+end

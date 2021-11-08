@@ -11,7 +11,6 @@ class Login extends React.Component {
     };
     this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log('login container')
   }
 
   handleInput(type) {

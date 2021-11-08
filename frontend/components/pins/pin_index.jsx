@@ -14,17 +14,18 @@ class PinIndex extends React.Component {
 
   render() {
     const pins = this.props.pins 
-    console.log(this.props.pins)
     const boards = this.props.boards
     if (pins.length > 1) {
       return(
-      <div className="pin-preview-container"> 
-        <div className="pin-grid">
-        {
-          pins.map((pin) => (
-            <Pin pin={pin} key={pin.id} boards={boards}/>
-          ))
-        }
+      <div className="pin-index">
+        <div className="pin-preview-container"> 
+          <div className="pin-grid">
+          {
+            pins.map((pin) => (
+              <Pin pin={pin} key={pin.id} boards={boards}/>
+            ))
+          }
+          </div>
         </div>
       </div>
     )}else{ 

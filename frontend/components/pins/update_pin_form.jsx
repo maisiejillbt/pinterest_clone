@@ -20,7 +20,6 @@ class UpdatePinForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props)
     const formData = new FormData();
     formData.append('pin[title]', this.state.title);
     formData.append('pin[description]', this.state.description);
@@ -43,7 +42,6 @@ class UpdatePinForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.photoFile)
 
     if (this.state.title) {
 

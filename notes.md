@@ -64,7 +64,7 @@
     - make update board form ✅
     - start adding photos into seeds file ✅
     - finish styling pin ✅
-    - make pin details modal
+    - make pin show page
     - make board show page 
 
 

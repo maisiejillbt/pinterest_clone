@@ -1,0 +1,44 @@
+.pin-detail .board-dropdown-header{
+  display: flex;
+  color:black;
+  font-weight: 600; 
+  position: relative;
+  width: 150px;
+}
+
+.board-dropdown-header {
+  align-items: center;
+}
+
+.pin-detail .board-chevron{
+  width:12px; 
+}
+
+.board-dropdown{
+  position: absolute;
+  width: 350px;
+  display:flex; 
+  flex-direction: column;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.board-image{
+  height: 50px;
+  width: 50px; 
+  border-radius:10px; 
+  overflow: hidden;
+  background-color: lightsalmon;
+}
+
+.dropdown-item{
+  display: flex;
+
+}
+
+.dropdown-item > .save-button{
+  height: 40px; 
+  width: 60px;
+
+  
+}

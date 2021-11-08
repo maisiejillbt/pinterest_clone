@@ -6,7 +6,7 @@ import PinShow from './pin_show';
 
 const mapStateToProps = state => ({
   pins: state.entities.pins,
-  boards: state.entities.boards
+  boards: Object.values(state.entities.boards)
 });
 
 const mapDispatchToProps = dispatch => ({

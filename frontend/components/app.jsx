@@ -12,6 +12,8 @@ import PinContainer from './pins/pins_container.jsx'
 import PinShowContainer from './pins/pin_show_container.jsx'
 
 import BoardContainer from './boards/board_index_container.jsx'
+import BoardShowContainer from './boards/board_show_container.jsx'
+
 
 import NavBarContainer from './nav_bar/nav_bar_container.jsx'
 import { AuthRoute } from '../utils/routes_utils'
@@ -27,7 +29,12 @@ export default () => (
     <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
     <Route exact path='/pins' component={PinContainer}/>
     <Route exact path='/pins/:pinId' component={PinShowContainer}/>
+    
     <Route exact path='/boards' component={BoardContainer}/>
+    <Route exact path='/boards/:boardId' component={BoardShowContainer}/>
+
+
+
     <Route path="/jackblack" component={JackBlack}/>   
     <AuthRoute path="/signup" component={SignupContainer}/> 
   </div>
