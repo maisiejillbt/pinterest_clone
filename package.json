@@ -28,7 +28,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "start": "webpack -w --mode=production"
   },
   "engines": {
     "node": "12.5.0",
