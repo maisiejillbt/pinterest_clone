@@ -15,7 +15,7 @@ const NavBar = ({ current_user, logoutUser }) => {
   }
 
   const hide = () => {
-    const dropdown = document.getElementById('dropdown');
+    const dropdown = document.getElementById('nav-dropdown');
     if(dropdown.classList.contains("hide")){
       dropdown.classList.remove("hide");
     }else{
@@ -32,7 +32,7 @@ const NavBar = ({ current_user, logoutUser }) => {
         <img className="icon" src={window.message_bubble}/>
         <Link to="/boards"><img id="avatar" className="icon" src={current_user.avatar}/></Link>
         <img className="chevron" src={window.chevron} onClick={() => hide()}/>
-        <div id="dropdown" className="dropdown hide">
+        <div id="nav-dropdown" className="dropdown hide">
           <h1>Settings</h1>
           <button className="dd-button" onClick={logoutUser}>Logout</button>
         </div>

@@ -19,7 +19,7 @@ current_datetime = DateTime.now
 puts Faker::TvShows::RuPaul.queen 
 puts current_datetime
 
-user1 = User.create!(username: 'demo', password: 'password', name:'Dr James Barry' email:'demo@demo.com', age: 25)
+user1 = User.create!(username: 'demo', password: 'password', name:'Dr. James Barry', email:'demo@demo.com', age: 25)
 
 # for i in 0..25
 #   User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::TvShows::RuPaul.unique.queen, password: 'password', email: Faker::Internet.unique.email, age: 25 )
