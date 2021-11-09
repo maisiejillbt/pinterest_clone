@@ -17,10 +17,10 @@ $pintrest-red: #E40B2C;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 480px; 
-  height: 85%;
+  width: 440px; 
+  height: 100%;
   background-color: white;
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: 0 0 20px grey;
 }
 
@@ -37,6 +37,7 @@ $pintrest-red: #E40B2C;
   color: #303030;
   text-align: center;
   padding-bottom: 10px;
+  letter-spacing: -1px;
 }
 
 .signup h3 {
