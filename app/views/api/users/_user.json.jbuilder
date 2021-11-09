@@ -1,5 +1,6 @@
 json.set! user.id do 
   json.username user.username 
+  json.name user.name 
   json.bio user.bio 
   json.pronouns user.pronouns
   json.boards user.boards do |board|

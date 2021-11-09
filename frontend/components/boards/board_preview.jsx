@@ -8,8 +8,6 @@ class BoardPreview extends React.Component {
   }
 
   render() {
-    console.log(this.props.board)
-
     const board = this.props.board
     const pins = board.pins.length > 0 ? board.pins.slice(0,3) : null
     return(

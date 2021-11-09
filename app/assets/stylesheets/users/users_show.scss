@@ -1,0 +1,17 @@
+.profile-container{
+  padding-top: 90px;
+}
+
+.user-info{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container > img{
+  object-fit: cover;
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+}
