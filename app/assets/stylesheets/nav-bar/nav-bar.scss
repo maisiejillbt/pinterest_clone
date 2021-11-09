@@ -1,3 +1,5 @@
+$pintrest-red: #E40B2C;
+
 header{
   position: fixed;
 }
@@ -62,4 +64,42 @@ header{
 
 .hide{
   display:none;
+}
+
+.signup-button, .login-button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width:65px;
+  border: none;
+  border-radius: 24px;
+}
+
+.login-button h1 {
+  color: white; 
+
+  font-size:14px;
+  font-weight:600;
+  padding:0;
+}
+
+.login-button{
+  background-color: $pintrest-red;
+  margin-right:15px; 
+}
+
+.signup-button h1{
+  text-decoration-color: white;
+  color: black; 
+  text-decoration: none;
+  font-size:14px;
+  font-weight:600;
+  padding:0;
+}
+
+.signup-button{
+  background-color: #EAEAEA;  
+  width:75px;
+  margin-right:25px;
 }
