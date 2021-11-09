@@ -12,4 +12,4 @@ json.set! board.id do
     json.created_at pin.created_at
     json.photoUrl pin.photo.attached? ? url_for(pin.photo) : nil
   end
-end
+end 

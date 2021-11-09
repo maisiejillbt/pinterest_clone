@@ -53,7 +53,7 @@
 
 .image-display{
   display: grid;
-  grid-template-columns: 215px 15px 215px 15px 215px 15px 215px 15px 215px 15px 215px 15px 215px;
+  grid-template-columns: 236px 15px 236px 15px 236px 15px 236px 15px 236px 15px 236px 15px 236px;
   grid-template-areas:
     "a1 a2 b1 b2 c1 c2 d1 d2 e1 e2 f1 f2 g1";
   position: absolute;
@@ -72,7 +72,7 @@
 }
 
 .image-container > img{
-  max-width:215px;
+  max-width:236px;
   max-height:100%;
   border-radius: 18px;
 }

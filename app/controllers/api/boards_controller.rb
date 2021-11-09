@@ -1,6 +1,5 @@
 class Api::BoardsController < ApplicationController
-  skip_before_action :verify_authenticity_token
-   
+
   def create
     @board = Board.new(board_params)
     if @board.save
@@ -29,7 +28,6 @@ class Api::BoardsController < ApplicationController
     @boards = Board.all.select{|board| board.user_id == current_user.id}
   end
 
-  
   def destroy
     @board = selected_board
     if @board
