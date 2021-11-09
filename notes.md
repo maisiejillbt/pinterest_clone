@@ -77,6 +77,7 @@
 # 11/08/21
   ### TODO
     - push to heroku 
+    
     - style login modals (login, signup)
     - make users/userid page (profile) (mostly complete)
     - implement save to baord logic
