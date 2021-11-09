@@ -79,6 +79,9 @@
     - push to heroku 
     
     - style login modals (login, signup)
+    - push to heroku ✅
+    - style login modals (login, signup) ✅
+
     - make users/userid page (profile) (mostly complete)
     - implement save to baord logic
     - connect all already made buttons/elements

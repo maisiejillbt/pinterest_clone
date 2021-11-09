@@ -1,4 +1,4 @@
-h1 {
+h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -11,3 +11,7 @@ button {
   font-weight: 500;
 }
 
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }

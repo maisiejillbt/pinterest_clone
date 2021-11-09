@@ -1,6 +1,6 @@
 $pintrest-red: #E40B2C;
 
-.login-container{
+.signup-container{
   position:absolute;
   z-index: 31;
   display:flex;
@@ -11,7 +11,7 @@ $pintrest-red: #E40B2C;
   background-color: rgba(0,0,0,0.3);;
 }
 
-.login{
+.signup{
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -23,105 +23,72 @@ $pintrest-red: #E40B2C;
   box-shadow: 0 0 20px grey;
 }
 
-.login img{
-  height:35px;
+.signup img{
+  height:50px;
   padding-bottom: 15px;
 
 }
 
-.login h1 {
+.signup h1 {
   padding:0;
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 500;
   color: #303030;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   letter-spacing: -1px;
 }
 
-.login form {
+.signup h3 {
+  padding:0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.signup form {
   display:flex; 
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: left;
-  width:240px;
+  align-items: center;
+  width: 100%;
 }
 
-.login > .content {
+.signup > .content {
   height: 100%; 
   display: flex;
   flex-direction: column;
   margin-top:25px;
+  // justify-content: center;
   align-items: center;
 }
 
-.login form input{
-  
+.signup form input{
+  width:260px;
   height: 40px;
   border: lightgray 2px solid; 
   border-radius:15px;
   margin-bottom: 10px;
-  font-size: 14px;
-  font-weight:300;
+  font-size: 16px;
+  font-weight:lighter;
   text-indent: 20px;
 }
 
-.login form input:focus{
+.signup form input:focus{
   border:2px solid #EAEAEA; 
   outline:4px solid rgba(0, 132, 255, 0.50);
   padding-bottom:3px;
 }
 
-.login button{
-  width:240px;
+.signup .continue{
+  width:265px;
   display:block;
   color: white; 
-  font-size:14px;
+  font-size:16px;
   background-color: $pintrest-red;
-  height: 35px;
+  height: 42px;
   border: none; 
-  border-radius: 24px;
-}
-
-.forgot {
-  padding-bottom: 15px;
-  font-weight: 600;
-  font-size: 12px;
-  justify-self: left;
-}
-
-.hide-forgot{
-  display:none;
-  position: absolute;
-  background-color: white;
-  border: 2px solid lightgray;
-  border-radius: 10px;
-  padding:10px;
-  font-weight:300;
-  font-size: 12px;
-}
-
-.forgot:hover + .hide-forgot {
-  cursor:pointer;
-  display:block;
-}
-
-.content > h3{
-  font-weight: 600;
-  font-size: 12px;
-  padding: 15px
-}
-
-.content > .demo-login {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  color: white; 
-  font-size:14px;
-  font-weight:500;
-  background-color: #227BEF;
-  height: 35px;
-  width:240px;
-  border: none;
   border-radius: 24px;
 }

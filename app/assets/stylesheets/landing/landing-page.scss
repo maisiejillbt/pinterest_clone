@@ -1,0 +1,141 @@
+.landing {
+  width:100vw;
+  height: 100vh;
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+
+}
+
+.landing > .content {
+  display:flex;
+  height: 100vh; 
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content > .head {
+  margin-top:80px;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head > h1 {
+  padding: 0;
+  padding-bottom: 80px;
+  font-size: 55px;
+  font-weight: 550;
+}
+
+.head > h2 {
+  padding: 0;
+  font-size: 52px;
+  font-weight: 550;
+  color:#C18A1E;
+  animation: rise-animation 1.25s forwards 1;
+  transition: .5s ease-in-out;
+}
+
+.content > .overlay {
+  position: fixed;
+  bottom: 0;
+  z-index: 30;
+  height: 40vh;
+  width: 100vw;
+   background: linear-gradient(to top, white,transparent);
+}
+
+.image-display{
+  display: grid;
+  grid-template-columns: 215px 15px 215px 15px 215px 15px 215px 15px 215px 15px 215px 15px 215px;
+  grid-template-areas:
+    "a1 a2 b1 b2 c1 c2 d1 d2 e1 e2 f1 f2 g1";
+  position: absolute;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  left: auto;
+  right: auto;
+}
+
+.image-container {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-container > img{
+  max-width:215px;
+  max-height:100%;
+  border-radius: 18px;
+}
+
+#img1, #img7 {
+}
+
+#img2, #img6{
+  margin-top:165px;
+}
+
+#img3, #img5{
+  margin-top:245px;
+}
+
+#img1{
+  grid-area: a1;
+}
+
+#img2{
+  grid-area: b1;
+  animation-delay: .25s;
+}
+
+#img3{
+  grid-area: c1;
+  animation-delay: .35s;
+
+}
+
+#img4{
+  grid-area: d1;
+  animation-delay: .45s;
+  margin-top:370px;
+}
+
+#img5{
+  animation-delay: .55s;
+  grid-area: e1;
+}
+
+#img6{
+  animation-delay: .65s;
+  grid-area: f1;
+}
+
+#img7{
+  animation-delay: .75s;
+  grid-area: g1;
+}
+
+
+.image-container{
+  animation: rise-animation 1.25s forwards 1;
+  transition: .5s ease-in-out;
+}
+@keyframes rise-animation{
+  0%{
+    transform: translateY(0px);
+    opacity: 0
+
+  }
+  100%{
+    transform: translateY(-60px);
+    opacity: 1.0
+  }
+}

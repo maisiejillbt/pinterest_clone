@@ -26,7 +26,6 @@ const NavBar = ({ current_user, logoutUser }) => {
   const display = () => {
     if (current_user) {
       assignAvatar();
-
       return (
       <div className="RightHeader">
         <img className="icon" src={window.bell}/>
@@ -39,11 +38,19 @@ const NavBar = ({ current_user, logoutUser }) => {
         </div>
       </div>
       )
-    }else{ 
+    }else{  
       return(
       <div className="RightHeader">
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/login">Log In</Link>
+        <div className="login-button">
+          <Link to="/login">
+            <h1>Log In</h1>
+          </Link>
+        </div>
+        <div className="signup-button">
+          <Link to="/signup">
+            <h1>Sign Up</h1>
+          </Link>
+        </div>
       </div>)
     }
   };
