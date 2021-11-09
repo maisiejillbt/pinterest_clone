@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 5852621a04c3e3999f7c506962986039b5e949b3
+  revision: f7221ec2e01b50362e94cb9fb61b6a2eced85328
   branch: master
   specs:
     faker (2.19.0)
-      i18n (>= 1.6, < 2)
+      i18n (>= 1.8.11, < 2)
 
 GEM
   remote: https://rubygems.org/
@@ -59,17 +59,17 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.523.0)
-    aws-sdk-core (3.121.6)
+    aws-partitions (1.525.0)
+    aws-sdk-core (3.122.0)
       aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.520.1)
+      aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.50.0)
-      aws-sdk-core (~> 3, >= 3.121.2)
+    aws-sdk-kms (1.51.0)
+      aws-sdk-core (~> 3, >= 3.122.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.104.0)
-      aws-sdk-core (~> 3, >= 3.121.2)
+    aws-sdk-s3 (1.105.1)
+      aws-sdk-core (~> 3, >= 3.122.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.4.0)
