@@ -76,9 +76,6 @@
 
 # 11/08/21
   ### TODO
-    - push to heroku 
-    
-    - style login modals (login, signup)
     - push to heroku ✅
     - style login modals (login, signup) ✅
 
@@ -86,4 +83,24 @@
     - implement save to baord logic
     - connect all already made buttons/elements
     - start logged-out landing page 
+
+- today was not nearly as productive as I had hoped, pushing to heroku took up the vast majority of the day and I got what seemed to be every bug heroku had to offer. I did manage to finish the logged out nav-bar, the login-in and sign-up modals and connect a lot of the previously unconnected buttons. 
+
+
+# 11/09/21
+  ### TODO 
+    - logged-out landing page 
+    - make users/userid page (profile) (mostly complete)
+    - implement save to board logic
+    - connect all already made buttons/elements
+
+
+# Overall todo 
+
+- implement follow logic
+- style create and update board & pin forms 
+- add close button to login/sign in modals 
+- add back button to pin-show
+- make settings page
+
 
