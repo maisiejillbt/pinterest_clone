@@ -25,7 +25,7 @@ class Pin extends React.Component {
         {pin.photoUrl ? 
         <div className="pin-image-container">
           <Link to={`/pins/${pin.id}`}><img className="pin-image" src={pin.photoUrl}/></Link>
-          
+        
           <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} />
           <button className="save-button">Save</button>
 
