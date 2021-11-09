@@ -33,29 +33,27 @@ class SignUp extends React.Component {
 
   render() {
     return(
-      <div className="sessionForm">
-        <h1>Sign Up</h1>
+    <div className="signup-container">
+      <div className="signup">
+        <div className="content">
+          <img src={window.main_logo} />
+          <h1>Welcome to Twinterest</h1>
+          <h3>Find new ideas to try</h3>
 
-        <form onSubmit={this.handleSubmit}>
-          <label>Email
+          <form onSubmit={this.handleSubmit}>
+           
             <input 
               type="text" 
               placeholder="Email"
               value={this.state.email}
               onChange={this.handleInput('email')}
               />
-          </label>
-
-          <label>Password
             <input 
               type="password" 
               placeholder="Create a password"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
-          </label>
-
-          <label>Age
             <input 
               type="number" 
               min="18"
@@ -63,33 +61,35 @@ class SignUp extends React.Component {
               value={this.state.age}
               onChange={this.handleInput('age')}
               />
-          </label>
 
-          {/* {Would love to come back to this and add in the entire set of questions asked during create user} */}
-          {/* <div>
-            <input type="radio" id="he/him/his" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}
-                  defaultChecked/>
-            <label htmlFor="he/him/his">He/Him/His</label>
-          </div>
 
-          <div>
-            <input type="radio" id="she/her/hers" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
-            <label htmlFor="she/her/hers">She/Her/Hers</label>
-          </div>
+            {/* {Would love to come back to this and add in the entire set of questions asked during create user} */}
+            {/* <div>
+              <input type="radio" id="he/him/his" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}
+                    defaultChecked/>
+              <label htmlFor="he/him/his">He/Him/His</label>
+            </div>
 
-          <div>
-            <input type="radio" id="they/them/theirs" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
-            <label htmlFor="they/them/theirs">They/Them/Theirs</label>
-          </div>
+            <div>
+              <input type="radio" id="she/her/hers" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
+              <label htmlFor="she/her/hers">She/Her/Hers</label>
+            </div>
 
-          <div>
-            <input type="text" id="other" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
-            <label htmlFor="other">Other</label>
-          </div> */}
+            <div>
+              <input type="radio" id="they/them/theirs" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
+              <label htmlFor="they/them/theirs">They/Them/Theirs</label>
+            </div>
 
-          <button onClick={this.handleSubmit}>Continue</button>
-        </form>
+            <div>
+              <input type="text" id="other" name="pronouns" value={this.state.pronouns} onChange={this.handleInput('pronouns')}/>
+              <label htmlFor="other">Other</label>
+            </div> */}
+
+            <button className="continue" onClick={this.handleSubmit}>Continue</button>
+          </form>
+        </div>
       </div>
+    </div>
     );
   }
 };
