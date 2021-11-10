@@ -25,14 +25,13 @@ export default () => (
     <Route path="/login" component={LoginContainer} />
     <Route path='/create-pin' component={CreatePinForm}/>
     <Route path='/create-board' component={CreateBoardForm}/>
-    <Route path='/boards/:boardId/edit' component={UpdateBoardForm}/>
     <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
     <Route exact path='/pins' component={PinContainer}/>
     <Route exact path='/pins/:pinId' component={PinShowContainer}/>
     
     <Route exact path='/boards' component={BoardContainer}/>
     <Route exact path='/boards/:boardId' component={BoardShowContainer}/>
-
+    <Route path='/boards/:boardId/edit' component={UpdateBoardForm}/>
 
 
     <Route path="/jackblack" component={JackBlack}/>   

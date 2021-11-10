@@ -23,12 +23,10 @@ class BoardShow extends React.Component {
             <div className="board-show-header">
               <h1 className="board-name">{currentBoard.name}</h1>
               <div className="overlay">
-                <img className="more-info" src={window.more_info}/>
+                <button className="edit-board"><h1>...</h1></button>
                 <div className="board-show-dropdown">
-
                 </div>
               </div>
-              
             </div>
 
             <img className="board-owner-image" src={this.props.current_user.avatar}/>

@@ -27,6 +27,7 @@
 }
 
 .board-owner-image{
+  padding-top:10px;
   height: 50px;
   width: 50px;
 }
@@ -36,7 +37,8 @@
   font-weight: 600;
   text-align: center;
   padding:0;
-  padding-bottom: 10px;
+  padding-right: 10px;
+
 }
 
 .pin-count{
@@ -48,4 +50,23 @@
   text-align: left;
   margin-left:70px;
 
+}
+
+.edit-board{
+  padding:0;
+  background-color: #EFEFEF;
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: none; 
+}
+
+.edit-board:hover{
+  background-color: lightgrey;
+}
+
+.edit-board > h1 {
+  font-size: 25px;
+  margin-top: -12px;
 }
