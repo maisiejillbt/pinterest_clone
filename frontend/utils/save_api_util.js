@@ -14,7 +14,7 @@ export const updateSave = save => (
   })
 );
 
-export const deletesave = saveId => (
+export const deleteSave = saveId => (
   $.ajax({
     url: `/api/save/${saveId}/`,
     method: 'DELETE'

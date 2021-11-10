@@ -8,7 +8,7 @@ const SavesReducer = (oldState = {}, action) => {
   const nextState = Object.assign({}, oldState)
   switch (action.type) {
     case RECEIVE_SAVE:
-      return {...action.board, ...nextState};
+      return {...action.save, ...nextState};
     case REMOVE_SAVE:
       delete nextState[action.saveId]
       return nextState;

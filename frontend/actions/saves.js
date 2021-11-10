@@ -9,7 +9,7 @@ const receiveSave = save => ({
   save
 });
 
-const removeBoard = saveId => ({
+const removeSave = saveId => ({
   type:REMOVE_SAVE, 
   saveId
 })
@@ -20,6 +20,6 @@ export const createSave = save => dispatch => {
 }
 
 export const deleteSave = saveId => dispatch => {
-  return SaveApiUtil.deleteBoard(saveId)
+  return SaveApiUtil.deleteSave(saveId)
     .then(() => dispatch(removeSave(saveId)));
 }
