@@ -1,3 +1,5 @@
+$pintrest-red: #E40B2C;
+
 .board-form-container{
   position: fixed;
   z-index: 11;
@@ -26,6 +28,7 @@
 .board-form > h1 {
   padding: 0;
   padding-top: 28px;
+  padding-bottom: 20px;
   font-size: 28px;
   font-weight: 500;
 }
@@ -39,10 +42,111 @@
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 300;
+  padding-bottom:10px;
 }
 
-#id, #description{ 
-  
+#name, #description{ 
+  width:470px;
+  height: 40px;
+  border: lightgray 2px solid; 
+  border-radius:15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight:lighter;
+  text-indent: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
 }
 
+#name{
+  margin-bottom: 30px;
+}
 
+#description{
+  padding-top: 15px;
+  height:70px;
+}
+
+.check-box{
+  display:flex; 
+  padding-top: 10px;
+}
+
+.check-box > input {
+  height: 20px; 
+  width: 20px;
+}
+
+.check-box h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.check-box p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 20px;
+
+}
+
+.board-form > form  button {
+  width:80px;
+  display:block;
+  color: white; 
+  font-size:16px;
+  background-color: $pintrest-red;
+  height: 45px;
+  border: none; 
+  border-radius: 24px;
+}
+
+.board-form > form  button:hover {
+  background-color: #b30a23;
+}
+
+.submit-delete{
+  display:flex; 
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.submit-delete > div {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  cursor: pointer;
+  padding:0;
+  width:80px;
+  color: black; 
+  font-size:16px;
+  background-color: #EAEAEA;
+  height: 45px;
+  border: none; 
+  border-radius: 24px;
+} 
+
+.submit-delete > div:hover {
+  background-color: lightgrey;
+}
+
+#deleteHide {
+  display:none;
+}
+
+.delete:hover + #deleteHide {
+  display:block;
+  position:absolute; 
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size: 14px;;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+  left: 26%;
+  top: 350px;
+}
