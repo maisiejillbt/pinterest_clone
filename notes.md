@@ -99,13 +99,19 @@
 - add back button to pin-show
 - make settings page
 
-
 things left to style 
   - create pin form 
   - create board form
   - update pin form 
   - main landing page
   - user settings page (user update)
+
+things left to connect 
+  - main pin save button 
+  - update button for boards 
+  - user icon to user profile page
+  - user icon on pin show (follow)
+  - close out for modals 
 
 
 

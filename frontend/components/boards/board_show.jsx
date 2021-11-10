@@ -2,6 +2,7 @@ import React from 'react';
 import BoardPreview from './board_preview'
 import Pin from '../pins/pin'
 
+
 class BoardShow extends React.Component {
   constructor(props){
     super(props)
