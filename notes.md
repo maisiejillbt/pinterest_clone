@@ -88,16 +88,24 @@
   ### TODO 
     - logged-out landing page ✅
     - make users/userid page (profile) ✅
-    - implement save to board logic
-    - connect all already made buttons/elements
+    - implement save to board logic ✅
+    - connect all already made buttons/elements (mostly)
 
 
 # Overall todo 
-
 - implement follow logic
 - style create and update board & pin forms 
 - add close button to login/sign in modals 
 - add back button to pin-show
 - make settings page
+
+
+things left to style 
+  - create pin form 
+  - create board form
+  - update pin form 
+  - main landing page
+  - user settings page (user update)
+
 
 

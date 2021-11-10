@@ -5,6 +5,7 @@ class UpdateBoardForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.match.params.boardId,
       name: '',
       public: true,
       description:'',
@@ -39,34 +40,45 @@ class UpdateBoardForm extends React.Component {
   }
 
   render() {
+    const boardId = this.props.match.params.boardId
     return (
-      <div className="board-form">
-        <h3>Edit your board</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Name
-            <input
-              type='text'
-              placeholder="Name"
-              value={this.state.name}
-              onChange={this.update('name')} 
-            />
-          </label>
+      <div className="board-form-container">
+        <div className="board-form">
+          <h1>Edit your board</h1>
+          <form onSubmit={this.handleSubmit}>
+            <h2>Name</h2> 
+              <input
+                id="name"
+                type='text'
+                placeholder={this.props.boards[boardId] ? this.props.boards[boardId].name : "Name"}
+                value={this.state.name}
+                onChange={this.update('name')} 
+              />
 
-          <label>Description
-            <textarea
-              placeholder="Description"
-              value={this.state.description}
-              onChange={this.update('description')} 
-            />
-          </label>
-
-          <label>Keep this board secret
-            <input type="checkbox" value={this.state.public} onChange={() => this.togglePrivate()}/>
-            <p>So only you and collaborators can see it.</p>
-          </label>
-
-          <button type='submit'>Update</button>
-        </form>
+            <h2>Description</h2> 
+              <textarea
+                id="description"
+                placeholder="Description"
+                value={this.state.description}
+                onChange={this.update('description')} 
+              />
+      
+            <div className="check-box">
+              <input type="checkbox" value={this.state.public} onChange={() => this.togglePrivate()}/>
+              <div>
+                <h3>Keep this board secret</h3> 
+                <p>So only you and collaborators can see it.</p>
+              </div>
+            </div>
+            <div className="submit-delete">
+              <div className="delete">
+                <h1 onClick={() => this.props.deleteBoard(boardId)}>Delete</h1>
+              </div>
+              <p id="deleteHide">Are your sure? You cannot undo this!</p>
+              <button type='submit'>Done</button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
