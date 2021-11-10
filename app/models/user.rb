@@ -20,6 +20,14 @@ class User < ApplicationRecord
     class_name: :Board, 
     foreign_key: :user_id
 
+  has_many :followers, 
+    class_name: :Follow, 
+    foreign_key: :followed_id
+
+  has_many :followed, 
+    class_name: :Follow, 
+    foreign_key: :follower_id
+
   has_one_attached :photo
 
   after_initialize :ensure_session_token

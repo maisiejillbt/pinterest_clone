@@ -30,7 +30,7 @@ const NavBar = ({ current_user, logoutUser }) => {
       <div className="RightHeader">
         <img className="icon" src={window.bell}/>
         <img className="icon" src={window.message_bubble}/>
-        <Link to="/boards"><img id="avatar" className="icon" src={current_user.avatar}/></Link>
+        <Link to={`/users/${current_user.id}`}><img id="avatar" className="icon" src={current_user.avatar}/></Link>
         <img className="chevron" src={window.chevron} onClick={() => hide()}/>
         <div id="nav-dropdown" className="dropdown hide">
           <h1>Settings</h1>
