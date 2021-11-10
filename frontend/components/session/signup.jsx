@@ -15,8 +15,6 @@ class SignUp extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-
   handleInput(type){
     return e => {
       this.setState({[type]: e.target.value})
@@ -28,6 +26,14 @@ class SignUp extends React.Component {
 
   handleSubmit(e){
     e.preventDefault(); 
+
+    this.props.createNewUser(this.state)
+      .then(() => 
+        this.props.login(this.state)
+          .then(() =>
+            this.props.history.push('/pins')
+      ));
+      
      /// this is where we will be sent after submit!
   }
 

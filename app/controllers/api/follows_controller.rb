@@ -18,7 +18,15 @@ class Api::FollowsController < ApplicationController
       render ['Could not find follow']
     end
   end
-  
+
+  def index
+    @follows = Follow.all.select{|follow| follow.follower_id == current_user.id}
+  end
+
+  # def show 
+  #   @follow = selected_follow
+  # end
+
   private
 
   def selected_follow

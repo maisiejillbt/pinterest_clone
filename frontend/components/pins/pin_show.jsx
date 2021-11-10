@@ -10,11 +10,11 @@ class PinShow extends React.Component{
   componentDidMount(){ 
     this.props.fetchUserBoards();
     this.props.fetchPin(this.pinId);
+    this.props.fetchFollows();
   }
 
   handleFollow(currentUser, userToFollow) {
     const button = document.getElementById('follow-button');
-    console.log(currentUser, userToFollow)
     const follow = {
       follower_id: currentUser, 
       followed_id: userToFollow, 
@@ -32,6 +32,7 @@ class PinShow extends React.Component{
   }
 
   render(){
+    console.log(this.props)
     const pin = this.props.pin
     const currentUserId = this.props.current_user.id;
     const pinOwnerId = this.props.pin.user_id

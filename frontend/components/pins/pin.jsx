@@ -16,8 +16,9 @@ class Pin extends React.Component {
   render() {
     const pin = this.props.pin
     const boards = this.props.boards
-    const firstBoardName = boards[0].name
-    const dropdownText = (firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
+    const hasBoards = this.props.boards.length > 0 ? true : false;
+    const firstBoardName = hasBoards ? boards[0].name : null 
+    const dropdownText = (hasBoards && firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
     
     return(
 
@@ -25,8 +26,12 @@ class Pin extends React.Component {
         {pin.photoUrl ? 
         <div className="pin-image-container">
           <Link to={`/pins/${pin.id}`}><img className="pin-image" src={pin.photoUrl}/></Link>
-        
-          <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} />
+          {
+            hasBoards ? 
+              <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} /> 
+              : 
+              <div className="board-dropdown-header"><h1 className="board-dropdown-header-text">Create a board first</h1></div>
+          }
           <button className="save-button">Save</button>
 
         </div>
