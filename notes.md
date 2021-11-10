@@ -71,9 +71,6 @@
     - completely reshape your state shape 😅🤪 ✅
 
 
-
-
-
 # 11/08/21
   ### TODO
     - push to heroku ✅

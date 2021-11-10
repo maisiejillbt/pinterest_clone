@@ -6,7 +6,6 @@ const BoardDropdownHeader = (props) => {
   const chevron = color == "black" ? window.chevron_black : window.chevron_white
   const firstBoardName = props.userBoards[0].name
   const dropdownText = (firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
-
   const hide = () => {
     const dropdown = document.getElementById('boardDropdown');
     if(dropdown.classList.contains("hide")){
@@ -20,7 +19,7 @@ const BoardDropdownHeader = (props) => {
     <div className="board-dropdown-header" onClick={()=>hide()}>
       <h1 className="board-dropdown-header-text">{dropdownText}</h1>
       <img className="board-chevron" src={chevron}/>
-      <BoardDropdown boards={props.userBoards}/>
+      <BoardDropdown boards={props.userBoards} pinId={props.pin.id} />
     </div>
   )
 }
