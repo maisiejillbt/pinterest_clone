@@ -7,16 +7,16 @@ class PinShow extends React.Component{
     this.pinId = this.props.match.params.pinId;
   }
 
-  componentDidMount(){
+  componentDidMount(){ 
     this.props.fetchUserBoards();
     this.props.fetchPin(this.pinId);
   }
 
   render(){
-    const pin = this.props.pins[this.pinId]
+    console.log(this.props)
+    const pin = this.props.pin
     if (this.props.boards[0] && pin ){
       const pinOwner = pin.user
-      console.log(pinOwner)
       return (
         <div className="pin-show">
           <div className="pin-modal">

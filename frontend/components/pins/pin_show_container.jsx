@@ -5,7 +5,7 @@ import { fetchUserBoards } from '../../actions/boards';
 import PinShow from './pin_show';
 
 const mapStateToProps = state => ({
-  pins: state.entities.pins,
+  pin: state.entities.pins,
   boards: Object.values(state.entities.boards)
 });
 

@@ -20,7 +20,6 @@ class UserShow extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const userId = this.props.match.params.userId
     if (Object.keys(this.props.user).length > 0) {
 

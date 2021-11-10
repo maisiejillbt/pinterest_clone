@@ -2,7 +2,6 @@ import React from 'react';
 import PinSave from './save_pin.js'
 
 const BoardDropdownItem = (props) => {
-  console.log(props)
   return(
     <div className="dropdown-item">
       <div className="left">

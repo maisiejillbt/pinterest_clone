@@ -30,7 +30,9 @@ export default () => (
     <Route path='/create-board' component={CreateBoardForm}/>
 
     <Route exact path='/pins' component={PinContainer}/>
+
     <Route exact path='/pins/:pinId' component={PinShowContainer}/>
+    
     <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
   
     <Route path='/boards/:boardId' component={BoardShowContainer}/>

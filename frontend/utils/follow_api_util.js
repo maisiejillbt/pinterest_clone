@@ -6,14 +6,6 @@ export const createFollow = follow => (
   })
 );
 
-export const updateFollow = follow => (
-  $.ajax({
-    url: `/api/follow/${follow.id}`,
-    method: 'patch',
-    data: { follow }
-  })
-);
-
 export const deleteFollow = folllowId => (
   $.ajax({
     url: `/api/follow/${followId}/`,

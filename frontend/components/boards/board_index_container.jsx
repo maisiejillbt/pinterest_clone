@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchUserBoards } from '../../actions/boards';
-import { fetchPin } from '../../actions/pins';
+
 
 import BoardIndex from './board_index';
 
