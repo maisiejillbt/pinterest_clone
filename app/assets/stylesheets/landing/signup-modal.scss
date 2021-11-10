@@ -1,8 +1,9 @@
 $pintrest-red: #E40B2C;
 
 .signup-container{
-  position:absolute;
-  z-index: 31;
+  position:fixed;
+  z-index: 50;
+  top:0;
   display:flex;
   justify-content:center;
   align-items: center;

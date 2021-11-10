@@ -21,9 +21,11 @@ import { AuthRoute } from '../utils/routes_utils'
 export default () => (
   <div>
     <Route path="/" component={NavBarContainer}/> 
-    <Route exact path="/" component={LandingPage}/> 
 
-    <Route path="/login" component={LoginContainer} />
+    <AuthRoute path="/" component={LandingPage}/> 
+    <AuthRoute path="/signup" component={SignupContainer}/> 
+    <AuthRoute path="/login" component={LoginContainer} />
+
     <Route path='/create-pin' component={CreatePinForm}/>
     <Route path='/create-board' component={CreateBoardForm}/>
 
@@ -37,6 +39,5 @@ export default () => (
     <Route path='/users/:userId' component={UserShowContainer}/>
 
     <Route path="/jackblack" component={JackBlack}/>   
-    <AuthRoute path="/signup" component={SignupContainer}/> 
   </div>
 );

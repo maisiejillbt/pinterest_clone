@@ -91,6 +91,21 @@
     - implement save to board logic ✅
     - connect all already made buttons/elements (mostly)
 
+- I felt like I actually got a decent amount done, though there is still a ton more to do hopefully there are a lot of retualbe elements in the next few forma I have to build out 
+
+
+
+# 11/10/21
+  ### TODO
+  - implememt follow logic and connect follow button
+  - style create board form
+  - style create & update pin forms 
+  - make user settings page
+  - add closeout logic to modals 
+  - add back button to pin show page 
+
+
+
 
 # Overall todo 
 - implement follow logic
@@ -110,8 +125,8 @@ things left to connect
   - main pin save button 
   - update button for boards 
   - user icon to user profile page
-  - user icon on pin show (follow)
+  - user icon on pin show (follow, profile)
   - close out for modals 
-
+`- add GH and LI 
 
 
