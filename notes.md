@@ -90,7 +90,7 @@
 # 11/09/21
   ### TODO 
     - logged-out landing page ✅
-    - make users/userid page (profile) (mostly complete)
+    - make users/userid page (profile) ✅
     - implement save to board logic
     - connect all already made buttons/elements
 
