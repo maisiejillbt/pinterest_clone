@@ -96,6 +96,11 @@ $pintrest-red: #E40B2C;
   border-radius:40px;
 }
 
+.unfollow{
+  background-color: $pintrest-red;
+  color: white;
+}
+
 .follow-button:hover{
   background-color: lightgrey;
 }

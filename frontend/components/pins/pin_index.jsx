@@ -15,7 +15,6 @@ class PinIndex extends React.Component {
   render() {
     const pins = this.props.pins 
     const boards = this.props.boards
-    console.log(this.props)
     if (pins.length > 6 ) {
       return(
       <div className="pin-index">

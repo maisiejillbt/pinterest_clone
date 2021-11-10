@@ -6,7 +6,7 @@ import * as FollowApiUtil from '../utils/follow_api_util';
 
 const receiveFollow = follow => ({
   type: RECEIVE_FOLLOW,
-  save
+  follow
 });
 
 const removeFollow = followId => ({

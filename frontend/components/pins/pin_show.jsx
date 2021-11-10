@@ -12,9 +12,29 @@ class PinShow extends React.Component{
     this.props.fetchPin(this.pinId);
   }
 
+  handleFollow(currentUser, userToFollow) {
+    const button = document.getElementById('follow-button');
+    console.log(currentUser, userToFollow)
+    const follow = {
+      follower_id: currentUser, 
+      followed_id: userToFollow, 
+      created_at: new Date(),
+    }
+
+    if (button.classList.contains("unfollow")) {
+      button.classList.remove("unfollow");
+      button.innerText = "Follow";
+    }else{
+      button.classList.add('unfollow');
+      button.innerText = "Unfollow";
+      this.props.createFollow(follow);
+    }
+  }
+
   render(){
-    console.log(this.props)
     const pin = this.props.pin
+    const currentUserId = this.props.current_user.id;
+    const pinOwnerId = this.props.pin.user_id
     if (this.props.boards[0] && pin ){
       const pinOwner = pin.user
       return (
@@ -43,7 +63,7 @@ class PinShow extends React.Component{
                     pinOwner ? <h1 className="name">{pinOwner.username}</h1> : null
                   }
                 </div>
-                <button className="follow-button">Follow</button>
+                <button id="follow-button" onClick={() => this.handleFollow(currentUserId, pinOwnerId)} className="follow-button">Follow</button>
               </div>
 
             </div>

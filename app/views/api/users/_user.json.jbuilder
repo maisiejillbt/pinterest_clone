@@ -3,6 +3,9 @@ json.set! user.id do
   json.name user.name 
   json.bio user.bio 
   json.pronouns user.pronouns
+  json.following user.following
+  json.followers user.followers
+
   json.boards user.boards do |board|
       json.partial! 'api/boards/board', board: board
   end
