@@ -21,7 +21,7 @@ import { AuthRoute } from '../utils/routes_utils'
 export default () => (
   <div>
     <Route path="/" component={NavBarContainer}/> 
-
+    
     <AuthRoute path="/" component={LandingPage}/> 
     <AuthRoute path="/signup" component={SignupContainer}/> 
     <AuthRoute path="/login" component={LoginContainer} />
