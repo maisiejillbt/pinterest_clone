@@ -21,6 +21,7 @@ class UserShow extends React.Component {
 
   render() {
     const userId = this.props.match.params.userId
+    console.log(this.props)
     if (Object.keys(this.props.user).length > 0) {
 
       const boards = this.props.user[userId].boards
@@ -42,13 +43,8 @@ class UserShow extends React.Component {
               <button className="dd-button">Pin</button>
               <button className="dd-button">Board</button>
             </div>
-          
           </div>
 
-        
-            
-
-          
           <div className="board-preview-container">
             <div className="board-grid">
               {

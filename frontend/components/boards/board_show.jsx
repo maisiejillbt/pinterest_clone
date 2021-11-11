@@ -15,6 +15,7 @@ class BoardShow extends React.Component {
 
   render() {
     const boards = this.props.boards
+    console.log(this.props.boards)
     if(this.props.boards.length > 1){
       const currentBoard = boards.filter(board => board.id == this.props.match.params.boardId)[0];
       const currentUserBoards = boards.filter(board => board.user_id == this.props.current_user.id)

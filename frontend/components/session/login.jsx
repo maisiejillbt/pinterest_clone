@@ -26,14 +26,18 @@ class Login extends React.Component {
     });
     e.preventDefault();
     this.props.login(demoState)
-      .then(() => this.props.history.push('/pins'));
+      .then(() => {
+        this.props.history.push('/pins')
+        });
   }
 
   handleSubmit(e) {
     e.preventDefault();
 
     this.props.login(this.state)
-      .then(() => this.props.history.push('/pins'));
+      .then(() => {
+        this.props.history.push('/pins')
+      });
   }
 
   render() {

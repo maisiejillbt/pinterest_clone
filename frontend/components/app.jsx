@@ -15,31 +15,27 @@ import LandingPage from './home/landing_page.jsx'
 import UserShowContainer from './users/user_show_container.jsx'
 
 import NavBarContainer from './nav_bar/nav_bar_container.jsx'
-import { AuthRoute } from '../utils/routes_utils'
+import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 
 
 export default () => (
   <div>
-    <Route path="/" component={NavBarContainer}/> 
-    
-    <AuthRoute path="/" component={LandingPage}/> 
-    <AuthRoute path="/signup" component={SignupContainer}/> 
-    <AuthRoute path="/login" component={LoginContainer} />
-
+    <ProtectedRoute path="/" component={NavBarContainer}/> 
+    <ProtectedRoute exact path="/pins" component={PinContainer}/>
     <Route path='/create-pin' component={CreatePinForm}/>
     <Route path='/create-board' component={CreateBoardForm}/>
 
-    <Route exact path='/pins' component={PinContainer}/>
+    <AuthRoute path="/" component={NavBarContainer}/> 
+    <AuthRoute exact path="/" component={LandingPage}/> 
+    <AuthRoute path="/login" component={LoginContainer} />
+    <AuthRoute path="/signup" component={SignupContainer}/> 
 
-    <Route exact path='/pins/:pinId' component={PinShowContainer}/>
-    
-    <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
-  
-    <Route path='/boards/:boardId' component={BoardShowContainer}/>
-    <Route path='/boards/:boardId/edit' component={UpdateBoardForm}/>
+    <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
+    <ProtectedRoute path='/pins/:pinId/edit' component={UpdatePinForm}/>
+    <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>
+    <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
+    <ProtectedRoute path='/users/:userId' component={UserShowContainer}/>
 
-    <Route path='/users/:userId' component={UserShowContainer}/>
-
-    <Route path="/jackblack" component={JackBlack}/>   
+    <ProtectedRoute path="/jackblack" component={JackBlack}/>   
   </div>
 );
