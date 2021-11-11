@@ -21,6 +21,7 @@ class UserShow extends React.Component {
 
   render() {
     const userId = this.props.match.params.userId
+    console.log(this.props.photoUrl)
    
     if (Object.keys(this.props.user).length > 0) {
 
@@ -29,6 +30,7 @@ class UserShow extends React.Component {
         <div className="profile-container">
           <div className="user-info">
             <div className="avatar-container">
+
               { this.props.photoUrl ? <img src={this.props.photoUrl}/> : <img src={window.avatar_green} alt="" /> }
             </div>
             <h1>{this.props.user.name}</h1>

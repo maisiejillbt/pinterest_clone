@@ -15,7 +15,6 @@ class BoardShow extends React.Component {
 
   render() {
     const boards = this.props.boards
-    console.log(this.props.boards)
     if(this.props.boards.length > 1){
       const currentBoard = boards.filter(board => board.id == this.props.match.params.boardId)[0];
       const currentUserBoards = boards.filter(board => board.user_id == this.props.current_user.id)
@@ -32,7 +31,7 @@ class BoardShow extends React.Component {
               </div>
             </div>
 
-            <img className="board-owner-image" src={this.props.current_user.avatar}/>
+            <img className="board-owner-image" src={window.avatar_blue}/>
             {
               currentBoard.details ? <h2>{currentBoard.details}</h2> : null
             }

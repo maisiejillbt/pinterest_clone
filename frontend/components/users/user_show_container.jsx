@@ -6,6 +6,7 @@ import UserShow from './user_show';
 
 const mapStateToProps = (state) => ({
   user: state.entities.users,
+  current_user: state.session.current_user
 });
 
 const mapDispatchToProps = dispatch => ({
