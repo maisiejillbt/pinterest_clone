@@ -39,8 +39,9 @@ class CreatePinForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input id="photo-upload" type="file" onChange={this.handleFile.bind(this)}/>
             <div className="left">
-              <label>Title
+              <label>
                 <input
+                  id="pin-name"
                   type='text'
                   placeholder="Add Your Title"
                   value={this.state.title}

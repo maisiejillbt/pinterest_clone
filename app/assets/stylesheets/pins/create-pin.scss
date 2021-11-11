@@ -12,9 +12,10 @@
   justify-content: center;
   align-items: center;
   width: 800px; 
-  height: 500px;
+  height: 510px;
   background-color: white;
   border-radius: 18px; 
+  margin-top: 70px;
 }
 
 .create-pin > form {
@@ -26,8 +27,8 @@
 }
 
 .create-pin > form > input[type="file"] {
-  height: 450px; 
-  width: 350px;
+  height: 225px; 
+  width: 275;
   border: none;
   color: black;
   background-color: lightgrey;
@@ -35,13 +36,27 @@
   justify-content: center;
   align-items: center;
   text-align: center !important;
-  padding-top: 150px;
+  padding-top: 200px;
   padding-left: 100px;
 }
 
 
 .create-pin > form > .left {
-  display: flex; 
-  flex-direction: column;
-  width: 350px;
+  // display: flex; 
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  width: 275px;
+}
+
+#pin-name {
+  font-size: 35px; 
+  width: 275px;
+  font-weight: 600;
+  color:grey;
+  border: none; 
+  background-color: none;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+  // text-indent: 20px;
 }
