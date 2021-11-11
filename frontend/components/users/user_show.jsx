@@ -21,18 +21,18 @@ class UserShow extends React.Component {
 
   render() {
     const userId = this.props.match.params.userId
-    console.log(this.props)
+   
     if (Object.keys(this.props.user).length > 0) {
 
-      const boards = this.props.user[userId].boards
+      const boards = this.props.user.boards
       return(
         <div className="profile-container">
           <div className="user-info">
             <div className="avatar-container">
               { this.props.photoUrl ? <img src={this.props.photoUrl}/> : <img src={window.avatar_green} alt="" /> }
             </div>
-            <h1>{this.props.user[userId].name}</h1>
-            <h2>@{this.props.user[userId].username}</h2>
+            <h1>{this.props.user.name}</h1>
+            <h2>@{this.props.user.username}</h2>
             <button className="edit-profile">Edit Profile</button>
           </div>
 

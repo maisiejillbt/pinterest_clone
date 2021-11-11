@@ -21,21 +21,25 @@ import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 export default () => (
   <div>
     <ProtectedRoute path="/" component={NavBarContainer}/> 
-    <ProtectedRoute exact path="/pins" component={PinContainer}/>
-    <Route path='/create-pin' component={CreatePinForm}/>
-    <Route path='/create-board' component={CreateBoardForm}/>
-
     <AuthRoute path="/" component={NavBarContainer}/> 
     <AuthRoute exact path="/" component={LandingPage}/> 
-    <AuthRoute path="/login" component={LoginContainer} />
-    <AuthRoute path="/signup" component={SignupContainer}/> 
 
-    <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
-    <ProtectedRoute path='/pins/:pinId/edit' component={UpdatePinForm}/>
-    <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>
-    <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
-    <ProtectedRoute path='/users/:userId' component={UserShowContainer}/>
 
+    <Switch>
+      <AuthRoute exact path="/login" component={LoginContainer} />
+      <AuthRoute exact path="/signup" component={SignupContainer}/> 
+    </Switch>
+
+    <Switch>
+      <ProtectedRoute exact path="/pins" component={PinContainer}/>
+      <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
+      <ProtectedRoute path='/pins/:pinId/edit' component={UpdatePinForm}/>
+      <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>
+      <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
+      <ProtectedRoute path='/users/:userId' component={UserShowContainer}/>
+      <ProtectedRoute path='/create-pin' component={CreatePinForm}/>
+      <ProtectedRoute path='/create-board' component={CreateBoardForm}/>
+     </Switch>
     <ProtectedRoute path="/jackblack" component={JackBlack}/>   
   </div>
 );
