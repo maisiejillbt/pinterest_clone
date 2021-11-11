@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BoardDropdownHeader from '../elements/board_dropdown_header'
+import PinSave from '../elements/save_pin.js'
 
 class Pin extends React.Component {
   constructor(props){
@@ -19,8 +20,9 @@ class Pin extends React.Component {
     const hasBoards = this.props.boards.length > 0 ? true : false;
     const firstBoardName = hasBoards ? boards[0].name : null 
     const dropdownText = (hasBoards && firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
-    
+    const firstBoardId = boards[0].id
     return(
+
 
       <div className="pin-container">
         {pin.photoUrl ? 
@@ -32,7 +34,7 @@ class Pin extends React.Component {
               : 
               <div className="board-dropdown-header"><h1 className="board-dropdown-header-text">Create a board first</h1></div>
           }
-          <button className="save-button">Save</button>
+          <button onClick={() => PinSave(pin.id, firstBoardId)} className="save-button">Save</button>
 
         </div>
         : 

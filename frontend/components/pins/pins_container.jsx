@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchPins } from '../../actions/pins';
 import { fetchUserBoards } from '../../actions/boards';
 import { fetchUser } from '../../actions/users';
-
 import PinIndex from './pin_index';
 
 const mapStateToProps = state => ({

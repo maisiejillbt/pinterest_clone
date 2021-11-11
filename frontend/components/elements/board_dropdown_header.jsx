@@ -11,8 +11,11 @@ const BoardDropdownHeader = (props) => {
   const hide = () => {
     const dropdownEl = <BoardDropdown boards={props.userBoards} pinId={props.pin.id} />
     const dropdownHeader = document.getElementById('board-dropdown-header');
+
     ReactDOM.render(dropdownEl, dropdownHeader);
+
     const dropdown = document.getElementById('boardDropdown');
+
     if(dropdown.classList.contains("hide")){
       dropdown.classList.remove("hide");
     }else{
