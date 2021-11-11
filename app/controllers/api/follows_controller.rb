@@ -3,7 +3,7 @@ class Api::FollowsController < ApplicationController
   def create
     @follow = Follow.new(follow_params)
     if @follow.save
-      render json: ["the follow was saved"]
+      render json: ["the user was followed"]
     else
       render @follow.errors.full_messages, status: 401
     end
@@ -23,9 +23,9 @@ class Api::FollowsController < ApplicationController
     @follows = Follow.all.select{|follow| follow.follower_id == current_user.id}
   end
 
-  # def show 
-  #   @follow = selected_follow
-  # end
+  def show 
+    @follow = selected_follow
+  end
 
   private
 

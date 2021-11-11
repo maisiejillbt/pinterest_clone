@@ -31,6 +31,6 @@ export const createFollow = follow => dispatch => {
 }
 
 export const deleteFollow = followId => dispatch => {
-  return SaveApiUtil.deleteFollow(followId)
+  return FollowApiUtil.deleteFollow(followId)
     .then(() => dispatch(removeFollow(followId)));
 }

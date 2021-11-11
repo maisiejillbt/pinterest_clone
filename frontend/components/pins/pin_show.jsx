@@ -5,6 +5,7 @@ class PinShow extends React.Component{
   constructor(props){
     super(props);
     this.pinId = this.props.match.params.pinId;
+    this.handleFollow = this.handleFollow.bind(this)
   }
 
   componentDidMount(){ 
@@ -20,7 +21,6 @@ class PinShow extends React.Component{
       followed_id: userToFollow, 
       created_at: new Date(),
     }
-
     if (button.classList.contains("unfollow")) {
       button.classList.remove("unfollow");
       button.innerText = "Follow";
@@ -31,12 +31,28 @@ class PinShow extends React.Component{
     }
   }
 
+  handleUnfollow(followId){
+    const button = document.getElementById('follow-button');
+    if (button.classList.contains("unfollow")) {
+      button.classList.remove("unfollow");
+      // button.innerText = "Follow";
+      this.props.deleteFollow(followId);
+    }else{
+      button.classList.add('unfollow');
+      // button.innerText = "Unfollow";
+    }
+
+  }
+
   render(){
-    console.log(this.props)
     const pin = this.props.pin
-    const currentUserId = this.props.current_user.id;
     const pinOwnerId = this.props.pin.user_id
-    if (this.props.boards[0] && pin ){
+    const followingUser = this.props.following.includes(pinOwnerId)
+    const follow = this.props.follows.filter(follow => {return follow.followed_id === pinOwnerId})[0]
+    const followId = follow ? follow.id : null
+    const currentUserId = this.props.current_user.id;
+    const hasBoards = this.props.boards.length > 0 ? true : false;
+    if (pin){
       const pinOwner = pin.user
       return (
         <div className="pin-show">
@@ -47,7 +63,13 @@ class PinShow extends React.Component{
             <div className="pin-detail">
               <div>
                 <div className="top">
-                  < BoardDropdownHeader userBoards={this.props.boards} pin={pin} color={"black"} />
+                  {
+                    hasBoards ? 
+                      < BoardDropdownHeader userBoards={this.props.boards} pin={pin} color={"black"} />
+                    : 
+                     <div className="board-dropdown-header"><h1 style={{color: 'black'}} className="board-dropdown-header-text">Create a board first</h1></div> 
+                  }
+                  
                   <button className="save-button">Save</button>
                 </div>
 
@@ -64,7 +86,13 @@ class PinShow extends React.Component{
                     pinOwner ? <h1 className="name">{pinOwner.username}</h1> : null
                   }
                 </div>
-                <button id="follow-button" onClick={() => this.handleFollow(currentUserId, pinOwnerId)} className="follow-button">Follow</button>
+                {
+                  followingUser ? 
+
+                  <button id="follow-button" onClick={() => this.handleUnfollow(followId)} className="follow-button unfollow">Unfollow</button>
+                  :
+                  <button id="follow-button" onClick={() => this.handleFollow(currentUserId, pinOwnerId)} className="follow-button">Follow</button>
+                }
               </div>
 
             </div>
