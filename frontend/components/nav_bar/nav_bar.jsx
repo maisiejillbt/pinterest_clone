@@ -39,9 +39,9 @@ class NavBar extends React.Component {
         <img className="icon" src={window.message_bubble}/>
         <Link to={`/users/${this.state.current_user.id}`}><img id="avatar" className="icon" src={this.current_user.avatar}/></Link>
         <img className="chevron" src={window.chevron} onClick={() => this.hide()}/>
-        <div id="nav-dropdown" className="dropdown hide">
-          <h1>Settings</h1>
-          <button className="dd-button" onClick={this.props.logoutUser}>Logout</button>
+        <div id="nav-dropdown" className="nav-dropdown hide">
+          <h1 id="settings-button">Settings</h1>
+          <button id="logout-button" onClick={this.props.logoutUser}>Log out</button>
         </div>
       </div>
       )
