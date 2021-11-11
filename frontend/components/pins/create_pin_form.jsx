@@ -17,7 +17,7 @@ class CreatePinForm extends React.Component {
     const formData = new FormData();
     formData.append('pin[title]', this.state.title);
     formData.append('pin[description]', this.state.description);
-    formData.append('pin[user_id]', this.props.current_user);
+    formData.append('pin[user_id]', this.props.current_user.id);
     formData.append('pin[created_at]', new Date());
     formData.append('pin[photo]', this.state.photoFile);
     this.props.createPin(formData);
@@ -32,7 +32,7 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
-
+    console.log(this.props.current_user.id)
     return (
       <div className="create-pin-container">
         <div className="create-pin">

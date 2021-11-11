@@ -31,8 +31,6 @@ class NavBar extends React.Component {
 
   display(){
     if (this.props.current_user) {
-      console.log(this.props.current_user)
-      console.log(this.state.current_user)
       this.assignAvatar();
       return (
       <div className="RightHeader">

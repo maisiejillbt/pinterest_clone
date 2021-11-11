@@ -111,3 +111,16 @@ $pintrest-red: #E40B2C;
 .save-button:hover{
   background-color: #AB0D21;
 }
+
+.pin-index > .create-button{
+  z-index: 15;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 0 15px 1px rgba(117, 117, 117, 0.5);
+  top: 88%;
+  right: 20px;
+}
+
+.pin-index > .create-button > .dropdown{
+  top:-130px;
+}
