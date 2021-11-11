@@ -20,8 +20,7 @@ import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 
 export default () => (
   <div>
-    <ProtectedRoute path="/" component={NavBarContainer}/> 
-    <AuthRoute path="/" component={NavBarContainer}/> 
+    <Route path="/" component={NavBarContainer}/> 
     <AuthRoute exact path="/" component={LandingPage}/> 
 
 
@@ -31,15 +30,15 @@ export default () => (
     </Switch>
 
     <Switch>
-      <ProtectedRoute exact path="/pins" component={PinContainer}/>
-      <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
-      <ProtectedRoute path='/pins/:pinId/edit' component={UpdatePinForm}/>
-      <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>
-      <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
-      <ProtectedRoute path='/users/:userId' component={UserShowContainer}/>
-      <ProtectedRoute path='/create-pin' component={CreatePinForm}/>
-      <ProtectedRoute path='/create-board' component={CreateBoardForm}/>
+      <Route exact path="/pins" component={PinContainer}/>
+      <Route exact path='/pins/:pinId' component={PinShowContainer}/>
+      <Route path='/pins/:pinId/edit' component={UpdatePinForm}/>
+      <Route path='/boards/:boardId' component={BoardShowContainer}/>
+      <Route path='/boards/:boardId/edit' component={UpdateBoardForm}/>
+      <Route path='/users/:userId' component={UserShowContainer}/>
+      <Route path='/create-pin' component={CreatePinForm}/>
+      <Route path='/create-board' component={CreateBoardForm}/>
      </Switch>
-    <ProtectedRoute path="/jackblack" component={JackBlack}/>   
+    <Route path="/jackblack" component={JackBlack}/>   
   </div>
 );

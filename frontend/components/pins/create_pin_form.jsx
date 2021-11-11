@@ -37,8 +37,9 @@ class CreatePinForm extends React.Component {
       <div className="create-pin-container">
         <div className="create-pin">
           <form onSubmit={this.handleSubmit}>
-            <input id="photo-upload" type="file" onChange={this.handleFile.bind(this)}/>
-            <div className="left">
+            <label htmlFor="photo-upload" id="drag-and-drop">Drag and drop or click to upload</label>
+              <input id="photo-upload" type="file" onChange={this.handleFile.bind(this)}/>
+            <div className="right">
               <label>
                 <input
                   id="pin-name"
@@ -48,14 +49,15 @@ class CreatePinForm extends React.Component {
                   onChange={this.update('title')}
                 />
               </label>
-              <label>Description
+              <label>
                 <textarea
+                  id="pin-description"
                   value={this.state.description}
                   placeholder="Tell everyone what your Pin is about"
                   onChange={this.update('description')}
                 />
               </label>
-              <button type='submit'>Create Pin!</button>
+              <button id="save-pin" type='submit'>Save</button>
             </div>
           </form>
         </div>
