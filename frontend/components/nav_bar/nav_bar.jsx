@@ -8,6 +8,7 @@ class NavBar extends React.Component {
       current_user: this.props.current_user
     }
     this.current_user = this.props.current_user
+    this.current_user.avatar = ""
   }
   
   assignAvatar(){
@@ -15,7 +16,7 @@ class NavBar extends React.Component {
       window.avatar_blue,
       window.avatar_green,
       window.avatar_dkgreen,
-      window.avatar_gold]; 
+      window.avatar_gold,] 
     const avatar = avatars[Math.floor(Math.random() * avatars.length)]
     this.current_user.avatar = avatar;
   }
