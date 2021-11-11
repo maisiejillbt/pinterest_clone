@@ -34,27 +34,30 @@ class CreatePinForm extends React.Component {
   render() {
 
     return (
-      <div className="create-pin">
-        <h3>Create A Pin!</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>Title
-            <input
-              type='text'
-              placeholder="Add Your Title"
-              value={this.state.title}
-              onChange={this.update('title')}
-            />
-          </label>
-          <label>Description
-            <textarea
-              value={this.state.description}
-              placeholder="Tell everyone what your Pin is about"
-              onChange={this.update('description')}
-            />
-          </label>
-          <input type="file" onChange={this.handleFile.bind(this)}/>
-          <button type='submit'>Create Pin!</button>
-        </form>
+      <div className="create-pin-container">
+        <div className="create-pin">
+          <form onSubmit={this.handleSubmit}>
+            <input id="photo-upload" type="file" onChange={this.handleFile.bind(this)}/>
+            <div className="left">
+              <label>Title
+                <input
+                  type='text'
+                  placeholder="Add Your Title"
+                  value={this.state.title}
+                  onChange={this.update('title')}
+                />
+              </label>
+              <label>Description
+                <textarea
+                  value={this.state.description}
+                  placeholder="Tell everyone what your Pin is about"
+                  onChange={this.update('description')}
+                />
+              </label>
+              <button type='submit'>Create Pin!</button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

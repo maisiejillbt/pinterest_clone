@@ -1,0 +1,47 @@
+.create-pin-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width:100vw;
+  background-color: #EFEFEF;
+}
+
+.create-pin{
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  width: 800px; 
+  height: 500px;
+  background-color: white;
+  border-radius: 18px; 
+}
+
+.create-pin > form {
+  width: 750px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.create-pin > form > input[type="file"] {
+  height: 450px; 
+  width: 350px;
+  border: none;
+  color: black;
+  background-color: lightgrey;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+  padding-top: 150px;
+  padding-left: 100px;
+}
+
+
+.create-pin > form > .left {
+  display: flex; 
+  flex-direction: column;
+  width: 350px;
+}
