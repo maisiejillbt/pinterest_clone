@@ -56,72 +56,72 @@ user26 = User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::
 board1 = Board.create!(created_at: DateTime.now, name:"Home decor Inspo", description:"",user_id:user1.id, public:true) 
 
 pin1 = Pin.create!(created_at: DateTime.now, title:"Plant shelf idea", user_id:user20.id)
-pin1.photo.attach(io: File.open(File.expand_path("../../public/images/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg", __FILE__)), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
+pin1.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg", __FILE__)), filename: "My Plant Shelfie + How to Achieve Your Own - xoxojackie lifestyle blog.jpeg")
 pin2 = Pin.create!(created_at: DateTime.now, title:"20 Borderline Genius Ways To Spruce Up Your Bedroom", user_id:user10.id)
-pin2.photo.attach(io: File.open(File.expand_path("../../public/images/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png", __FILE__)), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
+pin2.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/20 Bedroom Decorating Ideas, Trends & Tips For 2021.png", __FILE__)), filename: "20 Bedroom Decorating Ideas, Trends & Tips For 2021.png")
 pin3 = Pin.create!(created_at: DateTime.now, title:"Boho Bedroom Decor Ideas", user_id:user12.id)
-pin3.photo.attach(io: File.open(File.expand_path("../../public/images/22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg", __FILE__)), filename: "22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg")
+pin3.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg", __FILE__)), filename: "22 Boho Bedrooms You'll Want To Copy ASAP - Days Inspired.jpeg")
 pin4 = Pin.create!(created_at: DateTime.now, title:"How To Design A Sustainable & Minimalist Holiday Home", user_id:user5.id)
-pin4.photo.attach(io: File.open(File.expand_path("../../public/images/How To Design A Sustainable & Minimalist Holiday Home.jpeg", __FILE__)), filename: "How To Design A Sustainable & Minimalist Holiday Home.jpeg")
+pin4.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/How To Design A Sustainable & Minimalist Holiday Home.jpeg", __FILE__)), filename: "How To Design A Sustainable & Minimalist Holiday Home.jpeg")
 pin5 = Pin.create!(created_at: DateTime.now, title:"10 Beautiful Screened in Porch Ideas", user_id:user6.id)
-pin5.photo.attach(io: File.open(File.expand_path("../../public/images/10 Beautiful Screened in Porch Ideas.png", __FILE__)), filename: "10 Beautiful Screened in Porch Ideas.png")
+pin5.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/10 Beautiful Screened in Porch Ideas.png", __FILE__)), filename: "10 Beautiful Screened in Porch Ideas.png")
 pin6 = Pin.create!(created_at: DateTime.now, title:"The New Neutrals", user_id:user8.id)
-pin6.photo.attach(io: File.open(File.expand_path("../../public/images/Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg", __FILE__)), filename: "Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg")
+pin6.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg", __FILE__)), filename: "Terracotta_ The New Gender Neutral Color - Project Nursery.jpeg")
 pin7 = Pin.create!(created_at: DateTime.now, title:"How to style bookshelves", user_id:user7.id)
-pin7.photo.attach(io: File.open(File.expand_path("../../public/images/Built-in Bookshelf Styling.jpeg", __FILE__)), filename: "Built-in Bookshelf Styling.jpeg")
+pin7.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/Built-in Bookshelf Styling.jpeg", __FILE__)), filename: "Built-in Bookshelf Styling.jpeg")
 pin8 = Pin.create!(created_at: DateTime.now, title:"How I Decorated My Entryway on a Budget", user_id:user1.id)
-pin8.photo.attach(io: File.open(File.expand_path("../../public/images/How I Decorated My Entryway on a Budget.jpeg", __FILE__)), filename: "How I Decorated My Entryway on a Budget.jpeg")
+pin8.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/How I Decorated My Entryway on a Budget.jpeg", __FILE__)), filename: "How I Decorated My Entryway on a Budget.jpeg")
 pin9 = Pin.create!(created_at: DateTime.now, title:"Modern Cottage Style Bedroom", user_id:user1.id)
-pin9.photo.attach(io: File.open(File.expand_path("../../public/images/Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png", __FILE__)), filename: "Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png")
+pin9.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png", __FILE__)), filename: "Modern Cottage Style Bedroom Wall Paneling Ideas - Making it in the Mountains.png")
 pin10 = Pin.create!(created_at: DateTime.now, title:"Pantry Organization", user_id:user1.id)
-pin10.photo.attach(io: File.open(File.expand_path("../../public/images/Pantry cupboard inspiration!.jpeg", __FILE__)), filename: "Pantry cupboard inspiration!.jpeg")
+pin10.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/Pantry cupboard inspiration!.jpeg", __FILE__)), filename: "Pantry cupboard inspiration!.jpeg")
 pin11 = Pin.create!(created_at: DateTime.now, title:"Lookbook | Backsplash", user_id:user1.id)
-pin11.photo.attach(io: File.open(File.expand_path("../../public/images/Lookbook _ Backsplash.png", __FILE__)), filename: "Lookbook _ Backsplash.png")
+pin11.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/Lookbook _ Backsplash.png", __FILE__)), filename: "Lookbook _ Backsplash.png")
 pin12 = Pin.create!(created_at: DateTime.now, title:"Room Ideas", user_id:user1.id)
-pin12.photo.attach(io: File.open(File.expand_path("../../public/images/60+ Aesthetic Dorm Room Ideas On A Budget.jpeg", __FILE__)), filename: "60+ Aesthetic Dorm Room Ideas On A Budget.jpeg")
+pin12.photo.attach(io: File.open(File.expand_path("../../public/images/home-decor/60+ Aesthetic Dorm Room Ideas On A Budget.jpeg", __FILE__)), filename: "60+ Aesthetic Dorm Room Ideas On A Budget.jpeg")
 
 
 board2 = Board.create!(created_at: DateTime.now, name:"Dinner Ideas", description:"", user_id:user3.id, public:true) # 1,3
 
 
 pin13 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Honey Balsamic Glazed Chicken", user_id:user9.id)
-pin13.photo.attach(io: File.open(File.expand_path("../../public/images/Honey Balsamic Chicken _ Evolving Table Recipe.jpeg", __FILE__)), filename: "Honey Balsamic Chicken _ Evolving Table Recipe.jpeg")
+pin13.photo.attach(io: File.open(File.expand_path("../../public/images/food/Honey Balsamic Chicken _ Evolving Table Recipe.jpeg", __FILE__)), filename: "Honey Balsamic Chicken _ Evolving Table Recipe.jpeg")
 
 pin14 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Slow Cooker Pot Roast", user_id:user10.id)
-pin14.photo.attach(io: File.open(File.expand_path("../../public/images/Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg", __FILE__)), filename: "Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg")
+pin14.photo.attach(io: File.open(File.expand_path("../../public/images/food/Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg", __FILE__)), filename: "Slow Cooker BBQ Pot Roast - Mother Thyme.jpeg")
 
 pin15 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"CROCK POT CUBED STEAK & GRAVY", user_id:user12.id)
-pin15.photo.attach(io: File.open(File.expand_path("../../public/images/Crock Pot Cubed Steak with Gravy.jpeg", __FILE__)), filename: "Crock Pot Cubed Steak with Gravy.jpeg")
+pin15.photo.attach(io: File.open(File.expand_path("../../public/images/food/Crock Pot Cubed Steak with Gravy.jpeg", __FILE__)), filename: "Crock Pot Cubed Steak with Gravy.jpeg")
 
 pin16 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Stromboli", user_id:user13.id)
-pin16.photo.attach(io: File.open(File.expand_path("../../public/images/How to Make Homemade Stromboli - Sally's Baking Addiction.png", __FILE__)), filename: "How to Make Homemade Stromboli - Sally's Baking Addiction.png")
+pin16.photo.attach(io: File.open(File.expand_path("../../public/images/food/How to Make Homemade Stromboli - Sally's Baking Addiction.png", __FILE__)), filename: "How to Make Homemade Stromboli - Sally's Baking Addiction.png")
 
 pin17 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Healthy Baked Zucchini Fries with Parmesan Cheese", user_id:user1.id)
-pin17.photo.attach(io: File.open(File.expand_path("../../public/images/Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg", __FILE__)), filename: "Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg")
+pin17.photo.attach(io: File.open(File.expand_path("../../public/images/food/Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg", __FILE__)), filename: "Parmesan Zucchini Fries (Healthy and Extra Crispy!) - Rasa Malaysia.jpeg")
 
 pin18 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Quick Spinach Pasta", user_id:user4.id)
-pin18.photo.attach(io: File.open(File.expand_path("../../public/images/Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg", __FILE__)), filename: "Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg")
+pin18.photo.attach(io: File.open(File.expand_path("../../public/images/food/Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg", __FILE__)), filename: "Creamy Spinach Artichoke Pasta {Paleo, Vegan} - %.jpeg")
 
 pin19 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Spanish Rice", user_id:user13.id)
-pin19.photo.attach(io: File.open(File.expand_path("../../public/images/One Pot Spanish Chicken and Rice.jpeg", __FILE__)), filename: "One Pot Spanish Chicken and Rice.jpeg")
+pin19.photo.attach(io: File.open(File.expand_path("../../public/images/food/One Pot Spanish Chicken and Rice.jpeg", __FILE__)), filename: "One Pot Spanish Chicken and Rice.jpeg")
 
 pin20 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"OVEN BAKED CHICKEN PARMESAN", user_id:user3.id)
-pin20.photo.attach(io: File.open(File.expand_path("../../public/images/Baked Parmesan Chicken.jpeg", __FILE__)), filename: "Baked Parmesan Chicken.jpeg")
+pin20.photo.attach(io: File.open(File.expand_path("../../public/images/food/Baked Parmesan Chicken.jpeg", __FILE__)), filename: "Baked Parmesan Chicken.jpeg")
 
 pin21 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Asian Steak Bites and Potatoes", user_id:user3.id)
-pin21.photo.attach(io: File.open(File.expand_path("../../public/images/Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg", __FILE__)), filename: "Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg")
+pin21.photo.attach(io: File.open(File.expand_path("../../public/images/food/Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg", __FILE__)), filename: "Tender Skillet Steak Bites with Crispy Potatoes - Easy Dinner Idea!.jpeg")
 
 pin22 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"BBQ CHICKEN SLIDERS", user_id:user3.id)
-pin22.photo.attach(io: File.open(File.expand_path("../../public/images/Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg", __FILE__)), filename: "Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg")
+pin22.photo.attach(io: File.open(File.expand_path("../../public/images/food/Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg", __FILE__)), filename: "Quick & Easy BBQ Chicken Sliders - Little Broken.jpeg")
 
 pin23 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"SLOW COOKER HONEY GARLIC CHICKEN AND VEGGIES", user_id:user3.id)
-pin23.photo.attach(io: File.open(File.expand_path("../../public/images/Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png", __FILE__)), filename: "Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png")
+pin23.photo.attach(io: File.open(File.expand_path("../../public/images/food/Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png", __FILE__)), filename: "Crockpot Slow Cooker Honey Soy Chicken and Veggies Recipe.png")
 
 pin24 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Bang Bang Shrimp Pasta Recipe", user_id:user3.id)
-pin24.photo.attach(io: File.open(File.expand_path("../../public/images/Bang Bang Shrimp and Pasta.png", __FILE__)), filename: "Bang Bang Shrimp and Pasta.png")
+pin24.photo.attach(io: File.open(File.expand_path("../../public/images/food/Bang Bang Shrimp and Pasta.png", __FILE__)), filename: "Bang Bang Shrimp and Pasta.png")
 
 pin25 = Pin.create!(created_at: DateTime.now, description: Faker::Food.description, title:"Baked Honey Garlic Chicken Tenders", user_id:user3.id)
-pin25.photo.attach(io: File.open(File.expand_path("../../public/images/Honey Garlic Chicken Tenders {Paleo}.jpeg", __FILE__)), filename: "Honey Garlic Chicken Tenders {Paleo}.jpeg")
+pin25.photo.attach(io: File.open(File.expand_path("../../public/images/food/Honey Garlic Chicken Tenders {Paleo}.jpeg", __FILE__)), filename: "Honey Garlic Chicken Tenders {Paleo}.jpeg")
 
 board3 = Board.create!(description:"", created_at: DateTime.now, name:"Floral Arrangements", user_id:user1.id, public:true) # 1,3,1
 
@@ -139,6 +139,24 @@ pin36 =	Pin.create!(created_at: DateTime.now, title:"Amaranthus composition", us
 pin37 =	Pin.create!(created_at: DateTime.now, title:"Farmhouse Style Floral", user_id:user1.id)
 pin38 =	Pin.create!(created_at: DateTime.now, title:"Blooming Apricot & Blush Magnolia Branches", user_id:user1.id)
 pin39 =	Pin.create!(created_at: DateTime.now, title:"Private Floral Arranging Class", user_id:user1.id)
+
+pin26.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/496e71a42ca448bc687933235aebee30.jpg", __FILE__)), filename: "496e71a42ca448bc687933235aebee30.jpg")
+pin28.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/A still life with flowers.jpeg", __FILE__)), filename: "A still life with flowers.jpeg")
+pin27.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Best bridal bouquets 2017 _ Bridal bouquet ideas.jpeg", __FILE__)), filename: "Best bridal bouquets 2017 _ Bridal bouquet ideas.jpeg")
+pin29.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Color Theory Design Co on Instagram_ “So much spring beauty poppin up in Portland right now! I’m definitely the most drawn to all of the variegated and multi-toned blooms_ I am…”.jpeg", __FILE__)), filename: "Color Theory Design Co on Instagram_ “So much spring beauty poppin up in Portland right now! I’m definitely the most drawn to all of the variegated and multi-toned blooms_ I am…”.jpeg")
+pin30.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Design Tastemakers Reveal Their Favorite Fall Flower Arrangements.jpeg", __FILE__)), filename: "Design Tastemakers Reveal Their Favorite Fall Flower Arrangements.jpeg")
+pin31.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Eye Candy_ Pinterest Favorites This Week - The English Room.jpeg", __FILE__)), filename: "Eye Candy_ Pinterest Favorites This Week - The English Room.jpeg")
+pin32.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/HART Floral - Portland Oregon Wedding Florist.jpeg", __FILE__)), filename: "HART Floral - Portland Oregon Wedding Florist.jpeg")
+pin33.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/HATTIE on Instagram_ “Sorry I had to repost this because the insta cut off the side of my arrangement some how!”.jpeg", __FILE__)), filename: "HATTIE on Instagram_ “Sorry I had to repost this because the insta cut off the side of my arrangement some how!”.jpeg") 
+pin34.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/M I N I M A L I S M on Twitter.jpeg", __FILE__)), filename: "M I N I M A L I S M on Twitter.jpeg")
+pin35.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Sarah Winward's Simple Winter Floral Arrangement.jpeg", __FILE__)), filename: "Sarah Winward's Simple Winter Floral Arrangement.jpeg")
+pin36.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/SL&V.jpeg", __FILE__)), filename: "SL&V.jpeg")
+pin37.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Trendspotting_ Nebulous, Airy, Levitational Wedding Designs.jpeg", __FILE__)), filename: "Trendspotting_ Nebulous, Airy, Levitational Wedding Designs.jpeg")
+pin38.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/wedding decor that's over-the-top (in a good way).jpeg", __FILE__)), filename: "wedding decor that's over-the-top (in a good way).jpeg")
+pin39.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Wild Flowers_ beautiful color palette for this bouquet.jpeg", __FILE__)), filename: "Wild Flowers_ beautiful color palette for this bouquet.jpeg")
+
+
+
 
 board4 = Board.create!(description:"", created_at: DateTime.now, name:"DIY Home Decor", user_id:user3.id, public:true) 
 
