@@ -1,24 +1,3 @@
-# README
+# Overview 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based social media network where users and businesses can promote and explore their interests by pinning images and videos on virtual bulletin boards. With Twinterest users are able to follow eachother, add pins to their boards, create and edit new pins and boards, and view all other users pins. 

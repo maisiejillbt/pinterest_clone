@@ -1,6 +1,7 @@
 import React from 'react';
 import BoardPreview from './board_preview'
 import Pin from '../pins/pin'
+import { Link } from 'react-router-dom';
 
 
 class BoardShow extends React.Component {
@@ -24,7 +25,7 @@ class BoardShow extends React.Component {
             <div className="board-show-header">
               <h1 className="board-name">{currentBoard.name}</h1>
               <div className="overlay">
-                <button className="edit-board"><h1>...</h1></button>
+                <Link to={`/boards/${this.props.match.params.boardId}/edit`}><button className="edit-board"><h1>...</h1></button></Link>
                 <div className="board-show-dropdown">
                 
                 </div>

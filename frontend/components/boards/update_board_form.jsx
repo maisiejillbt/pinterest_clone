@@ -26,7 +26,10 @@ class UpdateBoardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateBoard(this.state);
+    this.props.updateBoard(this.state)
+      .then(() => {
+        this.props.history.push('/pins')
+      });
   } 
 
   update(fld) {
