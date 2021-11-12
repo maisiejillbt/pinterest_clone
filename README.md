@@ -8,7 +8,7 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 - Account Creation and Authentication 
 
-(image)
+![](app/assets/images/Screen Shot 2021-11-11 at 9.02.10 PM.png)
 
 - Protected routes to limit the users access to features based on logged in status 
 
