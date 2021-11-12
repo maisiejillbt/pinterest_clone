@@ -18,13 +18,13 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.03.29%20PM.png)
 
-    The Pins 'show' page is still under construction, my goal is to be able to have pins line up and stagger on the page in a consistently uneven fashion. While there were a few different ways that I attempted to implement this, (through flex-box css styling, and grid styling) ultumately none of them worked the way I was hoping. I also want to implement an "unlimited scroll" on this page, and felt it would be best to do both things in tandem as they go hand in hand. 
+The Pins 'show' page is still under construction, my goal is to be able to have pins line up and stagger on the page in a consistently uneven fashion. While there were a few different ways that I attempted to implement this, (through flex-box css styling, and grid styling) ultumately none of them worked the way I was hoping. I also want to implement an "unlimited scroll" on this page, and felt it would be best to do both things in tandem as they go hand in hand. 
 
 - View User profiles 
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.03.43%20PM.png)
 
-    The Users Profile Page proved to be more complex to put together than I had originally anticipated. I ended up creating a secondary element with a sub element as part of my 'Board' class in order to accheive the effect I wanted. One of the issues I faced with this was how to make as few calls to the back end as possible, while keeping my state shape relatively clean. I ended up only needing a single call, fetching the User and through the user all their boards and pins. These were used in my secondary element both to style it and to link through it to the boards 'show' page. 
+The Users Profile Page proved to be more complex to put together than I had originally anticipated. I ended up creating a secondary element with a sub element as part of my 'Board' class in order to accheive the effect I wanted. One of the issues I faced with this was how to make as few calls to the back end as possible, while keeping my state shape relatively clean. I ended up only needing a single call, fetching the User and through the user all their boards and pins. These were used in my secondary element both to style it and to link through it to the boards 'show' page. 
 
 ```javascript 
 
@@ -102,7 +102,7 @@ end
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.08.17%20PM.png)
 
-    Creating the Pin element was one of the most fun aspects of the project for me, I love being able to create something that looks and functions exactly I hope it will. Matching the CSS of this element exactly while still being able to re-use some of the styles and full elements (board dropdown) was a great challenge. I really had to think about how exactly I wanted this element to function, as it not only needed to be a display of the pin, but also needed to have saving functionality and be able to list and display all of the current users boards. 
+Creating the Pin element was one of the most fun aspects of the project for me, I love being able to create something that looks and functions exactly I hope it will. Matching the CSS of this element exactly while still being able to re-use some of the styles and full elements (board dropdown) was a great challenge. I really had to think about how exactly I wanted this element to function, as it not only needed to be a display of the pin, but also needed to have saving functionality and be able to list and display all of the current users boards. 
 
 - Create and edit Pins 
 
