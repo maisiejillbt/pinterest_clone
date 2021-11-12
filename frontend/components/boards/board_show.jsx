@@ -3,7 +3,6 @@ import BoardPreview from './board_preview'
 import Pin from '../pins/pin'
 import { Link } from 'react-router-dom';
 
-
 class BoardShow extends React.Component {
   constructor(props){
     super(props)

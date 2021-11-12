@@ -7,8 +7,8 @@ class NavBar extends React.Component {
     this.state = {
       current_user: this.props.current_user
     }
-    this.current_user = this.props.current_user
-    this.current_user.avatar = ""
+    // this.current_user = this.props.current_user
+    // this.current_user.avatar = ""
   }
   
   assignAvatar(){
@@ -32,12 +32,12 @@ class NavBar extends React.Component {
 
   display(){
     if (this.props.current_user) {
-      this.assignAvatar();
+      // this.assignAvatar();
       return (
       <div className="RightHeader">
         <img className="icon" src={window.bell}/>
         <img className="icon" src={window.message_bubble}/>
-        <Link to={`/users/${this.state.current_user.id}`}><img id="avatar" className="icon" src={this.current_user.avatar}/></Link>
+        <Link to={`/users/${this.props.current_user.id}`}><img id="avatar" className="icon" src={window.avatar_blue}/></Link>
         <img className="chevron" src={window.chevron} onClick={() => this.hide()}/>
         <div id="nav-dropdown" className="nav-dropdown hide">
           <h1 id="settings-button">Settings</h1>
