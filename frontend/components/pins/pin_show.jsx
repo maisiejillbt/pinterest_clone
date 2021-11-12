@@ -1,5 +1,7 @@
 import React from 'react';
 import BoardDropdownHeader from '../elements/board_dropdown_header';
+import { Link } from 'react-router-dom';
+
 
 class PinShow extends React.Component{
   constructor(props){
@@ -80,12 +82,14 @@ class PinShow extends React.Component{
               </div>
 
               <div className="pin-owner">
-                <div className="left">
+
+                <Link to={pinOwner ? `/users/${pinOwner.id}` : '/pins'}><div className="left">
                   <img src={window.avatar_blue}/>
                   {
                     pinOwner ? <h1 className="name">{pinOwner.username}</h1> : null
                   }
                 </div>
+                </Link>
                 {
                   followingUser ? 
 

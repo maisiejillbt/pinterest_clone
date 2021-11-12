@@ -42,8 +42,8 @@ class UserShow extends React.Component {
             <h1>+</h1>
             <div id="create-dropdown" className="dropdown hide">
               <h2 className="create">Create</h2>
-              <button className="dd-button">Pin</button>
-              <button className="dd-button">Board</button>
+              <button id="dd-button">Pin</button>
+              <button id="dd-button">Board</button>
             </div>
           </div>
 

@@ -46,7 +46,7 @@ class UpdatePinForm extends React.Component {
     if (this.state.title) {
 
       return (
-        <div>
+        <div className="update-pin">
           <h3>Update your Pin!</h3>
           <form onSubmit={this.handleSubmit}>
             <label>Title
