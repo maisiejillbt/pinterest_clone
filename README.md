@@ -12,7 +12,7 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.02.36%20PM.png)
 
-    One of my main goals for Twinterest was to stick to the design of Pinterest as closely as possible. Making sure to measure and adjust my cloned site as needed. For me the appearence of the page is just as important as the functionality. 
+One of my main goals for Twinterest was to stick to the design of Pinterest as closely as possible. Making sure to measure and adjust my cloned site as needed. For me the appearence of the page is just as important as the functionality. 
 
 - View other users pins 
 
