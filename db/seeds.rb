@@ -438,6 +438,21 @@ pin163 =	Pin.create!(created_at: DateTime.now, title:"The Best Nail Art Trends",
 pin164 =	Pin.create!(created_at: DateTime.now, title:"30+ Summer Floral Nail Designs", user_id:user1.id)
 pin165 =	Pin.create!(created_at: DateTime.now, title:"Black Nail Designs: Matte + Marbled", user_id:user1.id)
 
+pin152.photo.attach(io: File.open(File.expand_path("../../public/images/nails/❤ Hang Nguyen aka Moon ❤ on Instagram_ “Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg", __FILE__)), filename: "❤ Hang Nguyen aka Moon ❤ on Instagram_ “Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg") 
+pin153.photo.attach(io: File.open(File.expand_path("../../public/images/nails/15 Gorgeous White Nail Design Ideas - Almond Nails.jpeg", __FILE__)), filename: "15 Gorgeous White Nail Design Ideas - Almond Nails.jpeg") 
+pin154.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Byrdie.png", __FILE__)), filename: "Byrdie.png") 
+pin155.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Lively Orange Press-On Nails.jpeg", __FILE__)), filename: "Lively Orange Press-On Nails.jpeg") 
+pin156.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Most Beautiful Nail Designs You Will Love To wear In 2021 _ Green Swirl Nail Art.jpeg", __FILE__)), filename: "Most Beautiful Nail Designs You Will Love To wear In 2021 _ Green Swirl Nail Art.jpeg")
+pin157.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Nails, Nails, Nails.jpeg", __FILE__)), filename: "Nails, Nails, Nails.jpeg") 
+pin158.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Toadstool - Fire Red Creme Nail Polish, Blood Red Holiday Nails, Vegan Polish.png", __FILE__)), filename: "Toadstool - Fire Red Creme Nail Polish, Blood Red Holiday Nails, Vegan Polish.png") 
+pin159.photo.attach(io: File.open(File.expand_path("../../public/images/nails/3 vídeos com tutoriais simples para reproduzir nas suas unhas.jpeg", __FILE__)), filename: "3 vídeos com tutoriais simples para reproduzir nas suas unhas.jpeg") 
+pin160.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Chic Nude Press-On Nails.jpeg", __FILE__)), filename: "Chic Nude Press-On Nails.jpeg") 
+pin161.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Ballerina Long Coffin Fake Nails - NEW- glue set18.jpeg", __FILE__)), filename: "Ballerina Long Coffin Fake Nails - NEW- glue set18.jpeg") 
+pin162.photo.attach(io: File.open(File.expand_path("../../public/images/nails/fall nail inspo.jpeg", __FILE__)), filename: "fall nail inspo.jpeg") 
+pin163.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Modern green nail design ideas.png", __FILE__)), filename: "Modern green nail design ideas.png") 
+pin164.photo.attach(io: File.open(File.expand_path("../../public/images/nails/neutral nails for fall 🖤.jpeg", __FILE__)), filename: "neutral nails for fall 🖤.jpeg") 
+pin165.photo.attach(io: File.open(File.expand_path("../../public/images/nails/✨Zimbabwean Doll✨ on Twitter.jpeg", __FILE__)), filename: "✨Zimbabwean Doll✨ on Twitter.jpeg") 
+
 
 saves = [[152, 165, 13],[140, 151, 12],[128, 139, 11],[114, 127,10],[103, 113,9],[89, 102,8],[75, 88,7], [63, 74,6],[52, 62,5 ],[40, 51, 4],[26, 39, 3],[12, 25, 2],[1,12,1]]
 
