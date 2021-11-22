@@ -155,9 +155,6 @@ pin37.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/T
 pin38.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/wedding decor that's over-the-top (in a good way).jpeg", __FILE__)), filename: "wedding decor that's over-the-top (in a good way).jpeg")
 pin39.photo.attach(io: File.open(File.expand_path("../../public/images/flowers/Wild Flowers_ beautiful color palette for this bouquet.jpeg", __FILE__)), filename: "Wild Flowers_ beautiful color palette for this bouquet.jpeg")
 
-
-
-
 board4 = Board.create!(description:"", created_at: DateTime.now, name:"DIY Home Decor", user_id:user3.id, public:true) 
 
 pin40 = Pin.create!(created_at: DateTime.now, title:"DIY Sofa Table Build", user_id:user12.id)
@@ -293,20 +290,20 @@ pin100 = Pin.create!(created_at: DateTime.now, title:"vintage indie poster pack"
 pin101 = Pin.create!(created_at: DateTime.now, title:"green heart wallpaper", user_id:user10.id)
 pin102 = Pin.create!(created_at: DateTime.now, title:"Flowering Meadow, Dandelion", user_id:user9.id)
 
-pin89.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin90.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin91.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin92.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin93.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin94.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin95.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin96.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin97.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin98.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin99.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin100.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin101.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
-pin102.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin89.photo.attach(io: File.open(File.expand_path("../../public/images/green/✌🏼🔥.jpeg", __FILE__)), filename: "✌🏼🔥.jpeg") 
+pin90.photo.attach(io: File.open(File.expand_path("../../public/images/green/🌬.jpeg", __FILE__)), filename: "🌬.jpeg") 
+pin91.photo.attach(io: File.open(File.expand_path("../../public/images/green/50+ Sage Green Wall Collage Kit _ Aesthetic Sage Green Photo Collage _ Matcha and Mint Green _ Pinterest Aesthetic.jpeg", __FILE__)), filename: "50+ Sage Green Wall Collage Kit _ Aesthetic Sage Green Photo Collage _ Matcha and Mint Green _ Pinterest Aesthetic.jpeg") 
+pin92.photo.attach(io: File.open(File.expand_path("../../public/images/green/2010s Uk Gary Colet Poster Art Print.jpeg", __FILE__)), filename: "2010s Uk Gary Colet Poster Art Print.jpeg") 
+pin93.photo.attach(io: File.open(File.expand_path("../../public/images/green/amzz on Twitter.jpeg", __FILE__)), filename: "amzz on Twitter.jpeg") 
+pin94.photo.attach(io: File.open(File.expand_path("../../public/images/green/Bubble Cube Candle - Light Green - Lilac.jpeg", __FILE__)), filename: "Bubble Cube Candle - Light Green - Lilac.jpeg") 
+pin95.photo.attach(io: File.open(File.expand_path("../../public/images/green/De quoi rafraîchir ta playlist 🙃.jpeg", __FILE__)), filename: "De quoi rafraîchir ta playlist 🙃.jpeg") 
+pin96.photo.attach(io: File.open(File.expand_path("../../public/images/green/Fairy Shared Icon _3.jpeg", __FILE__)), filename: "Fairy Shared Icon _3.jpeg") 
+pin97.photo.attach(io: File.open(File.expand_path("../../public/images/green/Matisse Print Green Leaf-Matisse-Henri Matisse-Art Exhibition Poster-Mid Century Modern Art-Home Wall Decor-Matisse Print-Matisse Poster - Canvas 24 x 36.jpeg", __FILE__)), filename: "Matisse Print Green Leaf-Matisse-Henri Matisse-Art Exhibition Poster-Mid Century Modern Art-Home Wall Decor-Matisse Print-Matisse Poster - Canvas 24 x 36.jpeg") 
+pin98.photo.attach(io: File.open(File.expand_path("../../public/images/green/stella 🕊 on Twitter.jpeg", __FILE__)), filename: "stella 🕊 on Twitter.jpeg") 
+pin99.photo.attach(io: File.open(File.expand_path("../../public/images/green/Superfoods™ Apple, Matcha + Kale Replenishing 2-Piece Set.jpeg", __FILE__)), filename: "Superfoods™ Apple, Matcha + Kale Replenishing 2-Piece Set.jpeg") 
+pin100.photo.attach(io: File.open(File.expand_path("../../public/images/green/Wallpaper and widgets (green).jpeg", __FILE__)), filename: "Wallpaper and widgets (green).jpeg") 
+pin101.photo.attach(io: File.open(File.expand_path("../../public/images/green/Photo Wall Collage Kit _ Mint Sage Green Aesthetic (Set of 77 photos) INSTANT Download _ DIGITAL printable collage kit.png", __FILE__)), filename: "Photo Wall Collage Kit _ Mint Sage Green Aesthetic (Set of 77 photos) INSTANT Download _ DIGITAL printable collage kit.png") 
+pin102.photo.attach(io: File.open(File.expand_path("../../public/images/green/My Visit to the Real Monet's Garden in Giverny, France.png", __FILE__)), filename: "My Visit to the Real Monet's Garden in Giverny, France.png") 
 
 
 board9 = Board.create!(description:"", created_at: DateTime.now, name:"Hairstyles", user_id:user1.id, public:true) 
@@ -323,6 +320,17 @@ pin111 = Pin.create!(created_at: DateTime.now, title:"Easy Bubble Braid Hairstyl
 pin112 = Pin.create!(created_at: DateTime.now, title:"30 Trendy Hairstyles With Bangs You Will Want To Try", user_id:user12.id)
 pin113 = Pin.create!(created_at: DateTime.now, title:"EASY BRAIDED PONYTAIL HAIRSTYLE SPRING 2021 🌷", user_id:user11.id)
 
+pin103.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Butterfly locs hairstyles.jpeg", __FILE__)), filename: "Butterfly locs hairstyles.jpeg") 
+pin104.photo.attach(io: File.open(File.expand_path("../../public/images/hair/EASY RUBBER BAND HAIRSTYLE!.jpeg", __FILE__)), filename: "EASY RUBBER BAND HAIRSTYLE!.jpeg") 
+pin105.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Wand Curls Lace Front Wigs Loose Curly Human Hair Wigs 180% Density.jpeg", __FILE__)), filename: "Wand Curls Lace Front Wigs Loose Curly Human Hair Wigs 180% Density.jpeg")
+pin106.photo.attach(io: File.open(File.expand_path("../../public/images/hair/👑 Hairstylist (Braidbae)🦄♐️ on Instagram_ “Braids so 🔥🔥🔥 order Sleek Af Edge Control today 💕 Atlanta april16th-21st  book via the link in my bio…”.jpeg", __FILE__)), filename: "👑 Hairstylist (Braidbae)🦄♐️ on Instagram_ “Braids so 🔥🔥🔥 order Sleek Af Edge Control today 💕 Atlanta april16th-21st  book via the link in my bio…”.jpeg") 
+pin107.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Papaya Castor Scalp Massaging Serum.jpeg", __FILE__)), filename: "Papaya Castor Scalp Massaging Serum.jpeg") 
+pin108.photo.attach(io: File.open(File.expand_path("../../public/images/hair/11 PRETTY Prom Hairstyles.png", __FILE__)), filename: "11 PRETTY Prom Hairstyles.png") 
+pin109.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Instagram.png", __FILE__)), filename: "Instagram.png") 
+pin110.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Short Curly Hairstyles_ Loose Double Buns.jpeg", __FILE__)), filename: "Short Curly Hairstyles_ Loose Double Buns.jpeg") 
+pin111.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Bubble Braids, Hairstyles, Protective Styles, Curly Hair.jpeg", __FILE__)), filename: "Bubble Braids, Hairstyles, Protective Styles, Curly Hair.jpeg") 
+pin112.photo.attach(io: File.open(File.expand_path("../../public/images/hair/30 Trendy Hairstyles With Bangs You Will Want To Try.png", __FILE__)), filename: "30 Trendy Hairstyles With Bangs You Will Want To Try.png") 
+pin113.photo.attach(io: File.open(File.expand_path("../../public/images/hair/Stitch Braids with Designs.jpeg", __FILE__)), filename: "Stitch Braids with Designs.jpeg") 
 
 board10 = Board.create!(description:"", created_at: DateTime.now, name:"Instagram Captions", user_id:user7.id, public:true) 
 
@@ -341,7 +349,20 @@ pin125 = Pin.create!(created_at: DateTime.now, title:"Savage Instagram Captions 
 pin126 = Pin.create!(created_at: DateTime.now, title:"Instagram CAPTIONS FOR PICTURES", user_id:user12.id)
 pin127 = Pin.create!(created_at: DateTime.now, title:"Instagram Captions", user_id:user3.id)
 
-
+pin114.photo.attach(io: File.open(File.expand_path("../../public/images/captions/100 Instagram Captions.jpeg", __FILE__)), filename: "100 Instagram Captions.jpeg")  
+pin115.photo.attach(io: File.open(File.expand_path("../../public/images/captions/100 Selfie Captions.jpeg", __FILE__)), filename: "100 Selfie Captions.jpeg") 
+pin116.photo.attach(io: File.open(File.expand_path("../../public/images/captions/100+ Aesthetic Captions for Instagram.jpeg", __FILE__)), filename: "100+ Aesthetic Captions for Instagram.jpeg")
+pin117.photo.attach(io: File.open(File.expand_path("../../public/images/captions/500+Instagram Captions - Cute,Couples,Workout,Friendship,Cool,Sassy,One word,Short,Selfies,Adventure,Happy,Aesthetic,funny,Sunset,Fall,Fire,Beach,Dog,Savage.jpeg", __FILE__)), filename: "500+Instagram Captions - Cute,Couples,Workout,Friendship,Cool,Sassy,One word,Short,Selfies,Adventure,Happy,Aesthetic,funny,Sunset,Fall,Fire,Beach,Dog,Savage.jpeg") 
+pin118.photo.attach(io: File.open(File.expand_path("../../public/images/captions/a18b1317-1ba7-4913-a604-a0191ecb72ae.jpeg", __FILE__)), filename: "a18b1317-1ba7-4913-a604-a0191ecb72ae.jpeg") 
+pin119.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Aesthetic captions Instagram.jpeg", __FILE__)), filename: "Aesthetic captions Instagram.jpeg") 
+pin120.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Best Instagram Captions For Guys - ItsAllBee _ Solo Travel & Adventure Tips.jpeg", __FILE__)), filename: "Best Instagram Captions For Guys - ItsAllBee _ Solo Travel & Adventure Tips.jpeg") 
+pin121.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Captions.jpeg", __FILE__)), filename: "Captions.jpeg") 
+pin122.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Cool Snapchat Quotes & Captions - ItsAllBee _ Solo Travel & Adventure Tips.jpeg", __FILE__)), filename: "Cool Snapchat Quotes & Captions - ItsAllBee _ Solo Travel & Adventure Tips.jpeg") 
+pin123.photo.attach(io: File.open(File.expand_path("../../public/images/captions/f13d2cb0-5afb-43d6-9174-83a894f20977.jpeg", __FILE__)), filename: "f13d2cb0-5afb-43d6-9174-83a894f20977.jpeg") 
+pin124.photo.attach(io: File.open(File.expand_path("../../public/images/captions/f8102342-1195-4efd-bab8-e33b56775f15.png", __FILE__)), filename: "f8102342-1195-4efd-bab8-e33b56775f15.png") 
+pin125.photo.attach(io: File.open(File.expand_path("../../public/images/captions/insta captions (all parts).jpeg", __FILE__)), filename: "insta captions (all parts).jpeg") 
+pin126.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Курс _Интреактивный контент_.jpeg", __FILE__)), filename: "Курс _Интреактивный контент_.jpeg") 
+pin127.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Курс _Интреактивный контент_.png", __FILE__)), filename: "Курс _Интреактивный контент_.png") 
 
 board11 = Board.create!(description:"", created_at: DateTime.now, name:"Kawaii Wallpapers", user_id:user7.id, public:true) 
 
@@ -358,6 +379,18 @@ pin137 = Pin.create!(created_at: DateTime.now, title:"•~fondo kawaii para tu c
 pin138 = Pin.create!(created_at: DateTime.now, title:"Free Lock Screen Wallpaper by Bymunbear", user_id:user12.id)
 pin139 = Pin.create!(created_at: DateTime.now, title:"💖✨", user_id:user20.id)
 
+pin128.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/@aube_blue NAVER.jpeg", __FILE__)), filename: "@aube_blue NAVER.jpeg") 
+pin129.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/•_fondo kawaii para tu celular_•.jpeg", __FILE__)), filename: "•_fondo kawaii para tu celular_•.jpeg") 
+pin130.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Aesthetic wallpaper🌈.jpeg", __FILE__)), filename: "Aesthetic wallpaper🌈.jpeg") 
+pin131.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/aube blue 오브블루 on Twitter.jpeg", __FILE__)), filename: "aube blue 오브블루 on Twitter.jpeg") 
+pin132.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Bubble Tea Illustration Art Print_ Cute Kawaii Digital _ Etsy.jpeg", __FILE__)), filename: "Bubble Tea Illustration Art Print_ Cute Kawaii Digital _ Etsy.jpeg") 
+pin133.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Cute Bear wallpaper.jpeg", __FILE__)), filename: "Cute Bear wallpaper.jpeg") 
+pin134.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Cute wallpaper aesthatic.jpeg", __FILE__)), filename: "Cute wallpaper aesthatic.jpeg") 
+pin135.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/life planner ･ﾟ✧ - template.png", __FILE__)), filename: "life planner ･ﾟ✧ - template.png") 
+pin136.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/RantBook - 🌸1___Je suis quelqu'un__🌸.jpeg", __FILE__)), filename: "RantBook - 🌸1___Je suis quelqu'un__🌸.jpeg") 
+pin137.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/우이 on Twitter.jpeg", __FILE__)), filename: "우이 on Twitter.jpeg") 
+pin138.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/fondos de pantalla de anime.jpeg", __FILE__)), filename: "fondos de pantalla de anime.jpeg") 
+pin139.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/トーコ Toko on Twitter.png", __FILE__)), filename: "トーコ Toko on Twitter.png") 
 
 board12 = Board.create!(description:"", created_at: DateTime.now, name:"mEmeS", user_id:user7.id, public:true) 
 
@@ -373,6 +406,19 @@ pin148 = Pin.create!(created_at: DateTime.now, title:"21 Funny Loki Memes to Rea
 pin149 = Pin.create!(created_at: DateTime.now, title:'The Dog Like "he has a point"', user_id:user17.id)
 pin150 = Pin.create!(created_at: DateTime.now, title:"I can’t this is too funny 😂", user_id:user17.id)
 pin151 = Pin.create!(created_at: DateTime.now, title:"I Mean... You Tried..?", user_id:user20.id)
+
+pin140.photo.attach(io: File.open(File.expand_path("../../public/images/memes/25 Memes to Melt Your Mind.jpeg", __FILE__)), filename: "25 Memes to Melt Your Mind.jpeg")  
+pin141.photo.attach(io: File.open(File.expand_path("../../public/images/memes/30 Work From Home Memes That Need To Get Out More.jpeg", __FILE__)), filename: "30 Work From Home Memes That Need To Get Out More.jpeg")   
+pin142.photo.attach(io: File.open(File.expand_path("../../public/images/memes/50 Ridiculously Funny Programming Memes that Every Developer HAS to See!.gif", __FILE__)), filename: "50 Ridiculously Funny Programming Memes that Every Developer HAS to See!.gif")   
+pin143.photo.attach(io: File.open(File.expand_path("../../public/images/memes/50 Ridiculously Funny Programming Memes that Every Developer HAS to See!.png", __FILE__)), filename: "50 Ridiculously Funny Programming Memes that Every Developer HAS to See!.png")   
+pin144.photo.attach(io: File.open(File.expand_path("../../public/images/memes/66 Funny Memes to Enjoy Over the Weekend.jpeg", __FILE__)), filename: "66 Funny Memes to Enjoy Over the Weekend.jpeg")   
+pin145.photo.attach(io: File.open(File.expand_path("../../public/images/memes/How I went from enlisted Air Force to software engineer intern @Twitter.png", __FILE__)), filename: "How I went from enlisted Air Force to software engineer intern @Twitter.png")   
+pin146.photo.attach(io: File.open(File.expand_path("../../public/images/memes/Joke on Software Engineers.jpeg", __FILE__)), filename: "Joke on Software Engineers.jpeg")   
+pin147.photo.attach(io: File.open(File.expand_path("../../public/images/memes/MEME_.jpeg", __FILE__)), filename: "MEME_.jpeg")   
+pin148.photo.attach(io: File.open(File.expand_path("../../public/images/memes/monkeyUser on Twitter.jpeg", __FILE__)), filename: "monkeyUser on Twitter.jpeg")   
+pin149.photo.attach(io: File.open(File.expand_path("../../public/images/memes/Thirty-Eight Aimless Memes To Please Your Eyes.jpeg", __FILE__)), filename: "Thirty-Eight Aimless Memes To Please Your Eyes.jpeg")   
+pin150.photo.attach(io: File.open(File.expand_path("../../public/images/memes/This guy speaks nothing but the truth.jpeg", __FILE__)), filename: "This guy speaks nothing but the truth.jpeg")   
+pin151.photo.attach(io: File.open(File.expand_path("../../public/images/memes/Zetaplus 🇹🇬 on Twitter.jpeg", __FILE__)), filename: "Zetaplus 🇹🇬 on Twitter.jpeg")   
 
 
 board13 = Board.create!(description:"", created_at: DateTime.now, name:"Nail design inspo", user_id:user1.id, public:true) 
