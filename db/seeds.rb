@@ -361,8 +361,8 @@ pin122.photo.attach(io: File.open(File.expand_path("../../public/images/captions
 pin123.photo.attach(io: File.open(File.expand_path("../../public/images/captions/f13d2cb0-5afb-43d6-9174-83a894f20977.jpeg", __FILE__)), filename: "f13d2cb0-5afb-43d6-9174-83a894f20977.jpeg") 
 pin124.photo.attach(io: File.open(File.expand_path("../../public/images/captions/f8102342-1195-4efd-bab8-e33b56775f15.png", __FILE__)), filename: "f8102342-1195-4efd-bab8-e33b56775f15.png") 
 pin125.photo.attach(io: File.open(File.expand_path("../../public/images/captions/insta captions (all parts).jpeg", __FILE__)), filename: "insta captions (all parts).jpeg") 
-pin126.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Курс _Интреактивный контент_.jpeg", __FILE__)), filename: "Курс _Интреактивный контент_.jpeg") 
-pin127.photo.attach(io: File.open(File.expand_path("../../public/images/captions/Курс _Интреактивный контент_.png", __FILE__)), filename: "Курс _Интреактивный контент_.png") 
+pin126.photo.attach(io: File.open(File.expand_path("../../public/images/captions/captions1.jpeg", __FILE__)), filename: "captions1.jpeg") 
+pin127.photo.attach(io: File.open(File.expand_path("../../public/images/captions/captions2.png", __FILE__)), filename: "captions2.png") 
 
 board11 = Board.create!(description:"", created_at: DateTime.now, name:"Kawaii Wallpapers", user_id:user7.id, public:true) 
 
