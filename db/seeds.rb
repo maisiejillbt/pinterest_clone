@@ -382,15 +382,15 @@ pin139 = Pin.create!(created_at: DateTime.now, title:"💖✨", user_id:user20.i
 pin128.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/@aube_blue NAVER.jpeg", __FILE__)), filename: "@aube_blue NAVER.jpeg") 
 pin129.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/•_fondo kawaii para tu celular_•.jpeg", __FILE__)), filename: "•_fondo kawaii para tu celular_•.jpeg") 
 pin130.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Aesthetic wallpaper🌈.jpeg", __FILE__)), filename: "Aesthetic wallpaper🌈.jpeg") 
-pin131.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/aube blue 오브블루 on Twitter.jpeg", __FILE__)), filename: "aube blue 오브블루 on Twitter.jpeg") 
+pin131.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/aube blue Twitter.jpeg", __FILE__)), filename: "aube blue Twitter.jpeg") 
 pin132.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Bubble Tea Illustration Art Print_ Cute Kawaii Digital _ Etsy.jpeg", __FILE__)), filename: "Bubble Tea Illustration Art Print_ Cute Kawaii Digital _ Etsy.jpeg") 
 pin133.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Cute Bear wallpaper.jpeg", __FILE__)), filename: "Cute Bear wallpaper.jpeg") 
 pin134.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Cute wallpaper aesthatic.jpeg", __FILE__)), filename: "Cute wallpaper aesthatic.jpeg") 
-pin135.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/life planner ･ﾟ✧ - template.png", __FILE__)), filename: "life planner ･ﾟ✧ - template.png") 
+pin135.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/life planner template.png", __FILE__)), filename: "life planner template.png") 
 pin136.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/RantBook - 🌸1___Je suis quelqu'un__🌸.jpeg", __FILE__)), filename: "RantBook - 🌸1___Je suis quelqu'un__🌸.jpeg") 
-pin137.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/우이 on Twitter.jpeg", __FILE__)), filename: "우이 on Twitter.jpeg") 
+pin137.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/bunny.jpeg", __FILE__)), filename: "bunny.jpeg") 
 pin138.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/fondos de pantalla de anime.jpeg", __FILE__)), filename: "fondos de pantalla de anime.jpeg") 
-pin139.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/トーコ Toko on Twitter.png", __FILE__)), filename: "トーコ Toko on Twitter.png") 
+pin139.photo.attach(io: File.open(File.expand_path("../../public/images/kawaii/Toko on Twitter.png", __FILE__)), filename: "Toko on Twitter.png") 
 
 board12 = Board.create!(description:"", created_at: DateTime.now, name:"mEmeS", user_id:user7.id, public:true) 
 
@@ -438,7 +438,7 @@ pin163 =	Pin.create!(created_at: DateTime.now, title:"The Best Nail Art Trends",
 pin164 =	Pin.create!(created_at: DateTime.now, title:"30+ Summer Floral Nail Designs", user_id:user1.id)
 pin165 =	Pin.create!(created_at: DateTime.now, title:"Black Nail Designs: Matte + Marbled", user_id:user1.id)
 
-pin152.photo.attach(io: File.open(File.expand_path("../../public/images/nails/❤ Hang Nguyen aka Moon ❤ on Instagram_ “Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg", __FILE__)), filename: "❤ Hang Nguyen aka Moon ❤ on Instagram_ “Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg") 
+pin152.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg", __FILE__)), filename: "Happy Lunar New year !!!! Similar to yesterday’s nails but Lunar New Year colors 🎎🎊🧧🐂❤️💛”.jpeg") 
 pin153.photo.attach(io: File.open(File.expand_path("../../public/images/nails/15 Gorgeous White Nail Design Ideas - Almond Nails.jpeg", __FILE__)), filename: "15 Gorgeous White Nail Design Ideas - Almond Nails.jpeg") 
 pin154.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Byrdie.png", __FILE__)), filename: "Byrdie.png") 
 pin155.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Lively Orange Press-On Nails.jpeg", __FILE__)), filename: "Lively Orange Press-On Nails.jpeg") 
