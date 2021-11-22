@@ -445,7 +445,7 @@ pin155.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Li
 pin156.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Most Beautiful Nail Designs You Will Love To wear In 2021 _ Green Swirl Nail Art.jpeg", __FILE__)), filename: "Most Beautiful Nail Designs You Will Love To wear In 2021 _ Green Swirl Nail Art.jpeg")
 pin157.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Nails, Nails, Nails.jpeg", __FILE__)), filename: "Nails, Nails, Nails.jpeg") 
 pin158.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Toadstool - Fire Red Creme Nail Polish, Blood Red Holiday Nails, Vegan Polish.png", __FILE__)), filename: "Toadstool - Fire Red Creme Nail Polish, Blood Red Holiday Nails, Vegan Polish.png") 
-pin159.photo.attach(io: File.open(File.expand_path("../../public/images/nails/3 vídeos com tutoriais simples para reproduzir nas suas unhas.jpeg", __FILE__)), filename: "3 vídeos com tutoriais simples para reproduzir nas suas unhas.jpeg") 
+pin159.photo.attach(io: File.open(File.expand_path("../../public/images/nails/nails.jpeg", __FILE__)), filename: "nails.jpeg") 
 pin160.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Chic Nude Press-On Nails.jpeg", __FILE__)), filename: "Chic Nude Press-On Nails.jpeg") 
 pin161.photo.attach(io: File.open(File.expand_path("../../public/images/nails/Ballerina Long Coffin Fake Nails - NEW- glue set18.jpeg", __FILE__)), filename: "Ballerina Long Coffin Fake Nails - NEW- glue set18.jpeg") 
 pin162.photo.attach(io: File.open(File.expand_path("../../public/images/nails/fall nail inspo.jpeg", __FILE__)), filename: "fall nail inspo.jpeg") 
