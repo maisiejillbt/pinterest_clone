@@ -201,7 +201,7 @@ pin62 = Pin.create!(created_at: DateTime.now, title:"whatemwore on LTK", user_id
 
 pin52.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Button bodycon Lace Up Leather Skirt.jpeg", __FILE__)), filename: "Button bodycon Lace Up Leather Skirt.jpeg") 
 pin53.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Casual Round Neck Long Sleeve Dress - Black _ XXL.jpeg", __FILE__)), filename: "Casual Round Neck Long Sleeve Dress - Black _ XXL.jpeg") 
-pin54.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Come abbinare un blazer nel 2021 22_ gli outfit più belli.jpeg", __FILE__)), filename: "Come abbinare un blazer nel 2021 22_ gli outfit più belli.jpeg") 
+pin54.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/fall_outfit.jpeg", __FILE__)), filename: "fall_outfit.jpeg") 
 pin55.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Dropped shoulder lantern sleeve pocket coat plus size brown-4XL.png", __FILE__)), filename: "Dropped shoulder lantern sleeve pocket coat plus size brown-4XL.png") 
 pin56.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/FALL FASHION OUTFIT IDEAS _ NEUTRAL AUTUMN OUTFITS.jpeg", __FILE__)), filename: "FALL FASHION OUTFIT IDEAS _ NEUTRAL AUTUMN OUTFITS.jpeg") 
 pin57.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Fuzzy Long Cardigan.jpeg", __FILE__)), filename: "Fuzzy Long Cardigan.jpeg") 
