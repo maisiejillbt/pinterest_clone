@@ -174,6 +174,20 @@ pin50 = Pin.create!(created_at: DateTime.now, title:"DIY Closet Makeover", user_
 pin51 = Pin.create!(created_at: DateTime.now, title:"DIY footed bowl", user_id:user3.id)
 
 
+pin40.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Sofa Table - Brooklyn Nicole Home.png", __FILE__)), filename: "DIY Sofa Table - Brooklyn Nicole Home.png") 
+pin41.photo.attach(io: File.open(File.expand_path("../../public/images/diy/18 Magnificent Design Ideas For Decorating Master Bedroom.jpeg", __FILE__)), filename: "18 Magnificent Design Ideas For Decorating Master Bedroom.jpeg") 
+pin42.photo.attach(io: File.open(File.expand_path("../../public/images/diy/Ledge Shelf When You Barely Know How to Use a Drill.jpeg", __FILE__)), filename: "Ledge Shelf When You Barely Know How to Use a Drill.jpeg")  
+pin43.photo.attach(io: File.open(File.expand_path("../../public/images/diy/Creative DIY Outdoor Lighting Idea for $2.jpeg", __FILE__)), filename: "Creative DIY Outdoor Lighting Idea for $2.jpeg")  
+pin44.photo.attach(io: File.open(File.expand_path("../../public/images/diy/FAUX CERAMIC VASES DIY - bits and bites.jpeg", __FILE__)), filename: "FAUX CERAMIC VASES DIY - bits and bites.jpeg")  
+pin45.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Wall Art with Wood Shims - Fiddle Leaf Interiors.jpeg", __FILE__)), filename: "DIY Wall Art with Wood Shims - Fiddle Leaf Interiors.jpeg")  
+pin46.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Rattan Cabinet Hack With Burlap.jpeg", __FILE__)), filename: "DIY Rattan Cabinet Hack With Burlap.jpeg")  
+pin47.photo.attach(io: File.open(File.expand_path("../../public/images/diy/The Index Wall Shelf, Set of 4 in Oak.jpeg", __FILE__)), filename: "The Index Wall Shelf, Set of 4 in Oak.jpeg")  
+pin48.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Samsung Frame TV.png", __FILE__)), filename: "DIY Samsung Frame TV.png")  
+pin49.photo.attach(io: File.open(File.expand_path("../../public/images/diy/Home Solutions.jpeg", __FILE__)), filename: "Home Solutions.jpeg")  
+pin50.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Custom Closet - IKEA TARVA & IVAR HACK - Handmade Weekly.jpeg", __FILE__)), filename: "DIY Custom Closet - IKEA TARVA & IVAR HACK - Handmade Weekly.jpeg")  
+pin51.photo.attach(io: File.open(File.expand_path("../../public/images/diy/DIY Footed Display Bowls — Sugar & Cloth Decor %.jpeg", __FILE__)), filename: "DIY Footed Display Bowls — Sugar & Cloth Decor %.jpeg")  
+
+
 board5 = Board.create!(description:"", created_at: DateTime.now, name:"Autum Outfits", user_id:user3.id, public:true) 
 
 pin52 = Pin.create!(created_at: DateTime.now, title:"Parisian Chic", user_id:user3.id)
@@ -187,6 +201,18 @@ pin59 = Pin.create!(created_at: DateTime.now, title:"Long Sleeve Button Down", u
 pin60 = Pin.create!(created_at: DateTime.now, title:"Womens Turtleneck", user_id:user8.id)
 pin61 = Pin.create!(created_at: DateTime.now, title:"The Fall Trends You’re Probably Missing", user_id:user9.id)
 pin62 = Pin.create!(created_at: DateTime.now, title:"whatemwore on LTK", user_id:user9.id)
+
+pin52.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Button bodycon Lace Up Leather Skirt.jpeg", __FILE__)), filename: "Button bodycon Lace Up Leather Skirt.jpeg") 
+pin53.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Casual Round Neck Long Sleeve Dress - Black _ XXL.jpeg", __FILE__)), filename: "Casual Round Neck Long Sleeve Dress - Black _ XXL.jpeg") 
+pin54.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Come abbinare un blazer nel 2021 22_ gli outfit più belli.jpeg", __FILE__)), filename: "Come abbinare un blazer nel 2021 22_ gli outfit più belli.jpeg") 
+pin55.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Dropped shoulder lantern sleeve pocket coat plus size brown-4XL.png", __FILE__)), filename: "Dropped shoulder lantern sleeve pocket coat plus size brown-4XL.png") 
+pin56.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/FALL FASHION OUTFIT IDEAS _ NEUTRAL AUTUMN OUTFITS.jpeg", __FILE__)), filename: "FALL FASHION OUTFIT IDEAS _ NEUTRAL AUTUMN OUTFITS.jpeg") 
+pin57.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Fuzzy Long Cardigan.jpeg", __FILE__)), filename: "Fuzzy Long Cardigan.jpeg") 
+pin58.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/How to put together a neutral tone outfit and nail it.jpeg", __FILE__)), filename: "How to put together a neutral tone outfit and nail it.jpeg") 
+pin59.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Merlot And Cuddles Chenille Cardigan In Cream.jpeg", __FILE__)), filename: "Merlot And Cuddles Chenille Cardigan In Cream.jpeg") 
+pin60.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Next in Line Biker Jacket Brown - US 6 _ Brown.jpeg", __FILE__)), filename: "Next in Line Biker Jacket Brown - US 6 _ Brown.jpeg") 
+pin61.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Vintage Plaid Top Cardigan Jacket, Cream - beige _ S.jpeg", __FILE__)), filename: "Vintage Plaid Top Cardigan Jacket, Cream - beige _ S.jpeg") 
+pin62.photo.attach(io: File.open(File.expand_path("../../public/images/fall-outfits/Western Denim Jacket Dark Brown - S_M _ Dark Brown.jpeg", __FILE__)), filename: "Western Denim Jacket Dark Brown - S_M _ Dark Brown.jpeg") 
 
 
 board6 = Board.create!(description:"", created_at: DateTime.now, name:"Christmas Decor Ideas", user_id:user3.id, public:true) 
@@ -204,6 +230,18 @@ pin72 = Pin.create!(created_at: DateTime.now, title:"Simple and Natural Christma
 pin73 = Pin.create!(created_at: DateTime.now, title:"Christmas Decor We Are Drooling Over", user_id:user19.id)
 pin74 = Pin.create!(created_at: DateTime.now, title:"Christmas Home Tour 2020", user_id:user19.id)
 
+pin63.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/9 dressed up Christmas trees that will be forever in style _ Style at Home.jpeg", __FILE__)), filename: "9 dressed up Christmas trees that will be forever in style _ Style at Home.jpeg") 
+pin64.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/22 Magical Christmas Room Decor ideas Perfect for your Inner Diva!.jpeg", __FILE__)), filename: "22 Magical Christmas Room Decor ideas Perfect for your Inner Diva!.jpeg")
+pin65.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/73 Christmas Decor Ideas for Your Home - Chaylor & Mads.jpeg", __FILE__)), filename: "73 Christmas Decor Ideas for Your Home - Chaylor & Mads.jpeg") 
+pin66.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Christmas Decor We Are Drooling Over in 2020.jpeg", __FILE__)), filename: "Christmas Decor We Are Drooling Over in 2020.jpeg") 
+pin67.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Effortless Christmas Decorations.jpeg", __FILE__)), filename: "Effortless Christmas Decorations.jpeg") 
+pin68.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Green and Gold Fresh Evergreen Christmas Home Tour.jpeg", __FILE__)), filename: "Green and Gold Fresh Evergreen Christmas Home Tour.jpeg") 
+pin69.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Modern and Neutral Christmas Decor Ideas - Oh Happy Joy! Journey of Motherhood.jpeg", __FILE__)), filename: "Modern and Neutral Christmas Decor Ideas - Oh Happy Joy! Journey of Motherhood.jpeg") 
+pin70.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Home for the Holidays _ A peek inside our Christmas Decor - CHAMPAGNE + MACAROONS.png", __FILE__)), filename: "Home for the Holidays _ A peek inside our Christmas Decor - CHAMPAGNE + MACAROONS.png") 
+pin71.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Christmas Decorating Ideas- Simple Christmas tree decor - French Country Cottage.jpeg", __FILE__)), filename: "Christmas Decorating Ideas- Simple Christmas tree decor - French Country Cottage.jpeg") 
+pin72.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Three Christmas decor trends we're loving this festive season _ HouseAndHome_ie.jpeg", __FILE__)), filename: "Three Christmas decor trends we're loving this festive season _ HouseAndHome_ie.jpeg") 
+pin73.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/Minimalist Elegance Christmas Decor + Video.png", __FILE__)), filename: "Minimalist Elegance Christmas Decor + Video.png") 
+pin74.photo.attach(io: File.open(File.expand_path("../../public/images/christmas/White Chenille Stockings_ Christmas Red Ticking Stripe Stockings_ Family Stockings_ Shabby Chic Christmas Holiday Decor_ Farmhouse Decor.jpeg", __FILE__)), filename: "White Chenille Stockings_ Christmas Red Ticking Stripe Stockings_ Family Stockings_ Shabby Chic Christmas Holiday Decor_ Farmhouse Decor.jpeg") 
 
 board7 = Board.create!(description:"", created_at: DateTime.now, name:"Engagement Rings", user_id:user1.id, public:true) 
 
@@ -222,6 +260,21 @@ pin86 = Pin.create!(created_at: DateTime.now, title:"2.20 ct Round Brilliant Cut
 pin87 = Pin.create!(created_at: DateTime.now, title:"Vintage Scroll Pattern Engraved Diamond Engagement Ring", user_id:user22.id)
 pin88 = Pin.create!(created_at: DateTime.now, title:"Radiant cut engagement ring", user_id:user14.id)
 
+pin75.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Aquamarine & Diamond Ring.jpeg", __FILE__)), filename: "Aquamarine & Diamond Ring.jpeg")  
+pin76.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Aruba _ Light Green Emerald Engagement Ring Smooth Thin Band.png", __FILE__)), filename: "Aruba _ Light Green Emerald Engagement Ring Smooth Thin Band.png")
+pin77.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Brilliant 3_55CT Lab Created Emerald Center Engagement Ring,Minimalist Style Anniversary Ring,Promise Ring For Female,14K Yellow Gold Ring.jpeg", __FILE__)), filename: "Brilliant 3_55CT Lab Created Emerald Center Engagement Ring,Minimalist Style Anniversary Ring,Promise Ring For Female,14K Yellow Gold Ring.jpeg") 
+pin78.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Brilliant Earth Rose Gold Lumiere Oval Diamond Engagement Ring.jpeg", __FILE__)), filename: "Brilliant Earth Rose Gold Lumiere Oval Diamond Engagement Ring.jpeg") 
+pin79.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Comfort Fit Bezel Set Engagement Ring in 14K Yellow Gold 1_7mm Width Band (Setting Price).jpeg", __FILE__)), filename: "Comfort Fit Bezel Set Engagement Ring in 14K Yellow Gold 1_7mm Width Band (Setting Price).jpeg")
+pin80.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Eliza Engagement Ring Setting - 4_5 - Custom Pre-order; Allow 6-8 weeks for delivery.jpeg", __FILE__)), filename: "Eliza Engagement Ring Setting - 4_5 - Custom Pre-order; Allow 6-8 weeks for delivery.jpeg") 
+pin81.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Emerald Cut Champagne Diamond Engagement Ring In Yellow Gold.jpeg", __FILE__)), filename: "Emerald Cut Champagne Diamond Engagement Ring In Yellow Gold.jpeg") 
+pin82.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Emerald Moissanite diamond ring, Emerald cut Moissanite Engagement Ring, solitaire emerald diamond ring for her, emerlad wedding ring.jpeg", __FILE__)), filename: "Emerald Moissanite diamond ring, Emerald cut Moissanite Engagement Ring, solitaire emerald diamond ring for her, emerlad wedding ring.jpeg") 
+pin83.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Engagement_Kite Rutilated Quartz Ring - 14K White Gold _ 8_25.jpeg", __FILE__)), filename: "Engagement_Kite Rutilated Quartz Ring - 14K White Gold _ 8_25.jpeg") 
+pin84.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Jane Engagement Ring Setting - 5 - Custom Pre-Order; Allow 6-8 weeks for delivery.jpeg", __FILE__)), filename: "Jane Engagement Ring Setting - 5 - Custom Pre-Order; Allow 6-8 weeks for delivery.jpeg") 
+pin85.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Large Oval Monolith Ring.jpeg", __FILE__)), filename: "Large Oval Monolith Ring.jpeg") 
+pin86.photo.attach(io: File.open(File.expand_path("../../public/images/rings/MARROW FINE _ 1_01CT DIAMOND LOZENGE CIGAR BAND.jpeg", __FILE__)), filename: "MARROW FINE _ 1_01CT DIAMOND LOZENGE CIGAR BAND.jpeg") 
+pin87.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Modern Moi Et Toi Engagement Ring, Emily Ratajkowski Style Engagement Ring, Two Stone Engagement Ring.jpeg", __FILE__)), filename: "Modern Moi Et Toi Engagement Ring, Emily Ratajkowski Style Engagement Ring, Two Stone Engagement Ring.jpeg") 
+pin88.photo.attach(io: File.open(File.expand_path("../../public/images/rings/Moonbeam _ Elongated Rectangle Moissanite Engagement Ring.jpeg", __FILE__)), filename: "Moonbeam _ Elongated Rectangle Moissanite Engagement Ring.jpeg")
+
 
 board8 = Board.create!(description:"", created_at: DateTime.now, name:"Green Aesthetic", user_id:user7.id, public:true) 
 
@@ -239,6 +292,21 @@ pin99 = Pin.create!(created_at: DateTime.now, title:"Sage Green and White", user
 pin100 = Pin.create!(created_at: DateTime.now, title:"vintage indie poster pack", user_id:user10.id)
 pin101 = Pin.create!(created_at: DateTime.now, title:"green heart wallpaper", user_id:user10.id)
 pin102 = Pin.create!(created_at: DateTime.now, title:"Flowering Meadow, Dandelion", user_id:user9.id)
+
+pin89.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin90.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin91.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin92.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin93.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin94.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin95.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin96.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin97.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin98.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin99.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin100.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin101.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
+pin102.photo.attach(io: File.open(File.expand_path("../../public/images/green/", __FILE__)), filename: "") 
 
 
 board9 = Board.create!(description:"", created_at: DateTime.now, name:"Hairstyles", user_id:user1.id, public:true) 
