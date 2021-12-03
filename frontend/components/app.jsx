@@ -14,15 +14,17 @@ import BoardShowContainer from './boards/board_show_container.jsx'
 import LandingPage from './home/landing_page.jsx'
 import UserShowContainer from './users/user_show_container.jsx'
 
-import NavBarContainer from './nav_bar/nav_bar_container.jsx'
+import NavBarContainer from './nav_bar/nav_bar_container.js'
+import NavBarAuthContainer from './nav_bar/nav_bar_auth_container.js'
+// import NavBarContainer from './nav_bar/nav_bar_container.js'
+
 import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 
 
 export default () => (
   <div>
-    <Route path="/" component={NavBarContainer}/> 
+    <Route path="/" component={NavBarAuthContainer}/> 
     <AuthRoute exact path="/" component={LandingPage}/> 
-
 
     <Switch>
       <AuthRoute exact path="/login" component={LoginContainer} />
