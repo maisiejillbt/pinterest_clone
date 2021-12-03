@@ -1,6 +1,5 @@
 import React from 'react'; 
 
-
 class SignUp extends React.Component {
   constructor(props){
     super(props)
@@ -8,10 +7,8 @@ class SignUp extends React.Component {
       email: '', 
       password: '',
       age: '',
-      username: '', 
-      avatar: ''
+      username: '',
     }
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -24,6 +21,16 @@ class SignUp extends React.Component {
     };
   }
 
+  assignAvatar(){
+    const avatars = [
+      window.avatar_blue,
+      window.avatar_green,
+      window.avatar_dkgreen,
+      window.avatar_gold,] 
+    const avatar = avatars[Math.floor(Math.random() * avatars.length)]
+    return avatar;
+  }
+
   handleSubmit(e){
     e.preventDefault(); 
 
@@ -32,10 +39,25 @@ class SignUp extends React.Component {
         this.props.login(this.state)
           .then(() =>
             this.props.history.push('/pins')
-      ));
+        ));
       
      /// this is where we will be sent after submit!
   }
+
+  // trying and failing to implement default avatars  :( 
+
+    // handleSubmit(e) {
+    //   e.preventDefault();
+    //   const formData = new FormData();
+    //   formData.append('user[email]', this.state.email);
+    //   formData.append('user[password]', this.state.password);
+    //   formData.append('user[age]', this.state.age);
+    //   formData.append('user[photo]', this.state.photoFile);
+      
+    //   this.props.createNewUser(formData)
+    //     .then(() => 
+    //       this.props.login(this.state))
+    // } 
 
   render() {
     return(

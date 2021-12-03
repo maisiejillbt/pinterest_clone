@@ -5,11 +5,12 @@ import NavBarAuth from './nav_bar_auth';
 import { logoutUser } from '../../actions/session';
 
 const mstp = state => ({
-  current_user: state.session.current_user
+  current_user: state.session.current_user 
+  /// Might end up getting rid of this constructor all together 
 });
 
-const mdtp = dispatch => ({
-  logoutUser: () => dispatch(logoutUser()),
-});
+// const mdtp = dispatch => ({
+//   logoutUser: () => dispatch(logoutUser()),
+// });
 
-export default connect(mstp, mdtp)(NavBarAuth)
+export default connect(mstp)(NavBarAuth)

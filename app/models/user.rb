@@ -59,4 +59,5 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom.base64(64)
   end
+
 end

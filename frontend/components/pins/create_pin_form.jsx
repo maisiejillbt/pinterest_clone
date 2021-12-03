@@ -33,7 +33,6 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
-    console.log(this.props.current_user.id)
     return (
       <div className="create-pin-container">
         <div className="create-pin">
