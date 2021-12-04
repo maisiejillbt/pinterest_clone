@@ -39,7 +39,6 @@ class Pin extends React.Component {
               : 
               <button className="save-button"><Link to={`/create-board`}>Board</Link></button> 
             }
-
           </div>
         : 
           <div className="image-placeholder">
