@@ -3,7 +3,10 @@ import BoardPreview from '../boards/board_preview'
 
 class UserShow extends React.Component {
   constructor(props){
-    super(props)
+    super(props); 
+    this.state = {
+      userId: this.props.match.params.userId,
+    }
   }
 
   componentDidMount(){
@@ -20,17 +23,14 @@ class UserShow extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const userId = this.props.match.params.userId
-    console.log(this.props.photoUrl)
-   
     if (Object.keys(this.props.user).length > 0) {
-
       const boards = this.props.user.boards
       return(
         <div className="profile-container">
           <div className="user-info">
             <div className="avatar-container">
-
               { this.props.photoUrl ? <img src={this.props.photoUrl}/> : <img src={window.avatar_green} alt="" /> }
             </div>
             <h1>{this.props.user.name}</h1>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import NavBarProtected from './nav_bar_protected';
 
 import { logoutUser } from '../../actions/session';
@@ -12,4 +13,4 @@ const mdtp = dispatch => ({
   logoutUser: () => dispatch(logoutUser()),
 });
 
-export default connect(mstp, mdtp)(NavBarProtected);
+export default withRouter(connect(mstp, mdtp)(NavBarProtected));

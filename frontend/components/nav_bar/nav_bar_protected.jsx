@@ -13,7 +13,7 @@ class NavBarProtected extends React.Component {
   toggleDropdown(){
     this.setState(prevState => ({
         dropdownOpen: !prevState.dropdownOpen
-    }))
+    }));
   }
 
   dropdown(){

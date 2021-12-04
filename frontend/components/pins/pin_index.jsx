@@ -2,7 +2,6 @@ import React from 'react';
 import Pin from './pin'
 import { Link } from 'react-router-dom';
 
-
 class PinIndex extends React.Component {
   constructor(props){
     super(props)
@@ -23,7 +22,7 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    const pins = this.props.pins 
+    const pins = this.props.pins.slice(0,15)
     const boards = this.props.boards
     if (pins.length > 6 ) {
       return(
