@@ -8,6 +8,26 @@ class NavBarProtected extends React.Component {
       current_user: this.props.current_user, 
       dropdownOpen: false,
     }
+    this.close = this.close.bind(this);
+  }
+
+  componentDidUpdate(){
+    const { dropdownOpen } = this.state;
+
+    setTimeout(() => {
+      if(dropdownOpen){
+        window.addEventListener('click', this.close);
+      }
+      else{
+        window.removeEventListener('click', this.close);
+      }
+    }, 0);
+  }
+
+  close(){
+    this.setState({
+      dropdownOpen: false,
+    });
   }
   
   toggleDropdown(){

@@ -6,24 +6,52 @@ class UserShow extends React.Component {
     super(props); 
     this.state = {
       userId: this.props.match.params.userId,
+      dropdownOpen: false,
     }
+    this.close = this.close.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchUser(this.props.match.params.userId);
   }
 
-  hide() {
-    const dropdown = document.getElementById('create-dropdown');
-    if(dropdown.classList.contains("hide")){
-      dropdown.classList.remove("hide");
-    }else{
-      dropdown.classList.add("hide")
-    }
+  componentDidUpdate(){
+    const { dropdownOpen } = this.state;
+
+    setTimeout(() => {
+      if(dropdownOpen){
+        window.addEventListener('click', this.close);
+      }
+      else{
+        window.removeEventListener('click', this.close);
+      }
+    }, 0);
+  }
+
+  close(){
+    this.setState({
+      dropdownOpen: false,
+    });
+  }
+
+  toggleDropdown(){
+    this.setState(prevState => ({
+        dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+
+  dropdown(){
+      return(
+        <div id="create-dropdown" className="dropdown">
+          <h2 className="create">Create</h2>
+          <button id="dd-button">Pin</button>
+          <button id="dd-button">Board</button>
+        </div>
+      );
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.state.dropdownOpen)
     const userId = this.props.match.params.userId
     if (Object.keys(this.props.user).length > 0) {
       const boards = this.props.user.boards
@@ -38,13 +66,9 @@ class UserShow extends React.Component {
             <button className="edit-profile">Edit Profile</button>
           </div>
 
-          <div className="create-button" onClick={() => this.hide()}>
+          <div className="create-button" onClick={() => this.toggleDropdown()}>
             <h1>+</h1>
-            <div id="create-dropdown" className="dropdown hide">
-              <h2 className="create">Create</h2>
-              <button id="dd-button">Pin</button>
-              <button id="dd-button">Board</button>
-            </div>
+            { this.state.dropdownOpen ? this.dropdown() : null }
           </div>
 
           <div className="board-preview-container">
