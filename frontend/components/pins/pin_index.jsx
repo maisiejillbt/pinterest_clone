@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 class PinIndex extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.state = {
+      dropdownOpen: false,
+    };
+
+    this.close = this.close.bind(this);
   }
 
   componentDidMount(){
@@ -12,7 +17,7 @@ class PinIndex extends React.Component {
     this.props.fetchUserBoards();
   }
 
-    componentDidUpdate(){
+  componentDidUpdate(){
     const { dropdownOpen } = this.state;
 
     setTimeout(() => {
@@ -38,13 +43,13 @@ class PinIndex extends React.Component {
   }
 
   dropdown(){
-      return(
-        <div id="create-dropdown" className="dropdown">
-          <h2 className="create">Create</h2>
-          <button id="dd-button">Pin</button>
-          <button id="dd-button">Board</button>
-        </div>
-      );
+    return(
+      <div id="create-dropdown" className="dropdown">
+        <h2 className="create">Create</h2>
+        <Link to="/create-pin"><button id="dd-button">Pin</button></Link>
+        <button id="dd-button">Board</button>
+      </div>
+    )
   }
 
   render() {
@@ -53,7 +58,7 @@ class PinIndex extends React.Component {
     if (pins.length > 6 ) {
       return(
       <div className="pin-index">
-          <div className="create-button" onClick={() => this.hide()}>
+          <div className="create-button" onClick={() => this.toggleDropdown()}>
             <h1>+</h1>
             { this.state.dropdownOpen ? this.dropdown() : null }
           </div>

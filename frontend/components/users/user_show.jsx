@@ -1,5 +1,7 @@
 import React from 'react';
 import BoardPreview from '../boards/board_preview'
+import { Link } from 'react-router-dom';
+
 
 class UserShow extends React.Component {
   constructor(props){
@@ -44,7 +46,7 @@ class UserShow extends React.Component {
       return(
         <div id="create-dropdown" className="dropdown">
           <h2 className="create">Create</h2>
-          <button id="dd-button">Pin</button>
+          <Link to="/create-pin"><button id="dd-button">Pin</button></Link>
           <button id="dd-button">Board</button>
         </div>
       );
