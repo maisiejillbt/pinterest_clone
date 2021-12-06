@@ -53,7 +53,6 @@ class UserShow extends React.Component {
   }
 
   render() {
-    console.log(this.state.dropdownOpen)
     const userId = this.props.match.params.userId
     if (Object.keys(this.props.user).length > 0) {
       const boards = this.props.user.boards
@@ -65,12 +64,12 @@ class UserShow extends React.Component {
             </div>
             <h1>{this.props.user.name}</h1>
             <h2>@{this.props.user.username}</h2>
-            <button className="edit-profile">Edit Profile</button>
-          </div>
-
-          <div className="create-button" onClick={() => this.toggleDropdown()}>
-            <h1>+</h1>
-            { this.state.dropdownOpen ? this.dropdown() : null }
+            {this.props.userId === this.props.current_user.id ? <button className="edit-profile">Edit Profile</button> : null}
+            
+            <div className="create-button" onClick={() => this.toggleDropdown()}>
+              <h1>+</h1>
+              { this.state.dropdownOpen ? this.dropdown() : null }
+            </div>
           </div>
 
           <div className="board-preview-container">
