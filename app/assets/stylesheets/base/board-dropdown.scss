@@ -2,7 +2,6 @@
   display: flex;
   color:black;
   font-weight: 600; 
-  position: relative;
   width: 150px;
 }
 
@@ -14,31 +13,10 @@
   width:12px; 
 }
 
-.board-dropdown{
-  padding: 15px;
-  width: 325px;
-  display:flex; 
-  flex-direction: column;
-  background-color: white;
-  border-radius: 18px;
-  box-shadow: 0 0 15px #EAEAEA;
-}
-
-.board-dropdown:hover{
- position: fixed;
-}
-
 .pin-detail .board-dropdown{
   position: absolute;
   right: 180px;
   top:0px;
-}
-
-.pin-image-container .board-dropdown{
-  z-index:30;
-  position: fixed;
-  top: 150px;
-  right: 15px;
 }
 
 .board-image{
@@ -55,18 +33,40 @@
   align-items: center;
   padding: 8px;
   border-radius: 10px;
+
+  .left{
+    display:flex;
+  }
+
+  .save-button{
+    height: 40px; 
+    width: 60px;
+  }
 }
 
 .dropdown-item:hover{
   background-color: #EAEAEA;
 }
 
+.board-dropdown{
+  display:flex; 
+  flex-direction: column;
+  z-index:30;
 
-.dropdown-item > .left{
-  display:flex;
+  padding: 15px;
+  width: 325px;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 0 15px #EAEAEA;
+  top:60px;
+  left:-60px;
+
+  position: absolute;
+  
 }
 
-.dropdown-item > .save-button{
-  height: 40px; 
-  width: 60px;
+.pin-image-container:hover .board-dropdown{
+  top: 35px;
+  left:-75px;
 }
+

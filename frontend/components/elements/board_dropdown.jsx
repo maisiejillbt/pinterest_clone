@@ -6,7 +6,7 @@ const BoardDropdown = (props) => {
 
   const boards = props.boards
   return(
-    <div id="boardDropdown" className="board-dropdown hide">
+    <div id="boardDropdown" className="board-dropdown">
       {
         boards.map(board => <BoardDropdownItem key={board.id} pinId={props.pinId} board={board} />)
       }

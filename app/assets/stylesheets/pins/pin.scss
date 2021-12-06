@@ -4,11 +4,10 @@ $pintrest-red: #E40B2C;
   padding-top: 80px;
 }
 
-.pin-preview-container {
+.pin-preview-container { 
   display:flex;
   justify-content:center; 
   align-items: center;
-  
 }
 
 .pin-grid{
@@ -29,16 +28,17 @@ $pintrest-red: #E40B2C;
 }
 
 .pin-image-container:hover{
-  position: relative;
   display:flex;
   flex-direction: column;
   background-color: rgba(0,0,0,0.3);
   border-radius: 18px;
 }
 
+.pin-image-container{
+  position: relative;
+}
 
 .pin-image{
-  position: relative;
   width: 236px;
   border-radius: 18px;
   z-index:-1;

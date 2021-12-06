@@ -2,33 +2,73 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import BoardDropdown from './board_dropdown'
 
-const BoardDropdownHeader = (props) => {
-  const color = props.color
-  const chevron = color == "black" ? window.chevron_black : window.chevron_white
-  const firstBoardName = props.userBoards[0].name
-  const dropdownText = (firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
-  
-  const hide = () => {
-    const dropdownEl = <BoardDropdown boards={props.userBoards} pinId={props.pin.id} />
-    const dropdownHeader = document.getElementById('board-dropdown-header');
-
-    ReactDOM.render(dropdownEl, dropdownHeader);
-
-    const dropdown = document.getElementById('boardDropdown');
-
-    if(dropdown.classList.contains("hide")){
-      dropdown.classList.remove("hide");
-    }else{
-      dropdown.classList.add("hide")
+class BoardDropdownHeader extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dropdownOpen: false, 
     }
+    
+    this.close = this.close.bind(this);
+
+    this.color = this.props.color;
+    this.chevron = this.color == "black" ? window.chevron_black : window.chevron_white;
+    this.firstBoardName = props.userBoards[0].name;
+    this.dropdownText = (this.firstBoardName.length > 10) ? this.firstBoardName.slice(0,10) + '  ...' : this.firstBoardName;
   }
 
-  return (
-    <div id="board-dropdown-header" className="board-dropdown-header" onClick={()=>hide()}>
-      <h1 className="board-dropdown-header-text">{dropdownText}</h1>
-      <img className="board-chevron" src={chevron}/>
-    </div>
-  )
+  componentDidUpdate(){
+    console.log("update")
+    const { dropdownOpen } = this.state;
+
+    setTimeout(() => {
+      if(dropdownOpen){
+        window.addEventListener('click', this.close);
+      }
+      else{
+        window.removeEventListener('click', this.close);
+      }
+    }, 0);
+  }
+
+  close(){
+    console.log("close")
+    this.setState({
+      dropdownOpen: false,
+    });
+  }
+
+  toggleDropdown(){
+    console.log("toggleDropdown")
+    this.setState(prevState => ({
+        dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+
+
+  dropdown(){
+    return (
+      <BoardDropdown boards={this.props.userBoards} pinId={this.props.pin.id} />
+    )
+
+  }
+  
+  // hide() {
+  //   const dropdownEl = 
+
+  // }
+
+
+  render(){
+    return (
+      <div id="board-dropdown-header" className="board-dropdown-header" onClick={()=> this.toggleDropdown()}>
+        <h1 className="board-dropdown-header-text">{this.dropdownText}</h1>
+        <img className="board-chevron" src={this.chevron}/>
+        {this.state.dropdownOpen ? this.dropdown() : null}
+      </div>
+    )
+  }
+  
 }
 
-export default BoardDropdownHeader
+export default BoardDropdownHeader; 
