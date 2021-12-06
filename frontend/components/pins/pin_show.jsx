@@ -1,7 +1,9 @@
 import React from 'react';
 import BoardDropdownHeader from '../elements/board_dropdown_header';
-import PinSave from '../elements/save_pin.js'
+import PinSave from '../elements/save_pin.js';
 import { Link } from 'react-router-dom';
+import BackButton from '../elements/back_button';
+
 
 
 class PinShow extends React.Component{
@@ -61,6 +63,7 @@ class PinShow extends React.Component{
       const pinOwner = pin.user
       return (
         <div className="pin-show">
+          < BackButton /> 
           <div className="pin-modal">
             <div className="pin-photo-container">
               <img className="photo" src={pin.photoUrl}/>

@@ -1,0 +1,18 @@
+.back-button{
+    position: fixed;
+    height:45px; 
+    width:45px;
+    background-color: white;
+    border:none;
+    border-radius: 100%; 
+    top: 100px; 
+    left: 20px;
+
+    img{
+        height:20px;
+    }
+}
+
+.back-button:hover{
+    background-color: #EAEAEA;
+}

@@ -124,3 +124,30 @@ $pintrest-red: #E40B2C;
 .pin-index > .create-button > .dropdown{
   top:-130px;
 }
+
+
+@media (max-width: 1200px){
+  .pin-modal{ 
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 725px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px #EAEAEA;
+  }
+
+  .pin-photo-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+
+  .pin-detail{
+    width:655px;
+    // padding: 0;
+  }
+
+  
+}
