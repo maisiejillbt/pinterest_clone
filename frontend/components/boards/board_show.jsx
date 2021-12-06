@@ -25,8 +25,8 @@ class BoardShow extends React.Component {
               <h1 className="board-name">{currentBoard.name}</h1>
               <div className="overlay">
                 <Link to={`/boards/${this.props.match.params.boardId}/edit`}><button className="edit-board"><h1>...</h1></button></Link>
-                <div className="board-show-dropdown">
-                
+                <div className="board-show-dropdown"> 
+                      {/* I dont know what I put this in here for ??  */}
                 </div>
               </div>
             </div>

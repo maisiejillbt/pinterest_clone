@@ -22,6 +22,10 @@ $pintrest-red: #E40B2C;
   background-color: white;
   border-radius: 30px;
   box-shadow: 0 0 20px grey;
+
+  button:hover{
+    cursor: pointer;
+  }
 }
 
 .login img{

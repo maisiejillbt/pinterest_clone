@@ -1,5 +1,6 @@
 import React from 'react';
 import BoardDropdownHeader from '../elements/board_dropdown_header';
+import PinSave from '../elements/save_pin.js'
 import { Link } from 'react-router-dom';
 
 
@@ -54,6 +55,8 @@ class PinShow extends React.Component{
     const followId = follow ? follow.id : null
     const currentUserId = this.props.current_user.id;
     const hasBoards = this.props.boards.length > 0 ? true : false;
+    const firstBoardId = hasBoards ? this.props.boards[0].id : null;
+
     if (pin){
       const pinOwner = pin.user
       return (
@@ -71,8 +74,11 @@ class PinShow extends React.Component{
                     : 
                      <div className="board-dropdown-header"><h1 style={{color: 'black'}} className="board-dropdown-header-text">Create a board first</h1></div> 
                   }
-                  
-                  <button className="save-button">Save</button>
+
+                  { 
+                    hasBoards ? <button onClick={() => PinSave(pin.id, firstBoardId)} className="save-button">Save</button> : null
+                  }
+
                 </div>
 
                 <h1 className="title">{pin.title}</h1>

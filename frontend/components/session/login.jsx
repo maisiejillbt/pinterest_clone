@@ -67,9 +67,9 @@ class Login extends React.Component {
 
             <h3>OR</h3>
             
-            <div onClick={this.demoSignIn} className="demo-login">
-              <h2>Demo Login</h2>
-            </div>
+            <button onClick={this.demoSignIn} className="demo-login">
+              Demo Login
+            </button>
             
           </div>
         </div>
