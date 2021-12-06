@@ -1,5 +1,6 @@
-
 import React from 'react';
+import BackButton from '../elements/back_button';
+
 
 class UpdateBoardForm extends React.Component {
   constructor(props) {
@@ -46,6 +47,8 @@ class UpdateBoardForm extends React.Component {
     const boardId = this.props.match.params.boardId
     return (
       <div className="board-form-container">
+        < BackButton /> 
+
         <div className="board-form">
           <h1>Edit your board</h1>
           <form onSubmit={this.handleSubmit}>
