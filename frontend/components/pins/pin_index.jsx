@@ -2,6 +2,7 @@ import React from 'react';
 import Pin from './pin'
 import { Link } from 'react-router-dom';
 import CreateBoardContainer from '../boards/create_board_form_container';
+import PinGridContainer from './pin_grid_container';
 
 
 class PinIndex extends React.Component {
@@ -17,10 +18,10 @@ class PinIndex extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  componentDidMount(){
-    this.props.fetchPins();
-    this.props.fetchUserBoards();
-  }
+  // componentDidMount(){
+  //   this.props.fetchPins();
+  //   this.props.fetchUserBoards();
+  // }
 
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
@@ -81,37 +82,31 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    const pins = this.props.pins.slice(0,15)
-    const boards = this.props.boards
-    if (pins.length > 6 ) {
+    // const pins = this.props.pins.slice(0,15)
+    // const boards = this.props.boards
+    // if (pins.length > 6 ) {
       return(
-      <div className="pin-index">
-          <div className="create-button" onClick={() => this.toggle("dropdown")}>
-            <h1>+</h1>
-            { this.state.dropdownOpen ? this.dropdown() : null }
-          </div>
-
-        <div className="pin-preview-container"> 
-          <div className="pin-grid">
-          {
-            pins.map((pin) => (
-              <Pin pin={pin} key={pin.id} boards={boards} toggle={this.toggle}/>
-            ))
-          }
-          </div>
-        </div>
-        {this.state.modalOpen ? 
-            <div className="board-form-container">
-              <button className="back-button" onClick={() => this.closeModal()}> 
-                <img src={window.backButton} alt="back" />
-              </button>
-              {this.boardModal()}
+        <div className="pin-index">
+            <div className="create-button" onClick={() => this.toggle("dropdown")}>
+              <h1>+</h1>
+              { this.state.dropdownOpen ? this.dropdown() : null }
             </div>
-          : null }
-      </div>
-    )}else{ 
-      return null 
-    }
+
+            < PinGridContainer/> 
+
+            {this.state.modalOpen ? 
+                <div className="board-form-container">
+                  <button className="back-button" onClick={() => this.closeModal()}> 
+                    <img src={window.backButton} alt="back" />
+                  </button>
+                  {this.boardModal()}
+                </div>
+              : null }
+        </div>
+    )
+    // }else{ 
+    //   return null 
+    // }
 
   }
 }

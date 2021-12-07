@@ -1,0 +1,70 @@
+.pin-preview-container { 
+    display:flex;
+    justify-content:center; 
+    align-items: center;
+}
+
+.pin-grid{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(252px, 252px));
+}
+
+@media only screen and (max-width: 2016px) {
+// 2016 => 7 rows
+    .pin-grid{
+        width: 1764px;
+    }
+}
+
+@media only screen and (max-width: 1765px) {
+// 1765 => 6 rows 
+    .pin-grid{
+        width: 1512px;
+    }
+}
+
+@media only screen and (max-width: 1513px) {
+// 1515 => 5 rows
+    .pin-grid{
+        width: 1260px;
+    }
+}
+
+@media only screen and (max-width: 1261px) {
+// 1260 => 4 rows
+    .pin-grid{
+        width: 1008px;
+    }
+}
+
+@media only screen and (max-width: 1009px) {
+// 1008 => 3 rows
+    .pin-grid{
+        width: 756px;
+    }
+}
+
+@media only screen and (max-width: 757px) {
+// 756 => 2 rows
+    .pin-grid{
+        width: 504px;
+    }
+}
+
+@media only screen and (max-width: 505px) {
+// 505 => 1 row
+    .pin-grid{
+        width: 252px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
