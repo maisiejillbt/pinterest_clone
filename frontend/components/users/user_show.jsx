@@ -1,6 +1,7 @@
 import React from 'react';
 import BoardPreview from '../boards/board_preview'
 import { Link } from 'react-router-dom';
+import CreateBoardContainer from '../boards/create_board_form_container';
 
 
 class UserShow extends React.Component {
@@ -9,6 +10,7 @@ class UserShow extends React.Component {
     this.state = {
       userId: this.props.match.params.userId,
       dropdownOpen: false,
+      modalOpen: false,
     }
     this.close = this.close.bind(this);
   }
@@ -31,15 +33,34 @@ class UserShow extends React.Component {
   }
 
   close(){
+    {
+      this.setState({
+        dropdownOpen: false,
+      });
+    }
+  }
+
+  closeModal(){
     this.setState({
-      dropdownOpen: false,
+      modalOpen: false,
     });
   }
 
-  toggleDropdown(){
-    this.setState(prevState => ({
-        dropdownOpen: !prevState.dropdownOpen
-    }));
+  toggle(element){
+    switch (element) {
+      case "dropdown":
+        this.setState(prevState => ({
+          dropdownOpen: !prevState.dropdownOpen
+        }));
+        break;
+      case "modal":
+        this.setState(prevState => ({
+          modalOpen: !prevState.modalOpen
+        }));
+        break;
+      default:
+        break;
+    }
   }
 
   dropdown(){
@@ -47,9 +68,15 @@ class UserShow extends React.Component {
         <div id="create-dropdown" className="dropdown">
           <h2 className="create">Create</h2>
           <Link to="/create-pin"><button id="dd-button">Pin</button></Link>
-          <button id="dd-button">Board</button>
+          <button id="dd-button" onClick={() => this.toggle("modal")}>Board</button>
         </div>
       );
+  }
+
+  boardModal(){
+    return(
+      < CreateBoardContainer closeModal={this.closeModal} /> 
+    )
   }
 
   render() {
@@ -66,7 +93,7 @@ class UserShow extends React.Component {
             <h2>@{this.props.user.username}</h2>
             {this.props.userId === this.props.current_user.id ? <button className="edit-profile">Edit Profile</button> : null}
             
-            <div className="create-button" onClick={() => this.toggleDropdown()}>
+            <div className="create-button" onClick={() => this.toggle("dropdown")}>
               <h1>+</h1>
               { this.state.dropdownOpen ? this.dropdown() : null }
             </div>
@@ -81,6 +108,14 @@ class UserShow extends React.Component {
               }
             </div>
           </div>
+          {this.state.modalOpen ? 
+            <div className="board-form-container">
+              <button className="back-button" onClick={() => this.closeModal()}> 
+                <img src={window.backButton} alt="back" />
+              </button>
+              {this.boardModal()}
+            </div>
+          : null }
         </div>
         )
     }else{

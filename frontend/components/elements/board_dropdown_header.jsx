@@ -18,7 +18,6 @@ class BoardDropdownHeader extends React.Component {
   }
 
   componentDidUpdate(){
-    console.log("update")
     const { dropdownOpen } = this.state;
 
     setTimeout(() => {
@@ -32,14 +31,12 @@ class BoardDropdownHeader extends React.Component {
   }
 
   close(){
-    console.log("close")
     this.setState({
       dropdownOpen: false,
     });
   }
 
   toggleDropdown(){
-    console.log("toggleDropdown")
     this.setState(prevState => ({
         dropdownOpen: !prevState.dropdownOpen
     }));
@@ -52,12 +49,6 @@ class BoardDropdownHeader extends React.Component {
     )
 
   }
-  
-  // hide() {
-  //   const dropdownEl = 
-
-  // }
-
 
   render(){
     return (

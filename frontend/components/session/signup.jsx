@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
   render() {
     return(
-    <div className="signup-container" onClick={() => this.props.history.push('/')}>
+    <div className="signup-container">
       <div className="signup">
         <div className="content">
           <img src={window.main_logo} />
@@ -117,6 +117,7 @@ class SignUp extends React.Component {
           </form>
         </div>
       </div>
+      <div onClick={() => this.props.history.push('/')} className="modal-background"></div>
     </div>
     );
   }

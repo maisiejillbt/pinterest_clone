@@ -37,7 +37,7 @@ class Pin extends React.Component {
               firstBoardId ? 
               <button onClick={() => PinSave(pin.id, firstBoardId)} className="save-button">Save</button>
               : 
-              <button className="save-button"><Link to={`/create-board`}>Board</Link></button> 
+              <button className="save-button" onClick={() => this.props.toggle("modal")}>Board</button> 
             }
           </div>
         : 

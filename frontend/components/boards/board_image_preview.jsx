@@ -9,8 +9,7 @@ class BoardImagePreview extends React.Component {
   render(){
 
     if(this.props.pins) {
-      const pins = this.props.pins
-      console.log(pins)
+      const pins = this.props.pins; 
       
       return(
           <div className="board-image-container">

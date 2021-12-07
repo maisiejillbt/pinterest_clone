@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +42,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login-container" onClick={() => this.props.history.push('/')}>
+      <div className="login-container">
         <div className="login">
           <div className="content">
             <img src={window.main_logo} />
@@ -71,10 +69,10 @@ class Login extends React.Component {
             
             <button onClick={this.demoSignIn} className="demo-login">
               Demo Login
-            </button>
-            
+            </button>            
           </div>
         </div>
+        <div onClick={() => this.props.history.push('/')} className="modal-background"></div>
       </div>
     );
   }

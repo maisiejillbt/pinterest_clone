@@ -4,8 +4,9 @@ import CreateBoardForm from './create_board_form';
 import { createBoard } from '../../actions/boards'; 
 
 
-const mapStateToProps = state => ({ 
+const mapStateToProps = (state, ownProps) => ({ 
   current_user: state.session.current_user,
+  ownProps
 });
 
 const mapDispatchToProps = dispatch => ({

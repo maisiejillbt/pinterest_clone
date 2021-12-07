@@ -51,7 +51,7 @@ class UpdateBoardForm extends React.Component {
 
         <div className="board-form">
           <h1>Edit your board</h1>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}> 
             <h2>Name</h2> 
               <input
                 id="name"
