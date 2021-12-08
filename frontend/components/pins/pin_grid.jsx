@@ -7,7 +7,7 @@ class PinGrid extends React.Component {
         
         super(props); 
         this.state = {
-            firstRowLoaded: false, 
+            newRowLoaded: false, 
             numCols: this.getNumColumns(),
             pins:[],
         }
@@ -22,35 +22,31 @@ class PinGrid extends React.Component {
 
         this.getNumColumns = this.getNumColumns.bind(this);
         this.setNumColumns = this.setNumColumns.bind(this);
-        this.setFirstRow = this.setFirstRow.bind(this);
-        this.firstRow = this.firstRow.bind(this);
+        this.setPreviousRow = this.setPreviousRow.bind(this);
+        this.newRow = this.newRow.bind(this);
 
         this.pins = this.props.pins
 
 
-        const firstRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
+        const newRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
         window.addEventListener('resize', this.setNumColumns);
-        // window.addEventListener('resize', () => this.setFirstRow(firstRowPins));
+        // window.addEventListener('resize', () => this.setPreviousRow(newRowPins));
     }
 
     // componentDidUpdate(){
     //     const pins = this.props.pins.slice(0, this.state.numCols); 
-    //     this.setFirstRow(pins);
+    //     this.setPreviousRow(pins);
     // }
 
 
     componentDidMount(){
         this.props.fetchPins()
-            .then(() => this.firstRow(this.props.pins.slice(0,this.state.numCols)));
+            .then(() => this.newRow(this.props.pins.slice(0,this.state.numCols)));
         this.props.fetchUserBoards();
 
     }
 
-    getColumnHeight(){
-
-    }
-
-    setFirstRow(pins){
+    setPreviousRow(pins){
         if(pins.length > 0){
             for(let i=0; i < this.state.numCols; i++){
                 const pinId = pins[i].id; 
@@ -62,13 +58,9 @@ class PinGrid extends React.Component {
             }
             console.log(this.col1, this.col2, this.col3, this.col4);
         }
-        // this.setState({
-        //     firstRowLoaded: true,
-        // })
     } 
 
-    firstRow(pins){
-        // const pins = this.props.pins.slice(0,this.state.numCols); 
+    newRow(pins){
         const boards = this.props.boards;
         
         let pinArray = []; 
@@ -76,7 +68,6 @@ class PinGrid extends React.Component {
 
         for(let i=0; i < pins.length; i++){
             let y = this[`col${i+1}`];
-            console.log(y, i)
             let pin = pins[i];
             let style = {
                 transform: `translate(${x}px, ${y}px)`,
@@ -95,32 +86,6 @@ class PinGrid extends React.Component {
         this.setState({
             pins: [...this.state.pins, ...pinArray]
         })
-    }
-
-    addRow(pins){
-        const boards = this.props.boards;
-        let pinArray = []; 
-        let x = 0;
-
-        for(let i=0; i < pins.length; i++){
-            let y = this[`col${i+1}`];
-            console.log(y, i)
-            let pin = pins[i];
-            let style = {
-                transform: `translate(${x}px, ${y}px)`,
-            }; 
-            pinArray.push(
-                <Pin 
-                    pin={pin} 
-                    key={pin.id} 
-                    boards={boards} 
-                    toggle={this.props.toggle}
-                    style={style}
-                />
-                )
-            x += 252;
-            }
-        return(pinArray)
     }
     
 
@@ -151,12 +116,17 @@ class PinGrid extends React.Component {
         })
     }
 
+
     render(){
         console.log("render")
         console.log(this.col1, this.col2, this.col3, this.col4)
         const boards = this.props.boards
         const pins = this.props.pins
         const numCols = this.state.numCols
+
+        const previousRowStart = this.state.pins.length - numCols;
+        const previousRowend = this.state.pins.length; 
+        const newRowEnd = this.state.pins.length + numCols; 
 
         return(
             <div className="pin-preview-container"> 
@@ -166,8 +136,8 @@ class PinGrid extends React.Component {
                 )) : null }
                 </div>
                 
-                <button onClick={() => this.firstRow(pins.slice(4,8))}>second</button>
-                <button onClick={() => this.setFirstRow(pins.slice(0,4))}>first</button>
+                <button style={{position: 'fixed', top: '200px', left: '10px'}} onClick={() => this.setPreviousRow(pins.slice(previousRowStart,previousRowend))}>first</button>
+                <button style={{position: 'fixed', top: '200px', left: '80px'}} onClick={() => this.newRow(pins.slice(previousRowend,newRowEnd))}>second</button>
 
             </div>
         )
