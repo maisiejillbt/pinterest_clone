@@ -92,7 +92,7 @@ class PinIndex extends React.Component {
               { this.state.dropdownOpen ? this.dropdown() : null }
             </div>
 
-            < PinGridContainer/> 
+            < PinGridContainer closeModal={this.closeModal} toggle={this.toggle}/> 
 
             {this.state.modalOpen ? 
                 <div className="board-form-container">

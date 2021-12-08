@@ -8,12 +8,6 @@ class Pin extends React.Component {
     super(props)
   }
 
-//   function printMousePos(event) {
-//   document.body.textContent =
-//     "clientX: " + event.clientX +
-//     " - clientY: " + event.clientY;
-// }
-
   render() {
     const pin = this.props.pin
     const boards = this.props.boards
@@ -21,9 +15,8 @@ class Pin extends React.Component {
     const firstBoardName = hasBoards ? boards[0].name : null 
     const dropdownText = (hasBoards && firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
     const firstBoardId = boards[0] ? boards[0].id : null;
-    
     return(
-      <div className="pin-container">
+      <div id={pin.id} style={this.props.style} className="pin-container">
         {pin.photoUrl ? 
           <div className="pin-image-container">
             <Link to={`/pins/${pin.id}`}><img className="pin-image" src={pin.photoUrl}/></Link>

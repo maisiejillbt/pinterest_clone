@@ -2,11 +2,13 @@
     display:flex;
     justify-content:center; 
     align-items: center;
+    min-height:100%
 }
 
 .pin-grid{
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(252px, 252px));
+    display:block;
+    position: relative; 
+    height: 100vh;
 }
 
 @media only screen and (max-width: 2016px) {
