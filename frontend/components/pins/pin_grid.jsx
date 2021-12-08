@@ -13,7 +13,6 @@ class PinGrid extends React.Component {
             pins:[],
         }
 
-        this.numRows = 0;
         this.col1 = 0;
         this.col2 = 0; 
         this.col3 = 0; 
@@ -25,14 +24,22 @@ class PinGrid extends React.Component {
         this.getNumColumns = this.getNumColumns.bind(this);
         this.setNumColumns = this.setNumColumns.bind(this);
         this.setPreviousRow = this.setPreviousRow.bind(this);
+        this.windowResizeHandler = this.windowResizeHandler.bind(this);
+
         this.newRow = this.newRow.bind(this);
 
         this.pins = this.props.pins
 
 
         const newRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
-        window.addEventListener('resize', this.setNumColumns);
-        // window.addEventListener('resize', () => this.setPreviousRow(newRowPins));
+        
+        // this anon makes it so that the resize handler only triggers after 
+        // half a second to avoid resetting state too many times
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => this.windowResizeHandler(), 500);
+        });
     }
 
     componentDidUpdate(){
@@ -41,11 +48,26 @@ class PinGrid extends React.Component {
         }
     }
 
-
     componentDidMount(){
         this.props.fetchPins() // fetching pins and setting the initial row directly after
             .then(() => this.newRow(this.props.pins.slice(0,this.state.numCols)));
         this.props.fetchUserBoards();
+    }
+
+    windowResizeHandler(){
+        // reset state
+        // add a new row of pins to state and trigger new render loop (in newRow) with new state
+        this.setState({
+            numRows: 0,
+            prevNumRows:0, 
+            pins: [],
+            numCols: this.getNumColumns(),
+        });
+
+        for(let i = 1; i < 8; i++){
+            this[`col${i}`] = 0;
+        }
+        this.newRow(this.props.pins.slice(0,this.state.numCols))
     }
 
     setPreviousRow(){ // CONSIDER RENAMING TO SOMETHING MORE DESCRIPTIVE
@@ -58,21 +80,24 @@ class PinGrid extends React.Component {
         const newPins = pins.slice(previousRowend, newRowEnd);
 
         if(prevPins.length === this.state.numCols){
-            // adding previous pins height to column height
-            for(let i=0; i < this.state.numCols; i++){
-                const pinId = prevPins[i].id; 
-                const pin = document.getElementById(pinId);
-                const pinHeight = pin.offsetHeight;
-                this[`col${i+1}`] += pinHeight;
-            }
-            // adding to previous num rows to avoid CDU infinate loop 
-            this.setState({ 
-                prevNumRows: this.state.prevNumRows += 1
-            })
-            // calling new row automatically to set up initial 3 rows ====> Consider changing to 5 rows ? 
-            if(this.state.numRows < 3){
-                this.newRow(newPins);
-            }
+            // set timeout is needed to ensure previous row of pins has rendered on the dom 
+            setTimeout(() => {
+                // adding previous pins height to column height
+                for(let i=0; i < this.state.numCols; i++){
+                    const pinId = prevPins[i].id; 
+                    const pin = document.getElementById(pinId);
+                    const pinHeight = pin.offsetHeight;
+                    this[`col${i+1}`] += pinHeight;
+                }
+                // adding to previous num rows to avoid CDU infinate loop 
+                this.setState({ 
+                    prevNumRows: this.state.prevNumRows += 1
+                })
+                // calling new row automatically to set up initial 3 rows ====> Consider changing to 5 rows ? 
+                if(this.state.numRows < 3){
+                    this.newRow(newPins);
+                }
+            }, 300);
         }
     } 
 
