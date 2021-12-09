@@ -1,19 +1,22 @@
 import React from 'react';
 import Pin from './pin'
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom'; 
 
 class PinGrid extends React.Component {
     constructor(props){
-        
-        super(props); 
+        super(props);
+
         this.state = {
             numRows: 0,
             prevNumRows:0, 
+            rowRendered: false,
             numCols: this.getNumColumns(),
             pins:[],
+
         }
 
-        this.col1 = 0;
+        this.col1 = 0,
         this.col2 = 0; 
         this.col3 = 0; 
         this.col4 = 0; 
@@ -21,29 +24,35 @@ class PinGrid extends React.Component {
         this.col6 = 0; 
         this.col7 = 0; 
 
+        this.atBottom = false;
+
         this.getNumColumns = this.getNumColumns.bind(this);
         this.setNumColumns = this.setNumColumns.bind(this);
         this.setPreviousRow = this.setPreviousRow.bind(this);
         this.setContainerHeight = this.setContainerHeight.bind(this);
         this.windowResizeHandler = this.windowResizeHandler.bind(this);
         this.newRow = this.newRow.bind(this);
+        this.infiniteScrollHandler = this.infiniteScrollHandler.bind(this);
 
         // this anon makes it so that the resize handler only triggers after 
         // half a second to avoid resetting state too many times
         const newRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
         let resizeTimeout;
         window.addEventListener('resize', () => {
+            console.log("resize listner ln 40")
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => this.windowResizeHandler(), 500);
         });
     }
 
     componentDidUpdate(){
+        console.log('componentDidUpdate 49');
         if(this.state.prevNumRows !== this.state.numRows && this.state.numRows < 3){
+            console.log("CDU calls set previous row")
             this.setPreviousRow();
         }
         // updating the containers height for unlimited scroll 
-        this.setContainerHeight()
+        this.setContainerHeight();
     }
 
     componentDidMount(){
@@ -53,6 +62,9 @@ class PinGrid extends React.Component {
     }
 
     windowResizeHandler(){
+        console.log("windowResize handler 64")
+        // removing scroll event listener to avoid conflict with resize event listener
+        window.removeEventListener('scroll', this.infiniteScrollHandler);
         // reset state
         // add a new row of pins to state and trigger new render loop (in newRow) with new state
         this.setState({
@@ -61,14 +73,26 @@ class PinGrid extends React.Component {
             pins: [],
             numCols: this.getNumColumns(),
         });
-
+        this.atBottom = false;
         for(let i = 1; i < 8; i++){
             this[`col${i}`] = 0;
         }
         this.newRow(this.props.pins.slice(0,this.state.numCols))
     }
 
+    infiniteScrollHandler(){
+        console.log("infinateScrollHandler ln 81")
+        if(document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight){
+            this.atBottom = true; 
+            this.setPreviousRow();
+        }else{
+            this.atBottom = false;
+        } 
+    }
+
     setPreviousRow(){ // CONSIDER RENAMING TO SOMETHING MORE DESCRIPTIVE
+        console.log("setPreviousRow not in if block")
+
         const previousRowStart = this.state.pins.length - this.state.numCols;
         const previousRowend = this.state.pins.length; 
         const newRowEnd = this.state.pins.length + this.state.numCols; 
@@ -77,7 +101,7 @@ class PinGrid extends React.Component {
         const prevPins = pins.slice(previousRowStart,previousRowend);
         const newPins = pins.slice(previousRowend, newRowEnd);
 
-        if(prevPins.length === this.state.numCols){
+        if(prevPins.length === this.state.numCols && this.state.rowRendered){
             // set timeout is needed to ensure previous row of pins has rendered on the dom 
             setTimeout(() => {
                 // adding previous pins height to column height
@@ -89,18 +113,26 @@ class PinGrid extends React.Component {
                 }
                 // adding to previous num rows to avoid CDU infinate loop 
                 this.setState({ 
-                    prevNumRows: this.state.prevNumRows += 1
+                    prevNumRows: this.state.prevNumRows += 1,
+                    rowRendered: false,
                 })
                 // calling new row automatically to set up initial 3 rows ====> Consider changing to 5 rows ? 
-                if(this.state.numRows < 3){
+                if(this.state.numRows < 3 || this.atBottom){
                     this.newRow(newPins);
                 }
+                // adding event listener for infinite scroll
+                if(this.state.numRows === 3){
+                    window.addEventListener('scroll', this.infiniteScrollHandler);
+                }
+                console.log("setPreviousRow in if block")
+
                 
-            }, 300);
+            }, 500);
         }
     } 
 
     newRow(pins){
+        console.log("newRow ln 124")
         const boards = this.props.boards;
         let pinArray = []; 
         let x = 0;
@@ -132,6 +164,7 @@ class PinGrid extends React.Component {
             pins: [...this.state.pins, ...pinArray],
             prevNumRows: this.state.numRows,
             numRows: this.state.numRows + 1,
+            rowRendered: true,
         })
     }
     
@@ -164,22 +197,19 @@ class PinGrid extends React.Component {
     }
 
     setContainerHeight(){
-        const container = document.querySelector('.pin-grid'); 
-        const columns = [this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7]; 
-        const longestCol = Math.max(this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7); 
-        console.log("set height")
-        console.log(this.col1)
 
+        const container = document.querySelector('.pin-grid'); 
+        const longestCol = Math.max(this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7); 
         container.style.height = `${longestCol}px`;
     }
 
     render(){
+        console.log("render")
+        console.log(this.state)
         return(
             <div className="pin-preview-container"> 
                 <div className="pin-grid">
-                { this.state.pins.length > 0 ? this.state.pins.map(pin => (
-                    pin
-                )) : null }
+                    { this.state.pins.length > 0 ? this.state.pins.map(pin => (pin)) : null }    
                 </div>
             </div>
         )
