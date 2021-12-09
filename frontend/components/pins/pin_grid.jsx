@@ -24,17 +24,13 @@ class PinGrid extends React.Component {
         this.getNumColumns = this.getNumColumns.bind(this);
         this.setNumColumns = this.setNumColumns.bind(this);
         this.setPreviousRow = this.setPreviousRow.bind(this);
+        this.setContainerHeight = this.setContainerHeight.bind(this);
         this.windowResizeHandler = this.windowResizeHandler.bind(this);
-
         this.newRow = this.newRow.bind(this);
 
-        this.pins = this.props.pins
-
-
-        const newRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
-        
         // this anon makes it so that the resize handler only triggers after 
         // half a second to avoid resetting state too many times
+        const newRowPins = this.props.pins ? this.props.pins.slice(0, this.state.numCols) : null; 
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
@@ -46,6 +42,8 @@ class PinGrid extends React.Component {
         if(this.state.prevNumRows !== this.state.numRows && this.state.numRows < 3){
             this.setPreviousRow();
         }
+        // updating the containers height for unlimited scroll 
+        this.setContainerHeight()
     }
 
     componentDidMount(){
@@ -97,6 +95,7 @@ class PinGrid extends React.Component {
                 if(this.state.numRows < 3){
                     this.newRow(newPins);
                 }
+                
             }, 300);
         }
     } 
@@ -162,6 +161,16 @@ class PinGrid extends React.Component {
         this.setState({
             numCols: this.getNumColumns()
         })
+    }
+
+    setContainerHeight(){
+        const container = document.querySelector('.pin-grid'); 
+        const columns = [this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7]; 
+        const longestCol = Math.max(this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7); 
+        console.log("set height")
+        console.log(this.col1)
+
+        container.style.height = `${longestCol}px`;
     }
 
     render(){
