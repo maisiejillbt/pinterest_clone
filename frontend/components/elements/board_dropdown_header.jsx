@@ -10,6 +10,7 @@ class BoardDropdownHeader extends React.Component {
     }
     
     this.close = this.close.bind(this);
+    this.dropdownTimeout;
 
     this.color = this.props.color;
     this.chevron = this.color == "black" ? window.chevron_black : window.chevron_white;
@@ -20,7 +21,7 @@ class BoardDropdownHeader extends React.Component {
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
 
-    setTimeout(() => {
+    this.dropdownTimeout = setTimeout(() => {
       if(dropdownOpen){
         window.addEventListener('click', this.close);
       }
@@ -28,6 +29,10 @@ class BoardDropdownHeader extends React.Component {
         window.removeEventListener('click', this.close);
       }
     }, 0);
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.dropdownTimeout);
   }
 
   close(){

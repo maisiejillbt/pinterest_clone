@@ -12,7 +12,7 @@ class PinIndex extends React.Component {
       dropdownOpen: false,
       modalOpen: false, 
     };
-
+    this.dropdownTimeout;
     this.close = this.close.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -26,7 +26,7 @@ class PinIndex extends React.Component {
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
 
-    setTimeout(() => {
+    this.dropdownTimeout = setTimeout(() => {
       if(dropdownOpen){
         window.addEventListener('click', this.close);
       }
@@ -34,6 +34,10 @@ class PinIndex extends React.Component {
         window.removeEventListener('click', this.close);
       }
     }, 0);
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.dropdownTimeout);
   }
 
   close(){

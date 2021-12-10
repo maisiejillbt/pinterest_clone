@@ -9,12 +9,13 @@ class NavBarProtected extends React.Component {
       dropdownOpen: false,
     }
     this.close = this.close.bind(this);
+    this.dropdownTimeout;
   }
 
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
 
-    setTimeout(() => {
+    this.dropdownTimeout = setTimeout(() => {
       if(dropdownOpen){
         window.addEventListener('click', this.close);
       }
@@ -22,6 +23,10 @@ class NavBarProtected extends React.Component {
         window.removeEventListener('click', this.close);
       }
     }, 0);
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.dropdownTimeout);
   }
 
   close(){
