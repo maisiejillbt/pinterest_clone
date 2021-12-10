@@ -20,6 +20,11 @@ class BoardDropdownHeader extends React.Component {
 
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
+    const pin = document.getElementById(this.props.pin.id)
+
+    if(!dropdownOpen && pin){
+      pin.style.zIndex = "1"
+    }
 
     this.dropdownTimeout = setTimeout(() => {
       if(dropdownOpen){

@@ -148,6 +148,7 @@ class PinGrid extends React.Component {
             let pin = pins[i];
             let style = {
                 transform: `translate(${x}px, ${y}px)`,
+                zIndex:'1'
             }; 
             pinArray.push(
                 <Pin 
