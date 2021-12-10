@@ -57,7 +57,6 @@ class BoardDropdownHeader extends React.Component {
     return (
       <BoardDropdown boards={this.props.userBoards} pinId={this.props.pin.id} />
     )
-
   }
 
   render(){

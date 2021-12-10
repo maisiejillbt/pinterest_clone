@@ -7,7 +7,7 @@ const BoardDropdown = (props) => {
   const boards = props.boards
   const pin = document.getElementById(props.pinId)
   pin.style.zIndex = "1000"
-
+  console.log(props.pinId)
   return(
     <div id="boardDropdown" className="board-dropdown">
       {
