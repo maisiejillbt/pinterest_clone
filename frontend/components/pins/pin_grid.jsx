@@ -108,7 +108,15 @@ class PinGrid extends React.Component {
 
         const pins = this.pins; 
         const prevPins = pins.slice(previousRowStart,previousRowend);
-        const newPins = pins.slice(previousRowend, newRowEnd);
+        const newPins = newRowEnd > this.pins.length ? pins.slice(previousRowend) : pins.slice(previousRowend, newRowEnd)
+        console.log("set Prev row")
+        console.log(this.atBottom)
+        console.log(pins)
+        console.log(prevPins)
+        console.log(newPins)
+        console.log(this.state)
+
+
 
         if(this.state.rowRendered){
             // set timeout is needed to ensure previous row of pins has rendered on the dom 
@@ -124,9 +132,7 @@ class PinGrid extends React.Component {
                     
                 }
                 // adding to previous num rows to avoid CDU infinate loop 
-                this.setState({ 
-                    rowRendered: false,
-                })
+                
                 // calling new row automatically to set up initial 3 rows ====> Consider changing to 5 rows ? 
                 if(this.state.numRows < 3 || this.atBottom){
                     this.newRow(newPins);
@@ -136,10 +142,14 @@ class PinGrid extends React.Component {
                     window.addEventListener('scroll', this.infiniteScrollHandler);
                 }  
             }, 500);
+            this.setState({ 
+                rowRendered: false,
+            })
         }
     } 
 
     newRow(pins){
+        console.log("newRow")
         const boards = this.props.boards;
         let pinArray = []; 
         let x = 0;
