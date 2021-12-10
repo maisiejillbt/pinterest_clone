@@ -55,11 +55,11 @@ class PinShow extends React.Component{
     const followingUser = this.props.following.includes(pinOwnerId)
     const follow = this.props.follows.filter(follow => {return follow.followed_id === pinOwnerId})[0]
     const followId = follow ? follow.id : null
-    const currentUserId = this.props.current_user.id;
     const hasBoards = this.props.boards.length > 0 ? true : false;
     const firstBoardId = hasBoards ? this.props.boards[0].id : null;
 
-    if (pin){
+    if (pin && this.props.current_user){
+      const currentUserId = this.props.current_user.id;
       const pinOwner = pin.user
       return (
         <div className="pin-show">

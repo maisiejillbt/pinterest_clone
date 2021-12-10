@@ -9,7 +9,10 @@ class NavBarProtected extends React.Component {
       dropdownOpen: false,
     }
     this.close = this.close.bind(this);
+    this.logout = this.logout.bind(this);
+
     this.dropdownTimeout;
+
   }
 
   componentDidUpdate(){
@@ -41,11 +44,16 @@ class NavBarProtected extends React.Component {
     }));
   }
 
+  logout(){
+    this.props.logoutUser()
+      .then(() => this.props.history.push('/'))
+  }
+
   dropdown(){
       return(
         <div id="nav-dropdown" className="nav-dropdown">
             <h1 id="settings-button">Settings</h1>
-            <button id="logout-button" onClick={this.props.logoutUser}>Log out</button>
+            <button id="logout-button" onClick={this.logout}>Log out</button>
         </div>
       );
   }

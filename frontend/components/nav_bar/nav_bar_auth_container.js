@@ -9,8 +9,4 @@ const mstp = state => ({
   /// Might end up getting rid of this constructor all together 
 });
 
-// const mdtp = dispatch => ({
-//   logoutUser: () => dispatch(logoutUser()),
-// });
-
 export default connect(mstp)(NavBarAuth)

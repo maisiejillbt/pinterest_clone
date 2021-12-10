@@ -86,7 +86,7 @@ class UserShow extends React.Component {
 
   render() {
     const userId = this.props.match.params.userId
-    if (Object.keys(this.props.user).length > 0) {
+    if (Object.keys(this.props.user).length > 0 && this.props.current_user) {
       const boards = this.props.user.boards
       return(
         <div className="profile-container">
