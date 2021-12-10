@@ -48,9 +48,12 @@ class PinGrid extends React.Component {
     }
 
     componentDidMount(){
+
         // setting the initial row
         // shuffling the pins so that each refresh gives different pins at the top
-        this.props.fetchUserBoards().then(()=> {
+        
+
+        this.props.fetchUserBoards().then(()=>{
             this.pins = this.props.pins.sort(() => Math.random() - 0.5);
             this.newRow(this.pins.slice(0,this.state.numCols))})
     }
@@ -107,7 +110,7 @@ class PinGrid extends React.Component {
         const prevPins = pins.slice(previousRowStart,previousRowend);
         const newPins = pins.slice(previousRowend, newRowEnd);
 
-        if(prevPins.length === this.state.numCols && this.state.rowRendered){
+        if(this.state.rowRendered){
             // set timeout is needed to ensure previous row of pins has rendered on the dom 
             this.previousRowTimeout = setTimeout(() => {
                 // adding previous pins height to column height
@@ -132,7 +135,7 @@ class PinGrid extends React.Component {
                 if(this.state.numRows === 3){
                     window.addEventListener('scroll', this.infiniteScrollHandler);
                 }  
-            }, 1000);
+            }, 500);
         }
     } 
 
