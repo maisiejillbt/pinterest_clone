@@ -141,7 +141,7 @@ class PinGrid extends React.Component {
                 if(this.state.numRows === 3){
                     window.addEventListener('scroll', this.infiniteScrollHandler);
                 }  
-            }, 500);
+            }, 1500);
             this.setState({ 
                 rowRendered: false,
             })
