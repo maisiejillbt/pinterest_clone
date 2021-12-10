@@ -12,7 +12,6 @@ class CreateBoardForm extends React.Component {
       created_at: new Date()
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log(this.props)
   }
 
   handleSubmit(e) {

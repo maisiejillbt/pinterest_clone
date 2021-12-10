@@ -2,6 +2,7 @@ $pintrest-red: #E40B2C;
 
 header{
   position: fixed;
+  z-index: 1001 !important;
 }
 
 
@@ -9,7 +10,7 @@ header{
   display: flex; 
   position: absolute;
   top: 80px;
-  height: 200px; 
+  height: 45px; 
   width: 250px;
   background-color: white;
   box-shadow: 0 0 15px #ccc;
@@ -17,6 +18,7 @@ header{
   flex-direction: column;
   justify-content: space-between;
 }
+
 .nav-bar{
   z-index: 10;
   height: 80px;
@@ -34,29 +36,10 @@ header{
   box-shadow: 0 0 15px #ccc;
   border-radius: 18px;
   position: absolute;
-  right: 2px;
+  right: 5px;
   top:80px;
 }
 
-#settings-button{
-  background-color: white;
-  font-size: 16px;
-  font-weight: 400;
-  width: 235px;
-  padding: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  margin-left:10px;
-  margin-top:20px;
-  border-radius: 5px;
-  text-indent: 15px;
-  border: none;
-}
-
-#settings-button:hover{
-  background-color: rgb(238, 237, 237);
-}
 
 #logout-button{
   background-color: white;
@@ -66,8 +49,8 @@ header{
   padding: 0;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-bottom: 15px;
-  margin-left:10px;
+  margin-top: 8px;
+  margin-left:8px;
   border-radius: 5px;
   border: none;
 }

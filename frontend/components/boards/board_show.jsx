@@ -17,8 +17,9 @@ class BoardShow extends React.Component {
 
   render() {
     const boards = this.props.boards
-    if(this.props.boards.length >= 1 && this.props.current_user){
-      const currentBoard = boards.filter(board => board.id == this.props.match.params.boardId)[0];
+    const currentBoard = boards.filter(board => board.id == this.props.match.params.boardId)[0];
+
+    if(this.props.boards.length >= 1 && this.props.current_user && currentBoard){
       const currentUserBoards = boards.filter(board => board.user_id == this.props.current_user.id)
       return(
         <div className="board-show-container">
@@ -27,9 +28,6 @@ class BoardShow extends React.Component {
               <h1 className="board-name">{currentBoard.name}</h1>
               <div className="overlay">
                 <Link to={`/boards/${this.props.match.params.boardId}/edit`}><button className="edit-board"><h1>...</h1></button></Link>
-                <div className="board-show-dropdown"> 
-                      {/* I dont know what I put this in here for ??  */}
-                </div>
               </div>
             </div>
 
@@ -39,7 +37,6 @@ class BoardShow extends React.Component {
             }
             <h1 className="pin-count">{currentBoard.pins.length + " Pins"}</h1>
           </div>
-
 
           <div className="pin-preview-container"> 
             <div className="pin-grid">

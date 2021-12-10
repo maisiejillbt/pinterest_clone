@@ -33,8 +33,8 @@ export default () => (
     <ProtectedRoute path="/" component={NavBarProtectedContainer}/> 
 
     <Switch>
-      <ProtectedRoute path="/pins" component={PinIndexContainer}/>
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
+      <ProtectedRoute path="/pins" component={PinIndexContainer}/>
       <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
       <ProtectedRoute exact path='/pins/:pinId/edit' component={UpdatePinForm}/>
       <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>

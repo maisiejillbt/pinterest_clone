@@ -22,8 +22,7 @@ class CreatePinForm extends React.Component {
     formData.append('pin[photo]', this.state.photoFile);
     this.props.createPin(formData)
       .then((res) => {
-        this.props.history.push(`/pins/${res.pin.id}`)
-        console.log(res)});
+        this.props.history.push(`/pins/${res.pin.id}`)});
   } 
 
   update(fld) {

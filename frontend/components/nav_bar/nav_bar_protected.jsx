@@ -52,7 +52,6 @@ class NavBarProtected extends React.Component {
   dropdown(){
       return(
         <div id="nav-dropdown" className="nav-dropdown">
-            <h1 id="settings-button">Settings</h1>
             <button id="logout-button" onClick={this.logout}>Log out</button>
         </div>
       );
