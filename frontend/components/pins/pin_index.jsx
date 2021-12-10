@@ -18,10 +18,9 @@ class PinIndex extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  // componentDidMount(){
-  //   this.props.fetchPins();
-  //   this.props.fetchUserBoards();
-  // }
+  componentDidMount(){
+    this.props.fetchPins();
+  }
 
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
@@ -38,6 +37,9 @@ class PinIndex extends React.Component {
 
   componentWillUnmount(){
     clearTimeout(this.dropdownTimeout);
+    this.setState = (state,callback)=>{
+            return;
+        };
   }
 
   close(){
@@ -86,9 +88,9 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    // const pins = this.props.pins.slice(0,15)
-    // const boards = this.props.boards
-    // if (pins.length > 6 ) {
+    const pins = this.props.pins
+   
+    if (pins.length > 6 ){
       return(
         <div className="pin-index">
             <div className="create-button" onClick={() => this.toggle("dropdown")}>
@@ -96,7 +98,7 @@ class PinIndex extends React.Component {
               { this.state.dropdownOpen ? this.dropdown() : null }
             </div>
 
-            < PinGridContainer closeModal={this.closeModal} toggle={this.toggle}/> 
+            < PinGridContainer pins={this.props.pins} closeModal={this.closeModal} toggle={this.toggle}/> 
 
             {this.state.modalOpen ? 
                 <div className="board-form-container">
@@ -108,11 +110,12 @@ class PinIndex extends React.Component {
               : null }
         </div>
     )
-    // }else{ 
-    //   return null 
-    // }
-
-  }
+    }else{
+      return(
+        <div></div> 
+      )
+    }
+}
 }
 
 export default PinIndex

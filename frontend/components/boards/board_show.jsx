@@ -1,6 +1,8 @@
 import React from 'react';
 import BoardPreview from './board_preview'
 import Pin from '../pins/pin'
+import PinGridContainer from '../pins/pin_grid_container';
+
 import { Link } from 'react-router-dom';
 
 class BoardShow extends React.Component {
@@ -42,9 +44,7 @@ class BoardShow extends React.Component {
           <div className="pin-preview-container"> 
             <div className="pin-grid">
             {
-              currentBoard.pins.map(pin => 
-                <Pin pin={pin} key={pin.id} boards={currentUserBoards}/>
-              )
+              < PinGridContainer pins={currentBoard.pins} /> 
             }
             </div>
           </div>

@@ -6,8 +6,10 @@ const BoardDropdown = (props) => {
 
   const boards = props.boards
   const pin = document.getElementById(props.pinId)
-  pin.style.zIndex = "1000"
-  console.log(props.pinId)
+  if(pin){
+    pin.style.zIndex = "1000"
+  }
+  
   return(
     <div id="boardDropdown" className="board-dropdown">
       {

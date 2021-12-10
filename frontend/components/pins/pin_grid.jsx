@@ -48,13 +48,11 @@ class PinGrid extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchPins() // fetching pins and setting the initial row directly after
-            .then(() => {
-                // shuffling the pins so that each refresh gives different pins at the top
-                this.pins = this.props.pins.sort(() => Math.random() - 0.5);
-                this.newRow(this.pins.slice(0,this.state.numCols))
-                });
-        this.props.fetchUserBoards();
+        // setting the initial row
+        // shuffling the pins so that each refresh gives different pins at the top
+        this.props.fetchUserBoards().then(()=> {
+            this.pins = this.props.pins.sort(() => Math.random() - 0.5);
+            this.newRow(this.pins.slice(0,this.state.numCols))})
     }
 
     componentDidUpdate(){

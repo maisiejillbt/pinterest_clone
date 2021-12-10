@@ -9,16 +9,6 @@
   align-items: center;
 }
 
-.pin-detail .board-chevron{
-  width:12px; 
-}
-
-.pin-detail .board-dropdown{
-  position: absolute;
-  right: 180px;
-  top:0px;
-}
-
 .board-image{
   height: 50px;
   min-width: 50px; 
@@ -51,19 +41,18 @@
 .board-dropdown{
   display:flex; 
   flex-direction: column;
-  z-index:30;
-
   padding: 15px;
   width: 325px;
   background-color: white;
   border-radius: 18px;
   box-shadow: 0 0 15px #EAEAEA;
-  top:60px;
-  left:-60px;
-
   position: absolute;
   z-index: 1000;
-  
+}
+
+.pin-grid .board-dropdown{
+  top:60px;
+  left:-60px; 
 }
 
 .pin-image-container:hover .board-dropdown{
@@ -71,5 +60,12 @@
   left:-75px;
 }
 
+.pin-detail .board-chevron{
+  width:12px; 
+}
 
-
+.pin-detail .board-dropdown{
+  position:fixed;
+  right: 20px !important; 
+  top:100px !important;
+}
