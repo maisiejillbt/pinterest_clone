@@ -23,6 +23,7 @@ class PinGrid extends React.Component {
         this.col7 = 0; 
 
         this.atBottom = false;
+        this.initialRender = true;
 
         this.getNumColumns = this.getNumColumns.bind(this);
         this.setNumColumns = this.setNumColumns.bind(this);
@@ -116,6 +117,14 @@ class PinGrid extends React.Component {
         console.log(newPins)
         console.log(this.state)
 
+        let timeout; 
+
+        if(this.initialRender){
+            timeout = 2000; 
+            this.initialRender = false
+        }else{
+            timeout = 500;
+        }
 
 
         if(this.state.rowRendered){
@@ -141,7 +150,7 @@ class PinGrid extends React.Component {
                 if(this.state.numRows === 3){
                     window.addEventListener('scroll', this.infiniteScrollHandler);
                 }  
-            }, 1500);
+            }, timeout);
             this.setState({ 
                 rowRendered: false,
             })
