@@ -123,7 +123,6 @@ class PinGrid extends React.Component {
 
         if(this.state.rowRendered){
             // set timeout is needed to ensure previous row of pins has rendered on the dom 
-            console.log("rowRendered timeout")
             this.previousRowTimeout = setTimeout(() => {
                 // adding previous pins height to column height
                 for(let i=0; i < this.state.numCols; i++){
@@ -133,6 +132,8 @@ class PinGrid extends React.Component {
                         const pinHeight = pin.offsetHeight;
                         this[`col${i+1}`] += pinHeight;
                     }
+                    console.log("rowRendered timeout" + ` col${i+1}`)
+
                 }
                 
                 // calling new row automatically to set up initial 3 rows ====> Consider changing to 5 rows ? 
