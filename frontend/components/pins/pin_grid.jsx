@@ -12,6 +12,7 @@ class PinGrid extends React.Component {
             rowRendered: false,
             numCols: this.getNumColumns(),
             pins:[],
+            columnsRendered:{},
         }
 
         this.col1 = 0,
@@ -212,7 +213,11 @@ class PinGrid extends React.Component {
         }else if(w >= 1764){
             c = 7; 
         }
-        return c; 
+        let cols = {};
+        for(let i=0; i < c; i ++){
+            cols[i]=false
+        }
+        return c;
     }
 
     setNumColumns(){
