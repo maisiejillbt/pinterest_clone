@@ -10,7 +10,7 @@ class PinGrid extends React.Component {
         this.state = {
             numRows: 0,
             rowRendered: false,
-            numCols: this.getNumColumns(),
+            numCols: null,
             pins:[],
             columnsRendered:{},
         }
@@ -49,11 +49,14 @@ class PinGrid extends React.Component {
         });
 
         this.loaded = this.loaded.bind(this);
+
     }
 
     componentDidMount(){
         // shuffling the pins so that each refresh gives different pins at the top
         // setting the initial row
+        this.setNumColumns()
+
         this.props.fetchUserBoards().then(()=>{
             this.pins = this.props.pins.sort(() => Math.random() - 0.5);
             this.newRow(this.pins.slice(0,this.state.numCols))})
@@ -84,8 +87,8 @@ class PinGrid extends React.Component {
         this.setState({
             numRows: 0,
             pins: [],
-            numCols: this.getNumColumns(),
         });
+        this.setNumColumns();
         this.atBottom = false;
         for(let i = 1; i < 8; i++){
             this[`col${i}`] = 0;
@@ -149,12 +152,21 @@ class PinGrid extends React.Component {
             // row rendered as condit for if set previous row can be run again
             this.setState({ 
                 rowRendered: false,
+                columnsRendered: Object.keys(this.state.columnsRendered).forEach(v => this.state.columnsRendered[v] = false),
             })
         }
     } 
 
-    loaded(id){
-        console.log(id + " loaded")
+    loaded(id, column){
+        console.log(id + " loaded on " + column )
+        const columns = {...this.state.columnsRendered, ...{[column]: true}};
+        const rendered = Object.values(columns).every((v) => v === true)
+        this.setState({
+            columnsRendered: columns,
+            rowRendered: rendered,
+        });
+        console.log("loaded")
+        console.log(this.state)
     }
 
     newRow(pins){
@@ -178,6 +190,7 @@ class PinGrid extends React.Component {
                     toggle={this.props.toggle}
                     style={style}
                     loaded={this.loaded}
+                    column={i+1}
                 />
                 )
             x += 252;
@@ -187,11 +200,9 @@ class PinGrid extends React.Component {
         // updating num rows
         // updating prev num rows to trigger if statement in 
         // CDU for initial rendering of rows 
-
         this.setState({
             pins: [...this.state.pins, ...pinArray],
             numRows: this.state.numRows + 1,
-            rowRendered: true,
         })
     }
 
@@ -214,15 +225,17 @@ class PinGrid extends React.Component {
             c = 7; 
         }
         let cols = {};
-        for(let i=0; i < c; i ++){
+        for(let i=1; i <= c; i ++){
             cols[i]=false
         }
-        return c;
+        return [cols, c];
     }
 
     setNumColumns(){
+        const cols = this.getNumColumns()
         this.setState({
-            numCols: this.getNumColumns()
+            numCols: cols[1], 
+            columnsRendered: cols[0],
         })
     }
 
@@ -233,6 +246,7 @@ class PinGrid extends React.Component {
     }
 
     render(){
+        console.log(this.state);
         return(
             <div className="pin-preview-container"> 
                 <div className="pin-grid">
