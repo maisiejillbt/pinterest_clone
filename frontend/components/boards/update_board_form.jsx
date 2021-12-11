@@ -48,7 +48,6 @@ class UpdateBoardForm extends React.Component {
     return (
       <div className="board-form-container">
         < BackButton /> 
-
         <div className="board-form">
           <h1>Edit your board</h1>
           <form onSubmit={this.handleSubmit}> 
