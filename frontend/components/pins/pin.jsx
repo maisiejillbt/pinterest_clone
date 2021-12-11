@@ -16,10 +16,10 @@ class Pin extends React.Component {
     const dropdownText = (hasBoards && firstBoardName.length > 10) ? firstBoardName.slice(0,10) + '  ...' : firstBoardName;
     const firstBoardId = boards[0] ? boards[0].id : null;
     return(
-        <div id={pin.id} style={this.props.style} onLoad={() => this.props.loaded(pin.id)}className="pin-container">
+        <div id={pin.id} style={this.props.style} className="pin-container">
           {pin.photoUrl ? 
             <div className="pin-image-container">
-              <Link to={`/pins/${pin.id}`}><img className="pin-image" src={pin.photoUrl}/></Link>
+              <Link to={`/pins/${pin.id}`}><img className="pin-image" onLoad={() => this.props.loaded(pin.id)} src={pin.photoUrl}/></Link>
               {
                 hasBoards ? 
                   <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} /> 
