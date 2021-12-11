@@ -8,8 +8,14 @@ class SignUp extends React.Component {
       password: '',
       age: '',
       username: '',
+      pwError:"",
+      emailError:"",
+      ageError:"",
+      hasError: false,
     }
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateErrors = this.updateErrors.bind(this);
   }
 
   handleInput(type){
@@ -33,31 +39,32 @@ class SignUp extends React.Component {
 
   handleSubmit(e){
     e.preventDefault(); 
-
-    this.props.createNewUser(this.state)
+    if(!this.state.hasErrors){
+      this.props.createNewUser(this.state)
       .then(() => 
         this.props.login(this.state)
           .then(() =>
             this.props.history.push('/pins')
         ));
-      
-     /// this is where we will be sent after submit!
+    }
+    this.updateErrors();
   }
 
-  // trying and failing to implement default avatars  :( 
-
-    // handleSubmit(e) {
-    //   e.preventDefault();
-    //   const formData = new FormData();
-    //   formData.append('user[email]', this.state.email);
-    //   formData.append('user[password]', this.state.password);
-    //   formData.append('user[age]', this.state.age);
-    //   formData.append('user[photo]', this.state.photoFile);
-      
-    //   this.props.createNewUser(formData)
-    //     .then(() => 
-    //       this.props.login(this.state))
-    // } 
+  updateErrors(){
+    let errors = {
+      pwError:"",
+      emailError:"",
+      ageError:"",
+    }
+    this.state.password.length < 6 ? errors["pwError"] = "your password must be 6 characters" : errors["pwError"];
+    !this.state.password ? errors["pwError"] = "you must enter your password" : errors["pwError"];
+    !this.state.email ? errors["emailError"] = "you must enter your email" : errors["emailError"];
+    !this.state.email.includes("@") ? errors["emailError"] = "you must enter a valid email" : errors["emailError"];
+    !this.state.age ? errors["ageError"] = "you must enter your age" : errors["ageError"];
+    this.state.age < 18 ? errors["ageError"] = "you must be 18 to join" : errors["ageError"];
+    Object.keys(errors).length === 0 ? errors["hasError"] = false : errors["hasError"] = true;
+    this.setState(errors)
+  }
 
   render() {
     return(
@@ -76,12 +83,14 @@ class SignUp extends React.Component {
               value={this.state.email}
               onChange={this.handleInput('email')}
               />
+            <h2 className="error">{this.state.emailError}</h2>
             <input 
               type="password" 
               placeholder="Create a password"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
+            <h2 className="error">{this.state.pwError}</h2>
             <input 
               type="number" 
               min="18"
@@ -89,7 +98,7 @@ class SignUp extends React.Component {
               value={this.state.age}
               onChange={this.handleInput('age')}
               />
-
+            <h2 className="error">{this.state.ageError}</h2>
 
             {/* {Would love to come back to this and add in the entire set of questions asked during create user} */}
             {/* <div>

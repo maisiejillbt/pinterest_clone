@@ -1,6 +1,7 @@
 
 json.id user.id
 json.username user.username 
+json.errors user.errors
 json.name user.name 
 json.bio user.bio 
 json.pronouns user.pronouns

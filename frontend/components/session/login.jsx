@@ -9,6 +9,7 @@ class Login extends React.Component {
       pwError:"",
       emailError:"",
       credentialError:"",
+      hasError: null,
     };
     this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,33 +42,31 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.updateErrors();
-    this.props.login(this.state)
-      .then((res) => {
-        console.log(res);
-        this.props.history.push('/pins')
-      });
+    if(!this.state.hasErrors){
+      this.props.login(this.state)
+        .then(() => {
+          this.props.history.push('/pins')
+        });
+    }
+    
   }
 
   updateErrors(){
-    if(!this.state.password){
-      this.setState({
-        pwError:"you must enter your password",
-      }); 
-    }else{
-      this.setState({
-        pwError:"",
-      }); 
+    let errors = {
+      pwError:"",
+      emailError:"",
+      credentialError:"", 
     }
-    if(!this.state.email){
-      this.setState({
-        emailError:"you must enter your email",
-      }); 
-    }else{
-      this.setState({
-        emailError:"",
-      }); 
-    }
-    if(this.state.email && this.state.password){
+    this.setState(errors);
+    errors = {};
+    !this.state.password ? errors["pwError"] = "you must enter your password" : errors["pwError"];
+    !this.state.email ? errors["emailError"] = "you must enter your email" : errors["emailError"];
+    !this.state.email.includes("@") ? errors["emailError"] = "you must enter a valid email" : errors["emailError"];
+    
+    Object.keys(errors).length === 0 ? errors["hasError"] = false : errors["hasError"] = true;
+    this.setState(errors);
+
+    if(!errors.hasError){
         this.errorTimeout = setTimeout(() => {
           this.setState({
             credentialError:"incorrect credentials"
