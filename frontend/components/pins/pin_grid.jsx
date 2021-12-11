@@ -46,6 +46,8 @@ class PinGrid extends React.Component {
             clearTimeout(this.resizeTimeout);
             this.resizeTimeout = setTimeout(() => this.windowResizeHandler(), 500);
         });
+
+        this.loaded = this.loaded.bind(this);
     }
 
     componentDidMount(){
@@ -184,7 +186,6 @@ class PinGrid extends React.Component {
             rowRendered: true,
         })
     }
-    
 
     getNumColumns(){
         const w = window.innerWidth;
