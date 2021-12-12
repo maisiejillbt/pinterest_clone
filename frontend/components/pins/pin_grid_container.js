@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPins } from '../../actions/pins';
+import { fetchPins, deletePin } from '../../actions/pins';
 import { fetchUserBoards } from '../../actions/boards';
 import PinGrid from './pin_grid';
 
@@ -12,6 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchPins: () => dispatch(fetchPins()),
+  deletePin: (pinId) => dispatch(deletePin(pinId)),
   fetchUserBoards: () => dispatch(fetchUserBoards()),
 });
 

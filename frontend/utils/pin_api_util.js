@@ -33,7 +33,7 @@ export const updatePin = (pin) => (
   })
 );
 
-export const deletePin = pinId => (
+export const deletePin = pinId => ( 
   $.ajax({
     url: `/api/pins/${pinId}/`,
     method: 'DELETE'
