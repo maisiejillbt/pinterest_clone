@@ -66,7 +66,7 @@ class PinGrid extends React.Component {
                             linkedin && 
                             github ? 
                             [portfolio, newUpload, linkedin, ...this.pins.slice(1,4), github, ...this.pins.slice(5)] : 
-                            this.pins;
+                            this.props.pins;
                 this.newRow(this.pins.slice(0,this.state.numCols))
                 });
     }
