@@ -10,19 +10,19 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/0b71af5ffae54642c68ab1efbdfddf026ee68a30/app/assets/images/Screen%20Shot%202021-11-11%20at%209.02.10%20PM.png)
 
-![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.02.36%20PM.png)
+![](https://github.com/maisiejillbt/pinterest_clone/blob/afe085b04a5756e4dbfff5e601bf90c9471be592/app/assets/images/Screen%20Shot%202021-12-12%20at%202.27.17%20PM.png)
 
 One of my main goals for Twinterest was to stick to the design of Pinterest as closely as possible. Making sure to measure and adjust my cloned site as needed. For me the appearence of the page is just as important as the functionality. 
 
 - View other users pins 
 
-![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.03.29%20PM.png)
+![](https://github.com/maisiejillbt/pinterest_clone/blob/afe085b04a5756e4dbfff5e601bf90c9471be592/app/assets/images/twinHomepageSmall.gif)
 
 The Pins 'show' page is still under construction, my goal is to be able to have pins line up and stagger on the page in a consistently uneven fashion. While there were a few different ways that I attempted to implement this, (through flex-box css styling, and grid styling) ultumately none of them worked the way I was hoping. I also want to implement an "unlimited scroll" on this page, and felt it would be best to do both things in tandem as they go hand in hand. 
 
 - View User profiles 
 
-![](https://github.com/maisiejillbt/pinterest_clone/blob/073475c786fe1021c83b7f1f18ca2ad201d56d20/app/assets/images/Screen%20Shot%202021-11-11%20at%209.03.43%20PM.png)
+![](https://github.com/maisiejillbt/pinterest_clone/blob/afe085b04a5756e4dbfff5e601bf90c9471be592/app/assets/images/Screen%20Shot%202021-12-12%20at%202.29.02%20PM.png)
 
 The Users Profile Page proved to be more complex to put together than I had originally anticipated. I ended up creating a secondary element with a sub element as part of my 'Board' class in order to accheive the effect I wanted. One of the issues I faced with this was how to make as few calls to the back end as possible, while keeping my state shape relatively clean. I ended up only needing a single call, fetching the User and through the user all their boards and pins. These were used in my secondary element both to style it and to link through it to the boards 'show' page. 
 
