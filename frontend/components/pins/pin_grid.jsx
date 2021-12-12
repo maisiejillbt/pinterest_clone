@@ -60,7 +60,6 @@ class PinGrid extends React.Component {
                 const portfolio = this.props.pins[0]; 
                 const linkedin = this.props.pins[1];
                 const github = this.props.pins[2];
-                // console.log(linkedin)
                 this.pins = this.props.pins.slice(3).sort(() => Math.random() - 0.5)
                 this.pins = [portfolio,...this.pins.slice(0,1), linkedin, ...this.pins.slice(2,5), github, ...this.pins.slice(5)]
                 this.newRow(this.pins.slice(0,this.state.numCols))
@@ -247,7 +246,6 @@ class PinGrid extends React.Component {
     }
 
     render(){
-        console.log(this.props.pins)
         return(
             <div className="pin-preview-container"> 
                 {
