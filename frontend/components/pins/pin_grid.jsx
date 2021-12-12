@@ -177,6 +177,8 @@ class PinGrid extends React.Component {
         
         // generating new pin objects from pins prop
         for(let i=0; i < pins.length; i++){
+            let colors = ["#FFAC81", "#FF928B","#FEC3A6","#EFE9AE","#CDEAC0","#2DC7FF","#A997DF","#533B4D","#393E41"];
+            let color = colors[Math.floor(Math.random() * colors.length)];
             let y = this[`col${i+1}`];
             let pin = pins[i];
             let style = {
@@ -192,6 +194,7 @@ class PinGrid extends React.Component {
                     style={style}
                     loaded={this.columnLoaded}
                     column={i+1}
+                    bgColor={color}
                 />
                 )
             x += 252;

@@ -91,7 +91,7 @@ class PinShow extends React.Component{
           < BackButton /> 
           <div className="pin-modal">
             <div className="pin-photo-container">
-              <img className="photo" src={pin.photoUrl}/>
+              <img className="photo" src={pin.photoUrl} alt={pin.title}/>
             </div>
             <div className="pin-detail">
               <div>

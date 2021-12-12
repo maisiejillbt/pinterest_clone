@@ -19,7 +19,7 @@ class Pin extends React.Component {
         <div id={pin.id} style={this.props.style} className="pin-container">
           {pin.photoUrl ? 
             <div className="pin-image-container">
-              <Link to={`/pins/${pin.id}`}><img className="pin-image" onLoad={() => this.props.loaded(pin.id, this.props.column)} src={pin.photoUrl} alt="pin image"/></Link>
+              <Link to={`/pins/${pin.id}`}><img style={{backgroundColor: `${this.props.bgColor}`}} className="pin-image" onLoad={() => this.props.loaded(pin.id, this.props.column)} src={pin.photoUrl} alt={pin.title}/></Link>
               {
                 hasBoards ? 
                   <BoardDropdownHeader userBoards={boards} pin={this.props.pin} color={"white"} /> 
@@ -35,7 +35,7 @@ class Pin extends React.Component {
             </div>
           : 
             <div className="image-placeholder">
-              <h1>Image goes here</h1>
+              
             </div>
           }
           <div className="pin-title">
