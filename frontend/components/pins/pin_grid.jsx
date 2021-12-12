@@ -247,6 +247,7 @@ class PinGrid extends React.Component {
     }
 
     render(){
+        console.log(this.pins)
         return(
             <div className="pin-preview-container"> 
                 {
