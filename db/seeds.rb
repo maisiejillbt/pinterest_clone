@@ -25,6 +25,14 @@ user1 = User.create!(username: 'demo', password: 'password', name:'Dr. James Bar
 #   User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::TvShows::RuPaul.unique.queen, password: 'password', email: Faker::Internet.unique.email, age: 25 )
 # end
 
+portfolio = Pin.create!(created_at: DateTime.now, title:"Check Out Maisies Portfolio",description:"Here you can check out my portfolio and learn more about me!", user_id:user1.id)
+portfolio.photo.attach(io: File.open(File.expand_path("../../public/images/portfolio/portfolio-pin.png", __FILE__)), filename: "portfolio-pin.png")
+
+linkedin = Pin.create!(created_at: DateTime.now, title:"MAISIES LINKEDIN",description:"Check out my Linkedin and see what other people have to say about me!", user_id:user1.id)
+linkedin.photo.attach(io: File.open(File.expand_path("../../public/images/portfolio/linkedin-pin.png", __FILE__)), filename: "linkedin-pin.png")
+
+portfolio = Pin.create!(created_at: DateTime.now, title:"Maisies GitHub",description:"Check out my other projects and see what I'm working on now", user_id:user1.id)
+portfolio.photo.attach(io: File.open(File.expand_path("../../public/images/portfolio/github-pin.png", __FILE__)), filename: "github-pin.png")
 
 user2 = User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::TvShows::RuPaul.unique.queen, password: 'password', email: Faker::Internet.unique.email, age: 25 )
 user3 = User.create!(username: Faker::Games::Pokemon.unique.name, name: Faker::TvShows::RuPaul.unique.queen, password: 'password', email: Faker::Internet.unique.email, age: 25 )

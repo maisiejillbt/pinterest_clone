@@ -35,6 +35,10 @@ $pintrest-red: #E40B2C;
   width: 50%;
   padding: 35px;
   padding-right: 30px;;
+
+  h3{
+    padding-bottom:15px
+  }
 }
 
 .pin-detail .top{
@@ -58,6 +62,7 @@ $pintrest-red: #E40B2C;
   font-size: 25px;
   font-weight: 600;
   padding:0;
+  padding-bottom:15px;
 }
 
 .pin-detail .pin-owner {
@@ -125,6 +130,10 @@ $pintrest-red: #E40B2C;
   top:-130px;
 }
 
+#portfolioLink{
+  text-decoration: underline;
+}
+
 
 @media (max-width: 1200px){
   .pin-modal{ 
@@ -135,6 +144,10 @@ $pintrest-red: #E40B2C;
     width: 725px;
     border-radius: 30px;
     box-shadow: 0 0 30px #EAEAEA;
+  }
+
+  .pin-owner{
+    padding-top:30px;
   }
 
   .pin-photo-container{
@@ -149,8 +162,9 @@ $pintrest-red: #E40B2C;
     // padding: 0;
   }
 
-  .title{
+  .pin-detail > .title{
     margin-bottom: 15px;
+    padding-bottom: 0;
   }
 
   .top{

@@ -19,6 +19,30 @@ class PinShow extends React.Component{
     this.props.fetchFollows();
   }
 
+  setLink(pinId){
+    let data = false;
+    switch (pinId) {
+      case 1907:
+        data=[];
+        data[0] = "https://maisiejillbt.github.io/Resume/"
+        data[1] = "Portfolio"
+        break;
+      case 1908:
+        data=[];
+        data[0] = "https://www.linkedin.com/in/maisie-bruno-tyne-178a469a/";
+        data[1] = "Linkedin"
+        break;
+      case 1909:
+        data=[];
+        data[0] = "https://github.com/maisiejillbt"
+        data[1] = "GitHub"
+        break;
+      default:
+        break;
+    }
+    return data;
+  }
+
   handleFollow(currentUser, userToFollow) {
     const button = document.getElementById('follow-button');
     const follow = {
@@ -61,6 +85,7 @@ class PinShow extends React.Component{
     if (pin && this.props.current_user){
       const currentUserId = this.props.current_user.id;
       const pinOwner = pin.user
+      const link = this.setLink(pin.id)
       return (
         <div className="pin-show">
           < BackButton /> 
@@ -86,7 +111,10 @@ class PinShow extends React.Component{
 
                 <h1 className="title">{pin.title}</h1>
                 {
-                  pin.details ? <h1>{pin.details}</h1> : null
+                  pin.description ? <h3>{pin.description}</h3> : null
+                }
+                {
+                  link ? <a id="portfolioLink" href={link[0]}>View my {link[1]} here!</a> : null
                 }
               </div>
 

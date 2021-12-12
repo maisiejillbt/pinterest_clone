@@ -1,6 +1,5 @@
 import React from 'react';
 import Pin from './pin'
-import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom'; 
 
 class PinGrid extends React.Component {
@@ -58,7 +57,12 @@ class PinGrid extends React.Component {
 
         this.props.fetchUserBoards()
             .then(()=>{
-                this.pins = this.props.pins.sort(() => Math.random() - 0.5)
+                const portfolio = this.props.pins[58]; 
+                const linkedin = this.props.pins[59];
+                const github = this.props.pins[60];
+                // console.log(linkedin)
+                this.pins = this.props.pins.slice(3).sort(() => Math.random() - 0.5)
+                this.pins = [portfolio,...this.pins.slice(0,1), linkedin, ...this.pins.slice(2,5), github, ...this.pins.slice(5)]
                 this.newRow(this.pins.slice(0,this.state.numCols))
                 });
     }
