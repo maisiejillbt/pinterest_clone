@@ -30,7 +30,12 @@ class CreatePinForm extends React.Component {
   }
 
   handleFile(e){
-    this.setState({photoFile: e.currentTarget.files[0]})
+    this.setState({photoFile: e.currentTarget.files[0]});
+    
+    let image = document.getElementById('output');
+    image.src = URL.createObjectURL(e.target.files[0]);
+    image.style.width = "80px";
+      
   }
 
   render() {
@@ -39,7 +44,9 @@ class CreatePinForm extends React.Component {
         <div className="create-pin">
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="photo-upload" id="drag-and-drop">Drag and drop or click to upload</label>
-              <input id="photo-upload" type="file" onChange={this.handleFile.bind(this)}/>
+              <input id="photo-upload" type="file" accept="image/gif, image/jpeg, image/png" name="image" onChange={this.handleFile.bind(this)}/>            
+            <img id="output"/>
+            
             <div className="right">
               <label>
                 <input
