@@ -57,9 +57,9 @@ class PinGrid extends React.Component {
 
         this.props.fetchUserBoards()
             .then(()=>{
-                const portfolio = this.props.pins[58]; 
-                const linkedin = this.props.pins[59];
-                const github = this.props.pins[60];
+                const portfolio = this.props.pins[0]; 
+                const linkedin = this.props.pins[1];
+                const github = this.props.pins[2];
                 // console.log(linkedin)
                 this.pins = this.props.pins.slice(3).sort(() => Math.random() - 0.5)
                 this.pins = [portfolio,...this.pins.slice(0,1), linkedin, ...this.pins.slice(2,5), github, ...this.pins.slice(5)]

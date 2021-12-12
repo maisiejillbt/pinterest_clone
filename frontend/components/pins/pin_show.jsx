@@ -22,17 +22,17 @@ class PinShow extends React.Component{
   setLink(pinId){
     let data = false;
     switch (pinId) {
-      case 1907:
+      case 1315:
         data=[];
         data[0] = "https://maisiejillbt.github.io/Resume/"
         data[1] = "Portfolio"
         break;
-      case 1908:
+      case 1316:
         data=[];
         data[0] = "https://www.linkedin.com/in/maisie-bruno-tyne-178a469a/";
         data[1] = "Linkedin"
         break;
-      case 1909:
+      case 1317:
         data=[];
         data[0] = "https://github.com/maisiejillbt"
         data[1] = "GitHub"
