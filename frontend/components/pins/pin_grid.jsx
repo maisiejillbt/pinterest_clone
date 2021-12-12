@@ -57,11 +57,16 @@ class PinGrid extends React.Component {
 
         this.props.fetchUserBoards()
             .then(()=>{
-                const portfolio = this.props.pins[0]; 
-                const linkedin = this.props.pins[1];
-                const github = this.props.pins[2];
+                const portfolio = this.props.pins[this.props.pins.map(function(x) {return x.id; }).indexOf(1315)]; 
+                const linkedin = this.props.pins[this.props.pins.map(function(x) {return x.id; }).indexOf(1316)]; this.props.pins[1];
+                const github = this.props.pins[this.props.pins.map(function(x) {return x.id; }).indexOf(1317)]; 
+                const newUpload = this.props.pins[0];
                 this.pins = this.props.pins.slice(3).sort(() => Math.random() - 0.5)
-                this.pins = [portfolio,...this.pins.slice(0,1), linkedin, ...this.pins.slice(2,5), github, ...this.pins.slice(5)]
+                this.pins = portfolio && 
+                            linkedin && 
+                            github ? 
+                            [portfolio, newUpload, linkedin, ...this.pins.slice(1,4), github, ...this.pins.slice(5)] : 
+                            this.pins;
                 this.newRow(this.pins.slice(0,this.state.numCols))
                 });
     }
