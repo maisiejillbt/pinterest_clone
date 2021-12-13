@@ -27,7 +27,15 @@ class BoardImagePreview extends React.Component {
           </div>
       )
     } else {
-      return(null)
+      return(
+          <div className="board-image-container">
+            <div className="left-board-display-image" ></div>
+            <div className="right-images">
+            <div className="right-top-board-display-image"></div>
+            <div className="right-bottom-board-display-image"></div> 
+            </div>
+          </div>
+      )
     }}
   
 }

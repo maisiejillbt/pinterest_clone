@@ -14,6 +14,7 @@ class UpdateBoardForm extends React.Component {
       created_at: new Date()
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteBoard = this.deleteBoard.bind(this);
   }
 
   componentDidMount(){
@@ -41,6 +42,14 @@ class UpdateBoardForm extends React.Component {
     this.setState({
       public: !this.state.public ? true : false
     })
+  }
+
+  deleteBoard() {
+
+    this.props.deleteBoard(this.props.match.params.boardId)
+      .then(() => {
+        this.props.history.push(`/users/${this.state.user_id}`)
+      })
   }
 
   render() {
@@ -77,7 +86,7 @@ class UpdateBoardForm extends React.Component {
             </div>
             <div className="submit-delete">
               <div className="delete">
-                <h1 onClick={() => this.props.deleteBoard(boardId)}>Delete</h1>
+                <h1 onClick={this.deleteBoard}>Delete</h1>
               </div>
               <p id="deleteHide">Are your sure? You cannot undo this!</p>
               <button type='submit'>Done</button>
