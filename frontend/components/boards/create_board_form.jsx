@@ -17,10 +17,10 @@ class CreateBoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createBoard(this.state)
-      .then(
+      .then(() => {
         this.props.ownProps.closeModal()
-      );
-
+        }
+      )
   } 
 
   update(fld) {

@@ -49,10 +49,12 @@ class UserShow extends React.Component {
   closeModal(){
     this.setState({
       modalOpen: false,
-    }, 
-      () => this.props.fetchUser(this.props.match.params.userId)
-      );
-    }   
+    }, () => 
+      setTimeout(() => {
+        this.props.fetchUser(this.props.match.params.userId)
+      }, 500) 
+    );
+  }   
 
   toggle(element){
     switch (element) {
