@@ -106,17 +106,16 @@ class PinGrid extends React.Component {
     }
 
     infiniteScrollHandler(){
+        const scroll = document.documentElement.scrollHeight - 
+                       document.documentElement.scrollTop - 25
 
-        if(document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight){
+        if( scroll >= (document.documentElement.clientHeight - 25) && 
+            scroll <= document.documentElement.clientHeight){
             this.atBottom = true; 
             this.setPreviousRow();
         }else{
             this.atBottom = false;
         } 
-
-        console.log(document.documentElement.scrollHeight)
-        console.log(document.documentElement.scrollTop)
-        console.log(document.documentElement.clientHeight)
     }
 
     setPreviousRow(){ 
