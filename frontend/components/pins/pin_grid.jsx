@@ -114,7 +114,7 @@ class PinGrid extends React.Component {
         } 
     }
 
-    setPreviousRow(){ // CONSIDER RENAMING TO SOMETHING MORE DESCRIPTIVE ??
+    setPreviousRow(){ 
         const previousRowStart = (this.state.pins.length - this.state.numCols)
         const previousRowend = this.state.pins.length; 
         const newRowEnd = this.state.pins.length + this.state.numCols; 
@@ -136,12 +136,10 @@ class PinGrid extends React.Component {
             if(this.state.numRows < 3 || this.atBottom){
                 this.newRow(newPins);
             }
-
             // adding event listener for infinite scroll
             if(this.state.numRows === 2){
                 window.addEventListener('scroll', this.infiniteScrollHandler);
             }  
-            
             // rowRendered as condit for if setPreviousRow can be run again
             const rendered = {}
             Object.keys(this.state.columnsRendered).forEach(v => rendered[v] = false)
@@ -177,7 +175,9 @@ class PinGrid extends React.Component {
         
         // generating new pin objects from pins prop
         for(let i=0; i < pins.length; i++){
-            let colors = ["#FFAC81", "#FF928B","#FEC3A6","#EFE9AE","#CDEAC0","#2DC7FF","#A997DF","#533B4D","#393E41"];
+            let colors = ["#FFAC81", "#FF928B","#FEC3A6",
+                          "#EFE9AE","#CDEAC0","#2DC7FF",
+                          "#A997DF","#533B4D","#393E41"];
             let color = colors[Math.floor(Math.random() * colors.length)];
             let y = this[`col${i+1}`];
             let pin = pins[i];
