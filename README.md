@@ -4,9 +4,9 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 # [View the live site here!](https://tw1nterest.herokuapp.com/)
 
-If you're a current AA student looking for help or inspiration, feel free to reach out to me on Slack @Maisie Bruno-Tyne
+### If you're a student looking for help or inspiration, feel free to reach out to me on Slack @Maisie Bruno-Tyne
 
-## Features 
+# Features 
 
 - Account Creation and Authentication 
 
