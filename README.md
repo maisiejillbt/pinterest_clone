@@ -14,11 +14,106 @@ Twinterest is a fullstack clone based on Pinterest. Pinterest is an image-based 
 
 One of my main goals for Twinterest was to stick to the design of Pinterest as closely as possible. Making sure to measure and adjust my cloned site as needed. For me the appearence of the page is just as important as the functionality. 
 
-- View other users pins 
+- View Pins with Infinite Scroll
 
 ![](https://github.com/maisiejillbt/pinterest_clone/blob/afe085b04a5756e4dbfff5e601bf90c9471be592/app/assets/images/twinHomepageSmall.gif)
 
-The Pins 'show' page is still under construction, my goal is to be able to have pins line up and stagger on the page in a consistently uneven fashion. While there were a few different ways that I attempted to implement this, (through flex-box css styling, and grid styling) ultumately none of them worked the way I was hoping. I also want to implement an "unlimited scroll" on this page, and felt it would be best to do both things in tandem as they go hand in hand. 
+Displaying Pins in a staggered order while maintaining a constant stacking order for pins was a fun challenge. 
+
+It took me a while to come up with how I would implement the staggered look of the Pins. The most important things for me were maintaining the stacking order when changing screen size, and adding a new row, as well as setting myself up for future edits where I will make the unlimited scroll implement one pin at a time, from shortest to longest column. This immediately meant that using one large flexbox was not an option. I did consider using one flexbox for each row, and rendering the pins in each depending on a column properts. However, realized that with the infinite scroll and the loading time on the photos, I may end up triggering my scroll handler before photos have loaded, and in the process have many photos all loading to the page in different palces at different times. 
+
+This brought me to the conculsion that I should use a combination of the "onLoad" event and a set "transform" style property for each Pin. I implemented this by calling my newRow function first to render a row of pins to the DOM, and then triggering my columnLoaded function to update the state whenever a Pins image has completely loaded on the page. Finally I get the actual rendered height of the pin object and add it to the class variable of its column height in setPreviousRow.
+
+``` javascript 
+    newRow(pins){
+        const boards = this.props.boards;
+        let pinArray = []; 
+        let x = 0;
+        
+        // generating new pin objects from pins prop
+        for(let i=0; i < pins.length; i++){
+            let colors = ["#FFAC81", "#FF928B","#FEC3A6",
+                          "#EFE9AE","#CDEAC0","#2DC7FF",
+                          "#A997DF","#533B4D","#393E41"];
+            let color = colors[Math.floor(Math.random() * colors.length)];
+            let y = this[`col${i+1}`];
+            let pin = pins[i];
+            let style = {
+                transform: `translate(${x}px, ${y}px)`,
+                zIndex:'1'
+            }; 
+            pinArray.push(
+                <Pin 
+                    pin={pin} 
+                    key={pin.id} 
+                    boards={boards} 
+                    toggle={this.props.toggle}
+                    style={style}
+                    loaded={this.columnLoaded}
+                    column={i+1}
+                    bgColor={color}
+                />
+                )
+            x += 252;
+            }
+        // adding to pin state for rendering
+        // updating num rows
+        // CDU for initial rendering of rows will be triggered from this update
+        // to load initial rows of pins
+        this.setState({
+            pins: [...this.state.pins, ...pinArray],
+            numRows: this.state.numRows + 1,
+        });
+    }
+    
+    columnLoaded(id, column){
+        // setting state upon column image rendering
+        const columns = {...this.state.columnsRendered, ...{[column]: true}};
+        const rendered = Object.values(columns).every((v) => v === true)
+        this.setState({
+            columnsRendered: columns,
+            rowRendered: rendered,
+        });
+    }
+    
+    setPreviousRow(){ 
+        const previousRowStart = (this.state.pins.length - this.state.numCols);
+        const previousRowend = this.state.pins.length; 
+        const newRowEnd = this.state.pins.length + this.state.numCols; 
+        const pins = this.pins; 
+        const prevPins = pins.slice(previousRowStart,previousRowend);
+        const newPins = newRowEnd > this.pins.length ? pins.slice(previousRowend) : pins.slice(previousRowend, newRowEnd);
+
+        if(this.state.rowRendered){
+            // adding previous pins height to total column height
+            for(let i=0; i < this.state.numCols; i++){
+                const pinId = prevPins[i].id; 
+                const pin = document.getElementById(pinId);
+                if(pin){
+                    const pinHeight = pin.offsetHeight;
+                    this[`col${i+1}`] += pinHeight;
+                }
+            }
+            // calling new row to set up initial 3 rows 
+            if(this.state.numRows < 3 || this.atBottom){
+                this.newRow(newPins);
+            }
+            // adding event listener for infinite scroll
+            if(this.state.numRows === 2){
+                window.addEventListener('scroll', this.infiniteScrollHandler);
+            }  
+            // rowRendered as condit for if setPreviousRow can be run again
+            const rendered = {};
+            Object.keys(this.state.columnsRendered).forEach(v => rendered[v] = false);
+
+            this.setState({ 
+                rowRendered: false,
+                columnsRendered: rendered,
+            })
+        }
+    } 
+
+```
 
 - View User profiles 
 
@@ -124,4 +219,4 @@ Creating the Pin element was one of the most fun aspects of the project for me, 
 
 # Future Edits 
 
-  - Edit home page to have both a loading screen and a staggered appearence. 
+  - Make infinite scroll load one image at a time, on the shortest current column. 
