@@ -14,6 +14,7 @@ class UserShow extends React.Component {
     }
     this.dropdownTimeout;
     this.close = this.close.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount(){
@@ -48,8 +49,10 @@ class UserShow extends React.Component {
   closeModal(){
     this.setState({
       modalOpen: false,
-    });
-  }
+    }, 
+      () => this.props.fetchUser(this.props.match.params.userId)
+      );
+    }   
 
   toggle(element){
     switch (element) {

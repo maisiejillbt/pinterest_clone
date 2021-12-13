@@ -60,8 +60,8 @@ class NavBarProtected extends React.Component {
   rightHeader(){
     return (
         <div className="RightHeader">
-            <img className="icon" src={window.bell}/>
-            <img className="icon" src={window.message_bubble}/>
+           <a href="https://www.linkedin.com/in/maisie-bruno-tyne-178a469a/" target="_blank"><img className="icon" src={window.linkedin}/></a>
+           <a href="https://github.com/maisiejillbt" target="_blank"><img className="icon" src={window.github}/></a>
             <Link to={`/users/${this.props.current_user.id}`}><img id="avatar" className="icon" src={window.avatar_blue}/></Link>
             <img className="chevron" src={window.chevron} onClick={() => this.toggleDropdown()}/>
             { this.state.dropdownOpen ? this.dropdown() : null }
@@ -74,6 +74,7 @@ class NavBarProtected extends React.Component {
       <header className="nav-bar">
         <div className="LeftHeader">
         <Link to="/pins"><img className="MainLogo" src={window.main_logo} alt="main-logo"/></Link>
+        <a href="https://maisiejillbt.github.io/Resume/" target="_blank"><h1 className="portfolio">Portfolio</h1></a> 
         </div>
         {this.rightHeader()}
       </header>

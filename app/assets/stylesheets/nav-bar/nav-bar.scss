@@ -81,7 +81,7 @@ header{
 
 .icon{
   margin: 10px;
-  max-height: 28px; 
+  max-height: 25px; 
   max-width: 28px;
 }
 
@@ -140,4 +140,10 @@ header{
   background-color: #EAEAEA;  
   width:80px;
   margin-right:25px;
+}
+
+.portfolio{
+  text-indent: 8px;
+  color: $pintrest-red; 
+  font-weight: bolder;
 }
