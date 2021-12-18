@@ -126,14 +126,28 @@
 
 
 .image-container{
-  animation: rise-animation 1.25s forwards 1;
+  // animation-delay: 5s;
+  animation: rise-animation 1.25s forwards 1 5s;
+  // -webkit-animation-delay: 5s;
+  -webkit-animation: rise-animation 1.25s forwards 1 5s;
   transition: .5s ease-in-out;
 }
+
 @keyframes rise-animation{
   0%{
     transform: translateY(0px);
     opacity: 0
+  }
+  100%{
+    transform: translateY(-60px);
+    opacity: 1.0
+  }
+}
 
+@-webkit-keyframes rise-animation{
+  0%{
+    transform: translateY(0px);
+    opacity: 0
   }
   100%{
     transform: translateY(-60px);
