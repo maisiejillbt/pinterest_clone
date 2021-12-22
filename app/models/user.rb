@@ -2,6 +2,8 @@ class User < ApplicationRecord
 
   validates :email, :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
+  validates :age, numericality: { greater_than_or_equal_to: 18 }, on: :create
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, on: :create
   validates :email,
             :age,
             :password_digest,

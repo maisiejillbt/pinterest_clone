@@ -10,7 +10,7 @@ class NavBarAuth extends React.Component {
       // a display element 
     }
   }
-  
+
   display(){
       return(
         <div className="RightHeader">
@@ -29,6 +29,7 @@ class NavBarAuth extends React.Component {
   };
 
   render() {
+    console.log(this.props)
     return (
       <header className="nav-bar">
         <div className="LeftHeader">

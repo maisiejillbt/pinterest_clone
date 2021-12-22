@@ -23,14 +23,18 @@ const receiveErrors = errors => ({
     errors
 });
 
+const removeErrors = errors => ({
+    type: REMOVE_SESSION_ERRORS
+});
+
 export const createNewUser = formUser => dispatch => (
-    postUser(formUser).then(
-      user => 
-        dispatch(receiveCurrentUser(user)), 
-      err => 
-        dispatch(receiveErrors(err.responseJSON))
-    )
-  );
+  postUser(formUser).then(
+    user => 
+      dispatch(receiveCurrentUser(user)), 
+    err => 
+      dispatch(receiveErrors(err.responseJSON))
+  )
+);
 
 export const loginUser = formUser => dispatch => (
   postSession(formUser).then(
