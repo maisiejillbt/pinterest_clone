@@ -130,3 +130,11 @@ things left to connect
 `- add GH and LI 
 
 
+## Holiday updates 
+
+ do I have an unfollow? 
+ I need to finish my user edit 
+ Would like to finally add avatar 
+ !!! fix reload thing where it always brings you back to / 
+
+

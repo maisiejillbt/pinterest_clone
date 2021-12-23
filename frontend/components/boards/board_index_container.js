@@ -5,13 +5,13 @@ import { fetchUserBoards } from '../../actions/boards';
 
 import BoardIndex from './board_index';
 
-const mapStateToProps = (state, ownProps) => ({
+const mstp = (state, ownProps) => ({
   boards: Object.values(state.entities.boards),
   ownProps: ownProps
 });
 
-const mapDispatchToProps = dispatch => ({
+const mdtp = dispatch => ({
   fetchUserBoards: () => dispatch(fetchUserBoards()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoardIndex);
+export default connect(mstp, mdtp)(BoardIndex);

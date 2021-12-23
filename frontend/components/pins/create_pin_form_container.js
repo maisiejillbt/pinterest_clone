@@ -4,12 +4,12 @@ import CreatePinForm from './create_pin_form';
 import { createPin } from '../../actions/pins';
 
 
-const mapStateToProps = state => ({ 
+const mstp = state => ({ 
   current_user: state.session.current_user,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mdtp = dispatch => ({
   createPin: pin => dispatch(createPin(pin))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreatePinForm);
+export default connect(mstp, mdtp)(CreatePinForm);

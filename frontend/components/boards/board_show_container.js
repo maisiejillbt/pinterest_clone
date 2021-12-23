@@ -4,15 +4,15 @@ import { fetchBoard, fetchUserBoards } from '../../actions/boards';
 
 import BoardShow from './board_show';
 
-const mapStateToProps = (state, ownProps) => ({
+const mstp = (state, ownProps) => ({
   boards: Object.values(state.entities.boards),
   current_user: state.session.current_user,
   ownProps: ownProps
 });
 
-const mapDispatchToProps = dispatch => ({
+const mdtp = dispatch => ({
   fetchBoard: (boardId) => dispatch(fetchBoard(boardId)),
   fetchUserBoards: () => dispatch(fetchUserBoards())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoardShow);
+export default connect(mstp, mdtp)(BoardShow);

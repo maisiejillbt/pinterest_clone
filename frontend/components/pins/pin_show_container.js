@@ -6,7 +6,7 @@ import { createFollow, deleteFollow, fetchFollows } from '../../actions/follows'
 
 import PinShow from './pin_show';
 
-const mapStateToProps = state => ({
+const mstp = state => ({
   pin: state.entities.pins,
   boards: Object.values(state.entities.boards),
   current_user: state.session.current_user,
@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
   following: Object.values(state.entities.follows).map(follow => follow.followed_id)
 });
 
-const mapDispatchToProps = dispatch => ({
+const mdtp = dispatch => ({
   fetchPin: (pinId) => dispatch(fetchPin(pinId)),
   fetchUserBoards: () => dispatch(fetchUserBoards()),  
   createFollow: (follow) => dispatch(createFollow(follow)),
@@ -22,4 +22,4 @@ const mapDispatchToProps = dispatch => ({
   fetchFollows: () => dispatch(fetchFollows()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PinShow);
+export default connect(mstp, mdtp)(PinShow);

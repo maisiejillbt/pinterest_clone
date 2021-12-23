@@ -7,7 +7,7 @@ class UpdateBoardForm extends React.Component {
     super(props);
     this.state = {
       id: this.props.match.params.boardId,
-      name: '',
+      name: ' ',
       public: true,
       description:'',
       user_id: this.props.current_user.id,
@@ -18,12 +18,11 @@ class UpdateBoardForm extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchBoard(this.props.match.params.boardId)
+    const boardId = this.props.match.params.boardId
+    this.props.fetchBoard(boardId)
       .then(response => {
-        this.setState(response.board)
-        if(!this.state.description)
-          {this.setState({description:''})}
-      })
+        this.setState(response.board[boardId])
+      }) 
   }
 
   handleSubmit(e) {
@@ -45,7 +44,6 @@ class UpdateBoardForm extends React.Component {
   }
 
   deleteBoard() {
-
     this.props.deleteBoard(this.props.match.params.boardId)
       .then(() => {
         this.props.history.push(`/users/${this.state.user_id}`)
@@ -54,6 +52,7 @@ class UpdateBoardForm extends React.Component {
 
   render() {
     const boardId = this.props.match.params.boardId
+    console.log(this.state)
     return (
       <div className="board-form-container">
         < BackButton /> 
@@ -68,7 +67,14 @@ class UpdateBoardForm extends React.Component {
                 value={this.state.name}
                 onChange={this.update('name')} 
               />
-
+            
+            { 
+              this.state.name ? 
+              <div className="b30"></div>
+              : 
+              <h3 className="error">Your board must have a name</h3>
+            }
+            
             <h2>Description</h2> 
               <textarea
                 id="description"

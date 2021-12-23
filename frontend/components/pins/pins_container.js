@@ -5,16 +5,16 @@ import { fetchUserBoards } from '../../actions/boards';
 import { fetchUser } from '../../actions/users';
 import PinIndex from './pin_index';
 
-const mapStateToProps = state => ({
+const mstp = state => ({
   pins: Object.values(state.entities.pins),
   boards: Object.values(state.entities.boards),
   users: state.entities.users
 });
 
-const mapDispatchToProps = dispatch => ({
+const mdtp = dispatch => ({
   fetchPins: () => dispatch(fetchPins()),
   fetchUserBoards: () => dispatch(fetchUserBoards()),
   fetchUser: userId => dispatch(fetchUser(userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PinIndex);
+export default connect(mstp, mdtp)(PinIndex);
