@@ -9,7 +9,6 @@ class Login extends React.Component {
       pwError:"",
       emailError:"",
       credentialError:"",
-      hasError: null,
     };
     this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,41 +41,31 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.updateErrors();
-    if(!this.state.hasErrors){
-      this.props.login(this.state)
-        .then(() => {
-          this.props.history.push('/pins')
-        });
-    }
-    
+    this.props.login(this.state)
+      .then(() => {
+        this.props.history.push('/pins')
+      });
   }
 
   updateErrors(){
     let errors = {
       pwError:"",
       emailError:"",
-      credentialError:"", 
     }
     this.setState(errors);
     errors = {};
     !this.state.password ? errors["pwError"] = "you must enter your password" : errors["pwError"];
     !this.state.email ? errors["emailError"] = "you must enter your email" : errors["emailError"];
     !this.state.email.includes("@") ? errors["emailError"] = "you must enter a valid email" : errors["emailError"];
-    
-    Object.keys(errors).length === 0 ? errors["hasError"] = false : errors["hasError"] = true;
     this.setState(errors);
-
-    if(!errors.hasError){
-        this.errorTimeout = setTimeout(() => {
-          this.setState({
-            credentialError:"incorrect credentials"
-          })
-        }, 1000);
-    }
   }
 
 
   render() {
+    const authError = this.props.authError[0] 
+                      && !this.state.pwError  
+                      ? this.props.authError[0]
+                      : null;
     return (
       <div className="login-container">
         <div className="login">
@@ -98,7 +87,8 @@ class Login extends React.Component {
                 onChange={this.handleInput('password')}
               />
               <h3 className="error">{this.state.pwError}</h3>
-              <h3 className="error">{this.state.credentialError}</h3>
+              <h3 className="error">{authError}</h3>
+                
               <h3 className="forgot">Forgot your password?</h3>
               <h3 className="hide-forgot">Maybe your mom knows? Check your notes app?</h3>
               <button onClick={this.handleSubmit}>Log In</button>
