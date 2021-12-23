@@ -20,7 +20,7 @@ class CreateBoardForm extends React.Component {
     this.state.name ? 
       this.setState({error:""}) : 
       this.setState({error:"Your board must have a name"});
-    console.log(this.state)
+ 
     this.props.createBoard(this.state)
       .then(() => {
         this.props.ownProps.closeModal()
