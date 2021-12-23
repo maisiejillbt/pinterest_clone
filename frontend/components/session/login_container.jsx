@@ -5,7 +5,7 @@ import Login from './login';
 
 const mstp = state => ({
   authError: state.errors.session
-})
+});
 
 const mdtp = dispatch => ({
   login: formUser => dispatch(loginUser(formUser)),
