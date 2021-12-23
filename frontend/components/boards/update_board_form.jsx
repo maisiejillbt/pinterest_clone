@@ -22,7 +22,7 @@ class UpdateBoardForm extends React.Component {
     this.props.fetchBoard(boardId)
       .then(response => {
         this.setState(response.board[boardId])
-      }) 
+      });
   }
 
   handleSubmit(e) {
@@ -40,19 +40,18 @@ class UpdateBoardForm extends React.Component {
   togglePrivate() {
     this.setState({
       public: !this.state.public ? true : false
-    })
+    });
   }
 
   deleteBoard() {
     this.props.deleteBoard(this.props.match.params.boardId)
       .then(() => {
         this.props.history.push(`/users/${this.state.user_id}`)
-      })
+      });
   }
 
   render() {
-    const boardId = this.props.match.params.boardId
-    console.log(this.state)
+    const boardId = this.props.match.params.boardId;
     return (
       <div className="board-form-container">
         < BackButton /> 
@@ -74,7 +73,7 @@ class UpdateBoardForm extends React.Component {
               : 
               <h3 className="error">Your board must have a name</h3>
             }
-            
+
             <h2>Description</h2> 
               <textarea
                 id="description"

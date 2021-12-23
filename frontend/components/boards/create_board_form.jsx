@@ -9,22 +9,27 @@ class CreateBoardForm extends React.Component {
       public: true,
       description:"",
       user_id: this.props.current_user.id,
-      created_at: new Date()
+      created_at: new Date(),
+      error: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    this.state.name ? 
+      this.setState({error:""}) : 
+      this.setState({error:"Your board must have a name"});
+    console.log(this.state)
     this.props.createBoard(this.state)
       .then(() => {
         this.props.ownProps.closeModal()
         }
-      )
+      );
   } 
 
   update(fld) {
-    return e => this.setState({ [fld]: e.currentTarget.value });
+    return e => this.setState({[fld]: e.currentTarget.value});
   }
 
   togglePrivate() {
@@ -34,7 +39,6 @@ class CreateBoardForm extends React.Component {
   }
 
   render() {
-
     return (
         <div className="create board-form">
           <h1>Create board</h1>
@@ -47,6 +51,8 @@ class CreateBoardForm extends React.Component {
               value={this.state.name}
               onChange={this.update('name')}  
             />
+            <h3 className="error">{this.state.error}</h3>
+
             
             <div className="check-box">
               <input type="checkbox" value={this.state.public} onChange={() => this.togglePrivate()}/>
