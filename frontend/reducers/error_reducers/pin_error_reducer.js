@@ -1,17 +1,17 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS, REMOVE_SESSION_ERRORS } from '../../actions/pin';
+// import { RECEIVE_PIN_ERRORS, REMOVE_PIN_ERRORS, RECEIVE_PIN } from '../../actions/pins';
 
-const sessionErrorReducer = (state = [], action) => {
+// const pinErrorReducer = (state = [], action) => {
 
-    switch (action.type) {
-        case RECEIVE_SESSION_ERRORS:
-            return action.errors
-        case REMOVE_SESSION_ERRORS:
-            return [];
-        case RECEIVE_CURRENT_USER:
-            return [];
-        default:
-            return state;
-    }
-}
+//     switch (action.type) {
+//         case RECEIVE_PIN_ERRORS:
+//             return [action.errors]
+//         case REMOVE_PIN_ERRORS:
+//             return [];
+//         case RECEIVE_PIN:
+//             return [];
+//         default:
+//             return state;
+//     }
+// }
 
-export default sessionErrorReducer;
+// export default pinErrorReducer;

@@ -4,7 +4,6 @@ export const REMOVE_PIN = 'REMOVE_PIN';
 
 import *  as PinUtils from '../utils/pin_api_util';
 
-
 const receivePins = pins => ({
   type: RECEIVE_PINS,
   pins
@@ -20,30 +19,31 @@ const removePin = pinId => ({
   pinId
 })
 
-export const fetchPins = () => dispatch => {
-  return PinUtils.fetchPins()
-    .then(pins => dispatch(receivePins(pins)));
-}
+export const fetchPins = () => dispatch => (
+  PinUtils.fetchPins()
+    .then(pins => dispatch(receivePins(pins)))
+)
 
-export const fetchPin = pinId => dispatch => {
-  return PinUtils.fetchPin(pinId)
-    .then(pin => dispatch(receivePin(pin)));
-}
+export const fetchPin = pinId => dispatch => (
+  PinUtils.fetchPin(pinId)
+    .then(pin => dispatch(receivePin(pin)))
+);
 
-export const createPin = pin => dispatch => {
-  return PinUtils.createPin(pin)
-    .then(pin => dispatch(receivePin(pin)));
-}
+export const createPin = pin => dispatch => (
+  PinUtils.createPin(pin)
+    .then(pin => dispatch(receivePin(pin)))
+);
 
-export const updatePin = (pin) => dispatch => {
-  return PinUtils.updatePin(pin)
-    .then(pin => dispatch(receivePin(pin)));
-}
+export const updatePin = pin => dispatch => (
+  PinUtils.updatePin(pin)
+    .then(pin => dispatch(receivePin(pin))
+  )
+);
 
-export const deletePin = pinId => dispatch => {
-  return PinUtils.deletePin(pinId)
-    .then(() => dispatch(removePin(pinId)));
-}
+export const deletePin = pinId => dispatch => (
+  PinUtils.deletePin(pinId)
+    .then(() => dispatch(removePin(pinId)))
+)
 
 
 

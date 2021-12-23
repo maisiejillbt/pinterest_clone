@@ -1,7 +1,6 @@
 class Pin < ApplicationRecord 
   has_one_attached :photo 
-
-  validates :title, :user_id, :created_at, :photo, presence: true
+  validates :title, :user_id, :created_at, presence: true
 
   belongs_to :user,
     class_name: :User,

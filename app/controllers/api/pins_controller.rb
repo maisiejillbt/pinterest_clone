@@ -44,7 +44,7 @@ class Api::PinsController < ApplicationController
   def selected_pin
     Pin.find(params[:id])
   end
-  
+
   def pin_params
     params.require(:pin).permit(:title, :user_id, :description, :created_at, :photo)
   end
