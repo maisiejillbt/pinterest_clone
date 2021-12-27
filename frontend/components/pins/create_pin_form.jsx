@@ -57,7 +57,12 @@ class CreatePinForm extends React.Component {
       
   }
 
+  displayErrors(){
+    
+  }
+
   render() {
+    console.log(this.state.errors)
     return (
       <div className="create-pin-container">
         <div className="create-pin">
@@ -86,8 +91,18 @@ class CreatePinForm extends React.Component {
               </label>
               <button id="save-pin" type='submit'>Save</button>
             </div>
+            {
+              this.state.errors 
+              ? 
+              this.state.errors.map(error => (
+                <h3 className="error">{error}</h3>
+              ))
+              : 
+              null
+            }
           </form>
         </div>
+        
       </div>
     );
   }
