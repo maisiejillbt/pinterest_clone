@@ -85,7 +85,7 @@ class CreatePinForm extends React.Component {
               </label>
               <button id="save-pin" type='submit'>Save</button>
             </div>
-            {
+            {/* {
               this.state.errors 
               ? 
               this.state.errors.map(error => (
@@ -93,7 +93,8 @@ class CreatePinForm extends React.Component {
               ))
               : 
               null
-            }
+            } */}
+            
           </form>
         </div>
       </div>
