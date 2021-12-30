@@ -22,7 +22,6 @@ import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 
 export default () => (
   <div>
-    <AuthRoute path="/" component={NavBarAuthContainer}/> 
     <AuthRoute exact path="/" component={LandingPage}/> 
 
     <Switch>
