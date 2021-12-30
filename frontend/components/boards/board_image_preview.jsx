@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 class BoardImagePreview extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
   }
 
   render(){
@@ -25,7 +24,7 @@ class BoardImagePreview extends React.Component {
             }
             </div>
           </div>
-      )
+      );
     } else {
       return(
           <div className="board-image-container">
@@ -35,9 +34,9 @@ class BoardImagePreview extends React.Component {
             <div className="right-bottom-board-display-image"></div> 
             </div>
           </div>
-      )
+      );
     }}
   
 }
 
-export default BoardImagePreview
+export default BoardImagePreview;

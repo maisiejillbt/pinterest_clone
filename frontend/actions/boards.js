@@ -18,7 +18,7 @@ const receiveBoard = board => ({
 const removeBoard = boardId => ({
   type:REMOVE_BOARD, 
   boardId
-})
+});
 
 export const fetchUserBoards = () => dispatch => {
   return BoardApiUtil.fetchUserBoards()

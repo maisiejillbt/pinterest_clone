@@ -10,7 +10,7 @@ const BoardDropdownItem = (props) => {
       </div>
       <button onClick={()=>PinSave(props.pinId, props.board.id)} className="save-button">Save</button>
     </div>
-  )
+  );
 }
 
-export default BoardDropdownItem
+export default BoardDropdownItem;

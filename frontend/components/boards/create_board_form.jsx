@@ -35,7 +35,7 @@ class CreateBoardForm extends React.Component {
   togglePrivate() {
     this.setState({
       public: !this.state.public ? true : false
-    })
+    });
   }
 
   render() {

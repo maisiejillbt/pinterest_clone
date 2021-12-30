@@ -7,7 +7,7 @@ const PinSave = (pinId, boardId) => {
     pin_id: pinId, 
     board_id: boardId, 
     created_at: new Date(),
-  }
+  };
 
   createSave(save); 
 }

@@ -20,11 +20,11 @@ class BoardDropdownHeader extends React.Component {
 
   componentDidUpdate(){
     const { dropdownOpen } = this.state;
-    const pin = document.getElementById(this.props.pin.id)
+    const pin = document.getElementById(this.props.pin.id);
 
     if(!dropdownOpen && pin){
       pin.style.zIndex = "1"
-    }
+    };
 
     this.dropdownTimeout = setTimeout(() => {
       if(dropdownOpen){
@@ -56,7 +56,7 @@ class BoardDropdownHeader extends React.Component {
   dropdown(){
     return (
       <BoardDropdown boards={this.props.userBoards} pinId={this.props.pin.id} />
-    )
+    );
   }
 
   render(){
@@ -66,9 +66,8 @@ class BoardDropdownHeader extends React.Component {
         <img className="board-chevron" src={this.chevron}/>
         {this.state.dropdownOpen ? this.dropdown() : null}
       </div>
-    )
+    );
   }
-  
 }
 
 export default BoardDropdownHeader; 

@@ -1,13 +1,13 @@
 import React from 'react';
-import BoardPreview from './board_preview'
-import Pin from '../pins/pin'
+import BoardPreview from './board_preview';
+import Pin from '../pins/pin';
 import PinGridContainer from '../pins/pin_grid_container';
 
 import { Link } from 'react-router-dom';
 
 class BoardShow extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
   }
 
   componentDidMount(){
@@ -20,7 +20,9 @@ class BoardShow extends React.Component {
     const currentBoard = boards.filter(board => board.id == this.props.match.params.boardId)[0];
 
     if(this.props.boards.length >= 1 && this.props.current_user && currentBoard){
-      const currentUserBoards = boards.filter(board => board.user_id == this.props.current_user.id)
+      const currentUserBoards = boards.filter(board => {
+        board.user_id == this.props.current_user.id
+        });
       return(
         <div className="board-show-container">
           <div className="board-info-container">
@@ -47,11 +49,11 @@ class BoardShow extends React.Component {
           </div>
         
         </div>
-      )
+      );
     }else {
       return(
         <div></div>
-      )
+      );
     }
   }
 }

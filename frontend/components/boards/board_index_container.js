@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchUserBoards } from '../../actions/boards';
 
-
 import BoardIndex from './board_index';
 
 const mstp = (state, ownProps) => ({

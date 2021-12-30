@@ -1,9 +1,7 @@
 import React from 'react'; 
-import NavBarAuthContainer from '../nav_bar/nav_bar_auth_container'
+import NavBarAuthContainer from '../nav_bar/nav_bar_auth_container';
 
 const LandingPage = () => {
-
-
   return(
     <div>
       <NavBarAuthContainer /> 
@@ -52,9 +50,7 @@ const LandingPage = () => {
       
       </div>
     </div>
-
-  )
-
+  );
 }
 
 export default LandingPage; 

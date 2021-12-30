@@ -17,12 +17,12 @@ const receivePin = pin => ({
 const removePin = pinId => ({
   type: REMOVE_PIN, 
   pinId
-})
+});
 
 export const fetchPins = () => dispatch => (
   PinUtils.fetchPins()
     .then(pins => dispatch(receivePins(pins)))
-)
+);
 
 export const fetchPin = pinId => dispatch => (
   PinUtils.fetchPin(pinId)
@@ -36,14 +36,13 @@ export const createPin = pin => dispatch => (
 
 export const updatePin = pin => dispatch => (
   PinUtils.updatePin(pin)
-    .then(pin => dispatch(receivePin(pin))
-  )
+    .then(pin => dispatch(receivePin(pin)))
 );
 
 export const deletePin = pinId => dispatch => (
   PinUtils.deletePin(pinId)
     .then(() => dispatch(removePin(pinId)))
-)
+);
 
 
 

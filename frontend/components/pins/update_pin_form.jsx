@@ -26,7 +26,7 @@ class UpdatePinForm extends React.Component {
     formData.append('pin[description]', this.state.description);
     formData.append('pin[user_id]', this.props.current_user.id);
     formData.append('pin[created_at]', new Date());
-    formData.append('id',this.props.match.params.pinId)
+    formData.append('id',this.props.match.params.pinId);
 
     if(this.state.photoFile){
       formData.append('pin[photo]', this.state.photoFile);

@@ -54,11 +54,6 @@ class CreatePinForm extends React.Component {
     let image = document.getElementById('output');
     image.src = URL.createObjectURL(e.target.files[0]);
     image.style.width = "80px";
-      
-  }
-
-  displayErrors(){
-    
   }
 
   render() {
@@ -101,7 +96,6 @@ class CreatePinForm extends React.Component {
             }
           </form>
         </div>
-        
       </div>
     );
   }
