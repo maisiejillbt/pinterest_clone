@@ -24,14 +24,14 @@ export default () => (
     <ProtectedRoute path="/" component={NavBarProtectedContainer}/> 
 
     <Switch>
-      <AuthRoute exact path="/landing/login" component={LoginContainer} />
-      <AuthRoute exact path="/landing/signup" component={SignupContainer}/> 
+      <AuthRoute path="/landing/login" component={LoginContainer} />
+      <AuthRoute path="/landing/signup" component={SignupContainer}/> 
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
-      <ProtectedRoute exact path="/pins" component={PinIndexContainer}/>
-      <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
+      <ProtectedRoute path="/pins" component={PinIndexContainer}/>
+      <ProtectedRoute exact path='/boards/:boardId/edit' component={UpdateBoardForm}/>
       <ProtectedRoute exact path='/pins/:pinId/edit' component={UpdatePinForm}/>
-      <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>
-      <ProtectedRoute path='/users/:userId' component={UserShowContainer}/>
+      <ProtectedRoute exact path='/boards/:boardId' component={BoardShowContainer}/>
+      <ProtectedRoute exact path='/users/:userId' component={UserShowContainer}/>
       <ProtectedRoute path='/create-pin' component={CreatePinForm}/>
       <ProtectedRoute path='/create-board' component={CreateBoardForm}/>
      </Switch> 

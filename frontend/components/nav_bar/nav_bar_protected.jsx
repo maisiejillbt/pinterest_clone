@@ -46,7 +46,7 @@ class NavBarProtected extends React.Component {
 
   logout(){
     this.props.logoutUser()
-      .then(() => this.props.history.push('/'))
+      .then(() => this.props.history.push('/landing'))
   }
 
   dropdown(){
