@@ -15,12 +15,12 @@ class NavBarAuth extends React.Component {
       return(
         <div className="RightHeader">
             <div className="login-button">
-            <Link to="/login">
+            <Link to="/landing/login">
                 <h1>Log In</h1>
             </Link>
             </div>
             <div className="signup-button">
-            <Link to="/signup">
+            <Link to="/landing/signup">
                 <h1>Sign Up</h1>
             </Link>
             </div>

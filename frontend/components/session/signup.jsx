@@ -95,7 +95,7 @@ class SignUp extends React.Component {
             </form>
           </div>
         </div>
-        <div onClick={() => this.props.history.push('/')} className="modal-background"></div>
+        <div onClick={() => this.props.history.push('/landing')} className="modal-background"></div>
       </div>
     );
   }

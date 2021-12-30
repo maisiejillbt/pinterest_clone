@@ -22,18 +22,18 @@ import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
 
 export default () => (
   <div>
-    <AuthRoute exact path="/" component={LandingPage}/> 
+    <AuthRoute path="/landing" component={LandingPage}/> 
 
     <Switch>
-      <AuthRoute exact path="/login" component={LoginContainer} />
-      <AuthRoute exact path="/signup" component={SignupContainer}/> 
+      <AuthRoute exact path="/landing/login" component={LoginContainer} />
+      <AuthRoute exact path="/landing/signup" component={SignupContainer}/> 
     </Switch>
 
     <ProtectedRoute path="/" component={NavBarProtectedContainer}/> 
-    <ProtectedRoute path="/pins" component={PinIndexContainer}/>
 
     <Switch>
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
+      <ProtectedRoute exact path="/pins" component={PinIndexContainer}/>
       <ProtectedRoute path='/boards/:boardId/edit' component={UpdateBoardForm}/>
       <ProtectedRoute exact path='/pins/:pinId/edit' component={UpdatePinForm}/>
       <ProtectedRoute path='/boards/:boardId' component={BoardShowContainer}/>

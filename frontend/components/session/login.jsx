@@ -101,7 +101,7 @@ class Login extends React.Component {
             </button>            
           </div>
         </div>
-        <div onClick={() => this.props.history.push('/')} className="modal-background"></div>
+        <div onClick={() => this.props.history.push('/landing')} className="modal-background"></div>
       </div>
     );
   }
