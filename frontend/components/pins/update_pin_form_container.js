@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import UpdatePinForm from './update_pin_form';
-import { updatePin, fetchPin } from '../../actions/pins';
+import { updatePin, fetchPin, deletePin } from '../../actions/pins';
 
 
 const mstp = (state, ownProps) => ({ 
@@ -12,6 +12,7 @@ const mstp = (state, ownProps) => ({
 const mdtp = dispatch => ({
   updatePin: pin => dispatch(updatePin(pin)),
   fetchPin: pinId => dispatch(fetchPin(pinId)),
+  deletePin: pinId => dispatch(deletePin(pinId)),
 });
 
 export default connect(mstp, mdtp)(UpdatePinForm);

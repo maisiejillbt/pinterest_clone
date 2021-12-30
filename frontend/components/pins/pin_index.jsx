@@ -88,7 +88,8 @@ class PinIndex extends React.Component {
   }
 
   render() {
-    const pins = this.props.pins
+    const pins = this.props.pins;
+
    
     if (pins.length > 6 ){
       return(

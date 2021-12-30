@@ -9,6 +9,7 @@ class UpdatePinForm extends React.Component {
       decription: '',
       photoUrl: null
     }
+    this.deletePin = this.deletePin.bind(this);
   }
 
   componentDidMount(){
@@ -41,6 +42,13 @@ class UpdatePinForm extends React.Component {
     this.setState({photoFile: e.currentTarget.files[0]})
   }
 
+  deletePin(){
+    this.props.deletePin(this.props.match.params.pinId)
+      .then(() => {
+          this.props.history.push('/pins')
+      });
+  }
+
   render() {
 
     if (this.state.title) {
@@ -67,6 +75,7 @@ class UpdatePinForm extends React.Component {
             <input type="file" onChange={this.handleFile.bind(this)}/>
             <button type='submit'>Update Pin!</button>
           </form> 
+          <button onClick={() => this.deletePin()}>Delete Pin</button>
         </div>
       );
     }else{

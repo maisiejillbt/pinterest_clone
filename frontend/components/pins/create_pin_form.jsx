@@ -62,7 +62,6 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.errors)
     return (
       <div className="create-pin-container">
         <div className="create-pin">

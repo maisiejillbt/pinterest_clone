@@ -27,7 +27,7 @@ export default () => (
       <AuthRoute path="/landing/login" component={LoginContainer} />
       <AuthRoute path="/landing/signup" component={SignupContainer}/> 
       <ProtectedRoute exact path='/pins/:pinId' component={PinShowContainer}/>
-      <ProtectedRoute path="/pins" component={PinIndexContainer}/>
+      <ProtectedRoute exact path="/pins" component={PinIndexContainer}/>
       <ProtectedRoute exact path='/boards/:boardId/edit' component={UpdateBoardForm}/>
       <ProtectedRoute exact path='/pins/:pinId/edit' component={UpdatePinForm}/>
       <ProtectedRoute exact path='/boards/:boardId' component={BoardShowContainer}/>
