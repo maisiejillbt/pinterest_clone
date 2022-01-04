@@ -13,6 +13,10 @@ class SignUp extends React.Component {
     this.updateErrors = this.updateErrors.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.removeErrors();
+  }
+
   handleInput(type){
     return e => {
       this.setState({[type]: e.target.value})
@@ -23,8 +27,7 @@ class SignUp extends React.Component {
   }
 
   handleSubmit(e){
-    e.preventDefault(); 
-    // this.updateErrors();
+    e.preventDefault();
     
     this.props.createNewUser(this.state)
       .then(() => 
@@ -41,7 +44,7 @@ class SignUp extends React.Component {
     let frontErrors = {
       pwError:"",
       emailError:"",
-      ageError:"",
+      ageError:"", 
     };
 
     for(let i = 0; i < backErrors.length; i++){

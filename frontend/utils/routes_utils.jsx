@@ -25,6 +25,16 @@ const Protected = ({loggedIn, path, component: Component}) => (
   />
 )
 
+const PinsRedirect = ({loggedIn, path, component: Component}) => (
+  <Route  
+    path={path}
+    render={props => (
+      loggedIn ? <Redirect to="/pins"/> : <Redirect to="/landing"/>
+    )}
+  />
+)
+
 export const AuthRoute = withRouter(connect(mstp)(Auth));
 
 export const ProtectedRoute = withRouter(connect(mstp)(Protected));
+export const PinsRedirectRoute = withRouter(connect(mstp)(PinsRedirect));

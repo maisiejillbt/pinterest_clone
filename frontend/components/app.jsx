@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../utils/routes_utils'
+import { AuthRoute, ProtectedRoute, PinsRedirectRoute } from '../utils/routes_utils'
 
 import LandingPage from './home/landing_page'
 import NavBarProtectedContainer from './nav_bar/nav_bar_protected_container'

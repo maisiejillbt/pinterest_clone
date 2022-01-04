@@ -13,7 +13,6 @@ class Login extends React.Component {
     this.demoSignIn = this.demoSignIn.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateErrors = this.updateErrors.bind(this);
-    this.errorTimeout; 
   }
 
   handleInput(type) {
@@ -23,7 +22,7 @@ class Login extends React.Component {
   }
 
   componentWillUnmount(){
-    clearTimeout(this.errorTimeout);
+    this.props.removeErrors();
   }
 
   demoSignIn(e) {
